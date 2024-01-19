@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>九九乘法表</title>
+</head>
+
+<body>
+    <script type="text/javascript" language="JavaScript">
+        var a = 1;
+        label1: for (var i = 1; i <= 9; i++) {
+            document.write("<br/>");
+            for (var j = 1; j <= 9; j++) {
+                if (j > i) {
+                    continue label1;
+                }
+                document.write(i + " * " + j + " = " + i * j + "&nbsp; ");
+            }
+        }
+    </script>
+</body>
+
+</html>

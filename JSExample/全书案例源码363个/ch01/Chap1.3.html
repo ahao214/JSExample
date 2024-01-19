@@ -1,0 +1,272 @@
+﻿<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+    <meta http-equiv="Content-Language" content="zh-cn">
+    <style>
+        <!--
+        td, input {
+            font-size: 10pt;
+            color: #3399FF;
+        }
+        -->
+    </style>
+</head>
+<body>
+    <div align="center">
+        <center>
+            <table width="248" border="0">
+                <tr>
+                    <td nowrap width="600">
+                        时间选择:<input onclick="PopCalendar(regdate, regdate); return false" type="text" name="regdate" size="10">
+                    </td>
+                </tr>
+            </table>
+        </center>
+    </div>
+    <script>
+        //定义一些变量
+        var gdCtrl = new Object();
+        var goSelectTag = new Array();
+        var gcGray = "#808080";//"#808080";
+        var gcToggle = "FB8664";//"#FB8664";
+        var gcBG = "FAEBD7";//"#e5e6ec";
+        var previousObject = null;
+        var gdCurDate = new Date();
+        var giYear = gdCurDate.getFullYear();
+        var giMonth = gdCurDate.getMonth() + 1;
+        var giDay = gdCurDate.getDate();
+        var gMonths = new Array("1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月"
+            , "9月", "10月", "11月", "12月");
+        //显示一个隐藏的层，放置日期的选择框。
+        with (document) {
+            write("<Div id=VicPopCal style=POSITION:absolute;VISIBILITY:hidden;border:1px ridge;z-index:100;>");
+            write("<table border=0 bgcolor=#E6E6FA>");
+            write("<TR>");
+            write("<td valign=middle align=center><input type=button name=PrevMonth value='<' style=height:20;width:20;FONT:bold onClick=PrevMonth()>");
+            write(" <Select name=tbSelYear onChange=UpdateCal(tbSelYear.value, tbSelMonth.value) Victor=Won>");
+            for (i = 1975; i < 2015; i++)
+                write("<OPTION value=" + i + ">" + i + "年</OPTION>");
+            write("</Select>");
+            write(" <select name=tbSelMonth onChange=UpdateCal(tbSelYear.value, tbSelMonth.value) Victor=Won>");
+            for (i = 0; i < 12; i++)
+                write("<option value=" + (i + 1) + ">" + gMonths[i] + "</option>");
+            write("</Select>");
+            write("<input type=button name=PrevMonth value='>' style=height:20;width:20;FONT:bold onclick=NextMonth()>");
+            write("</td>");
+            write("</TR><TR>");
+            write("<td align=center>");
+            write("<DIV style=background-color:#778899><table width=100% border=0>");
+            //drawCal()函数完成日期的显示。
+            drawCal(giYear, giMonth, 18, 12);
+            function drawCal(iYear, iMonth, iCellHeight, sDateTextSize) {
+                //建立WeekDay数组。
+                var WeekDay = new Array("日", "一", "二", "三", "四", "五", "六");
+                //建立styleTD，就是每一个TD的style。
+                var styleTD = " bgcolor=" + gcBG + " bordercolor=" + gcBG + " valign=middle align=center height=" + iCellHeight + " style=font: arial " + sDateTextSize + ";";
+                with (document) {
+                    write("<tr>");
+                    //这个for完成星期的显示。
+                    for (i = 0; i < 7; i++) {
+                        write("<td " + styleTD + "color:maroon >" + WeekDay[i] + "</td>");
+                    }
+                    write("</tr>");
+                    //在这里，每个格子（6行7列）的显示内容暂时都是空的，要由后面的UpdateCal()函数完成。
+                    for (w = 1; w < 7; w++) {
+                        write("<tr>");
+                        for (d = 0; d < 7; d++) {
+                            write("<td id=calCell " + styleTD + "cursor:hand; onMouseOver=this.bgColor=gcToggle onMouseOut=this.bgColor=gcBG onclick=SetSelected(this)>");
+                            write("<font id=cellText Victor=Hcy_Flag> </font>");
+                            write("</td>")
+                        }
+                        write("</tr>");
+                    }
+                }
+            }
+            write("</table></DIV>");
+            write("</td>");
+            write("</TR><TR><TD align=center>");
+            write("<TABLE width=100%><TR><TD align=center>");
+            write("<B style=cursor:hand onclick=SetDate(0,0,0) onMouseOver=this.style.color=gcToggle onMouseOut=this.style.color=0>清空</B>");
+            write("</td><td algin=center>");
+            write("<B style=cursor:hand onclick=SetDate(giYear,giMonth,giDay) onMouseOver=this.style.color=gcToggle onMouseOut=this.style.color=0>今天: " + giYear + "-" + giMonth + "-" + giDay + "</B>");
+            write("</td></tr></table>");
+            write("</TD></TR>");
+            write("</TABLE></Div>");
+        }
+        //第2部分的内容是4个辅助日期显示的函数。
+        //PopCalendar()函数完成日期div的显示和隐藏操作。
+        function PopCalendar(popCtrl, dateCtrl) {
+            //因为有后面的previousObject = popCtrl附值操作，所以这里可以理解成是再次点击文本框时修改调用HiddenDiv()函数取消显示。
+            if (popCtrl == previousObject) {
+                if (VicPopCal.style.visibility == "visible") {
+                    HiddenDiv();
+                    return true;
+                }
+            }
+            previousObject = popCtrl;
+            gdCtrl = dateCtrl;
+            SetYearMon(giYear, giMonth);
+            //调用GetXY()函数获取控件的坐标。
+            var point = GetXY(popCtrl);
+            with (VicPopCal.style) {
+                //给定显示层的绝对位置。
+                left = point.x;
+                top = point.y + popCtrl.offsetHeight;
+                width = VicPopCal.offsetWidth;
+                height = VicPopCal.offsetHeight;
+                //fToggleTags(point);
+                visibility = "visible";
+            }
+        }
+        //HiddenDiv()函数取消日期显示框div层的显示。
+        function HiddenDiv() {
+            var i;
+            VicPopCal.style.visibility = "hidden";
+        }
+        //UpdateCal()函数完成日期文字在页面div中的显示。
+        function UpdateCal(iYear, iMonth) {
+            //BuildCal()函数获取给定日期所有需要显示的日期内容。
+            myMonth = BuildCal(iYear, iMonth);
+            var i = 0;
+            for (w = 0; w < 6; w++)
+                for (d = 0; d < 7; d++)
+                    with (cellText[(7 * w) + d]) {
+                        //Victor作为一个参数，用作判断同为负值的一些日期月份的变化。
+                        Victor = i++;
+                        //这个if完成对日期的所有显示，同时完成所有的对日期颜色的操作。
+                        if (myMonth[w + 1][d] < 0) {
+                            color = gcGray;
+                            innerText = -myMonth[w + 1][d];
+                        } else {
+                            color = ((d == 0) || (d == 6)) ? "red" : "black";
+                            innerText = myMonth[w + 1][d];
+                        }
+                    }
+        }
+        //BuildCal()函数获取给定日期所有需要显示的日期内容。
+        function BuildCal(iYear, iMonth) {
+            //建立aMonth[1]到aMonth[6]六个空数组。
+            var aMonth = new Array();
+            for (i = 1; i < 7; i++)
+                aMonth[i] = new Array(i);
+            //Date对象的3个参数是必选的，表示给定的时间坐标，其中月份值比较特殊，6月份是用数字5表示的，1月份是用数字0表
+            //示的，所以要减去1。iDayOfFirst表示给定时间轴日期的星期值,iDaysInMonth表示所给年月的总的日期数。iOffsetLast
+            //表示在页面第一个格子中需要显示的上个月的日期值（在这里iYear，iMonth都是值的现在的时间）。
+            var dCalDate = new Date(iYear, iMonth - 1, 1);
+            var iDayOfFirst = dCalDate.getDay();
+            var iDaysInMonth = new Date(iYear, iMonth, 0).getDate();
+            var iOffsetLast = new Date(iYear, iMonth - 1, 0).getDate() - iDayOfFirst + 1;
+            var iDate = 1;
+            var iNext = 1;
+            //这个for完成第一行的显示，作者让刚开始的几天用负数表示，便于以后的页面显示，很好的方法。
+            for (d = 0; d < 7; d++)
+                aMonth[1][d] = (d < iDayOfFirst) ? -(iOffsetLast + d) : iDate++;
+            //这个for完成2-6行的显示，依旧用负数表示下个月的日期。
+            for (w = 2; w < 7; w++)
+                for (d = 0; d < 7; d++)
+                    aMonth[w][d] = (iDate <= iDaysInMonth) ? iDate++ : -(iNext++);
+            return aMonth;
+        }
+
+        //事件函数。
+        //PrevMonth()函数显示上个月的日期。
+        function PrevMonth() {
+            //tbSelMonth.value表示select中选中的月份值，tbSelYear.value表示select中选中的年份值。
+            var iMon = tbSelMonth.value;
+            var iYear = tbSelYear.value;
+            if (--iMon < 1) {
+                iMon = 12;
+                iYear--;
+            }
+            //调用SetYearMon函数显示最新的月份内容。
+            SetYearMon(iYear, iMon);
+        }
+        //PrevMonth()函数显示下个月的日期。
+        function NextMonth() {
+            //tbSelMonth.value表示select中选中的月份值，tbSelYear.value表示select中选中的年份值。
+            var iMon = tbSelMonth.value;
+            var iYear = tbSelYear.value;
+            if (++iMon > 12) {
+                iMon = 1;
+                iYear++;
+            }
+            //调用SetYearMon函数显示最新的月份内容。
+            SetYearMon(iYear, iMon);
+        }
+        //SetYearMon()函数可以按照给定的时间，在页面中进行日期的显示。
+        function SetYearMon(iYear, iMon) {
+            //因为6月份是用数字5表示，所以-1，选中。
+            tbSelMonth.options[iMon - 1].selected = true;
+            //年份的选择有点复杂，但这似乎也是唯一的办法。
+            for (i = 0; i < tbSelYear.length; i++)
+                if (tbSelYear.options[i].value == iYear)
+                    tbSelYear.options[i].selected = true;
+            //完成了上面两个select的显示之后调用UpdateCal()函数完成页面日期的显示。
+            UpdateCal(iYear, iMon);
+        }
+        //SetDate()函数实现div层中的“清空”和“今天”的操作。
+        function SetDate(iYear, iMonth, iDay) {
+            VicPopCal.style.visibility = "hidden";
+            //SetDate(0,0,0)实现清空文本框。
+            if ((iYear == 0) && (iMonth == 0) && (iDay == 0)) {
+                gdCtrl.value = "";
+            } else {
+                iMonth = iMonth + 100 + "";
+                iMonth = iMonth.substring(1);
+                iDay = iDay + 100 + "";
+                iDay = iDay.substring(1);
+                if (gdCtrl.tagName == "INPUT") {
+                    gdCtrl.value = iYear + "-" + iMonth + "-" + iDay;
+                } else {
+                    gdCtrl.innerText = iYear + "-" + iMonth + "-" + iDay;
+                }
+            }
+        }
+        //SetSelected()函数实现点击日期时的JS操作。
+        function SetSelected(aCell) {
+            var iOffset = 0;
+            //获取select中选中的年月份。
+            var iYear = parseInt(tbSelYear.value);
+            var iMonth = parseInt(tbSelMonth.value);
+            //每一个显示日期的格子都有同一个ID“cellText”，这里用children方法可以获取操作的对象，srcElement也许会更
+            //清晰明了一些。
+            with (aCell.children["cellText"]) {
+                var iDay = parseInt(innerText);
+                //Victor参数的作用就在这里，如果是上个月的日期，则月份-1，如果是下个月的日期，则月份+1。
+                if (color == gcGray)
+                    iOffset = (Victor < 10) ? -1 : 1;
+                iMonth += iOffset;
+                //这个if完成隔年的情况下的操作。
+                if (iMonth < 1) {
+                    iYear--;
+                    iMonth = 12;
+                } else if (iMonth > 12) {
+                    iYear++;
+                    iMonth = 1;
+                }
+            }
+            //调用SetDate()完成日期的最后显示。
+            SetDate(iYear, iMonth, iDay);
+        }
+
+        //两个小的工具函数，获取坐标。
+        //Point()函数重新定位坐标。
+        function Point(iX, iY) {
+            this.x = iX;
+            this.y = iY;
+        }
+        //GetXY()函数获取某一给定对象的大小坐标
+        function GetXY(aTag) {
+            var oTmp = aTag;
+            var pt = new Point(0, 0);
+            do {
+                pt.x += oTmp.offsetLeft;
+                pt.y += oTmp.offsetTop;
+                //offsetParent表示在HTML中的上一个标签的对象合集。
+                oTmp = oTmp.offsetParent;
+            } while (oTmp.tagName != "BODY");
+            return pt;
+        }
+    </script>
+</body>
+</html>

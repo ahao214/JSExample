@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>变量的优先级</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <script language="JavaScript">
+        var scope = "全局变量";
+
+        function checkscope() {
+            var scope = "局部变量";
+            document.write(scope);
+        }
+        checkscope();
+    </script>
+</body>
+
+</html>
