@@ -98,6 +98,8 @@
     <Content Include="全书案例源码363个\ch04\images\01.jpg" />
     <Content Include="全书案例源码363个\ch04\images\logo.jpg" />
     <Content Include="全书案例源码363个\ch04\images\meitu.jpg" />
+    <Content Include="全书案例源码363个\ch05\01.jpg" />
+    <Content Include="全书案例源码363个\ch05\02.jpg" />
     <Content Include="全书案例源码363个\ch05\Chap5.1.html" />
   </ItemGroup>
   <ItemGroup>
