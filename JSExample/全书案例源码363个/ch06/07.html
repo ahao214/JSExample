@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>动态删除列</title>
+    <style>
+        <!--
+        .datalist {
+            border: 1px solid #0058a3; /* 表格边框 */
+            font-family: Arial;
+            border-collapse: collapse; /* 边框重叠 */
+            background-color: #eaf5ff; /* 表格背景色 */
+            font-size: 14px;
+        }
+
+            .datalist caption {
+                padding-bottom: 5px;
+                font: bold 1.4em;
+                text-align: left;
+            }
+
+            .datalist th {
+                border: 1px solid #0058a3; /* 行名称边框 */
+                background-color: #4bacff; /* 行名称背景色 */
+                color: #FFFFFF; /* 行名称颜色 */
+                font-weight: bold;
+                padding-top: 4px;
+                padding-bottom: 4px;
+                padding-left: 12px;
+                padding-right: 12px;
+                text-align: center;
+            }
+
+            .datalist td {
+                border: 1px solid #0058a3; /* 单元格边框 */
+                text-align: left;
+                padding-top: 4px;
+                padding-bottom: 4px;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            .datalist tr:hover, .datalist tr.altrow {
+                background-color: #c4e4ff; /* 动态变色 */
+            }
+        -->
+    </style>
+    <script language="javascript">
+        function deleteColumn(oTable, iNum) {
+            // 自定义删除列函数，即每行删除相应单元格
+            for (var i = 0; i < oTable.rows.length; i++) {
+                oTable.rows[i].deleteCell(iNum);
+            }
+        }
+        function delAddress() {
+            var oTable = document.getElementById("member");
+            deleteColumn(oTable, 3);
+        }
+    </script>
+</head>
+<body>
+    <table class="datalist" summary="list of members in EE Studay" id="member">
+        <caption>人员通信录</caption>
+        <tr>
+            <th scope="col">姓名</th>
+            <th scope="col">性别</th>
+            <th scope="col">出生年月</th>
+            <th scope="col">家庭住址</th>
+            <th scope="col">联系电话</th>
+        </tr>
+        <tr>
+            <td>王丽</td>
+            <td>女</td>
+            <td>10月20日</td>
+            <td>长兴路2号</td>
+            <td>13019821212</td>
+        </tr>
+        <tr>
+            <td>李飞</td>
+            <td>男</td>
+            <td>9月16日</td>
+            <td>北京路6号</td>
+            <td>13079941515</td>
+        </tr>
+        <tr>
+            <td>李琦</td>
+            <td>男</td>
+            <td>8月29日</td>
+            <td>南京路8号</td>
+            <td>18592102121</td>
+        </tr>
+        <tr>
+            <td>刘瑶</td>
+            <td>女</td>
+            <td>9月5号</td>
+            <td>北京路2号</td>
+            <td>13025896212</td>
+        </tr>
+    </table>
+    <input type="button" onclick="delAddress()" value="删除家庭住址列">
+</body>
+</html>
