@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>动态添加行</title>
+    <style type="text/css">
+        table {
+            color: #000066;
+            background-color: #999999;
+            font-family: "宋体";
+            border-collapse: separate; /*表格边框分开不合并*/
+            border-spacing: 5pt; /*相邻单元格边框的间距*/
+            border-top: 5px solid red; /*表格的上边框*/
+            border-left: 5px solid red; /*表格的左边框*/
+            border-right: 5px dashed black; /*表格的右边框*/
+            border-bottom: 5px dashed blue; /*表格的下边框*/
+        }
+
+        th {
+            color: #000033;
+            background-color: #9900CC;
+            border: outset 5pt; /*表头边框*/
+        }
+
+        caption {
+            font-size: 16px;
+            font-weight: bolder;
+        }
+    </style>
+    <script type="text/javascript" ; language="javascript">
+        function insTable() {
+            /*在ID为score的表的最后新添加一行*/
+            var objRow = document.getElementById("score").insertRow(4);
+            /*创建一个数组用来存放单元格的内容*/
+            var content = new Array();
+            content[0] = document.createTextNode("赵六");
+            content[1] = document.createTextNode("55");
+            content[2] = document.createTextNode("67");
+            /*为新添加的一行添加单元格并填充内容*/
+            for (var i = 0; i < content.length; i++) {
+                var objCell = objRow.insertCell(i);
+                objCell.appendChild(content[i]);
+            }
+        }
+    </script>
+</head>
+<body onload="insTable()">
+    <table width="200" border="1" summary="该表格显示了学生的语文数学成绩" id="score">
+        <caption>
+            成绩表
+        </caption>
+        <thead>姓名</thead>
+        <thead>语文</thead>
+        <thead>数学</thead>
+        <tr>
+            <td>张三</td>
+            <td>88</td>
+            <td>90</td>
+        </tr>
+        <tr>
+            <td>李四</td>
+            <td>65</td>
+            <td>82</td>
+        </tr>
+        <tr>
+            <td>王五</td>
+            <td>95</td>
+            <td>78</td>
+        </tr>
+    </table>
+</body>
+</html>
