@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>设置单选按钮</title>
+    <script language="javascript">
+        function getResult() {
+            var objRadio = document.form1.jobView;
+            for (var i = 0; i < objRadio.length; i++) {
+                if (objRadio[i].checked) {
+                    myView = objRadio[i].value;
+                    alert("请您对我当前的工作进行评价" + myView);
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <form id="form1" method="post" action="regInfo.aspx" name="form1">
+        请您对我当前的工作进行评价：
+        <p>
+            <input type="radio" name="jobView" id="most" value="非常满意" />
+            <label for="most">非常满意</label>
+        </p>
+        <p>
+            <input type="radio" name="jobView" id="more" checked="checked" value="比较满意" />
+            <label for="more">比较满意</label>
+        </p>
+        <p>
+            <input type="radio" name="jobView" id="satisfied" value="满意" />
+            <label for="satisfied">满意</label>
+        </p>
+        <p>
+            <input type="radio" name="jobView" id="dissatisfied" value="不满意" />
+            <label for="dissatisfied">不满意</label>
+        </p>
+        <p>
+            <input type="radio" name="jobView" id="less" value="比较不满意" />
+            <label for="less">比较不满意</label>
+        </p>
+        <p>
+            <input type="radio" name="jobView" id="least" value="非常不满意" />
+            <label for="least">非常不满意</label>
+        </p>
+        <p>
+            <input type="submit" name="btnSubmit" id="btnSubmit" value="提交" />
+            <input type="reset" name="btnSubmit" id="btnSubmit" value="重置" />
+        </p>
+        <p>
+            <input type="button" name="btn" value="查看评价结果" onclick="getResult();" />
+        </p>
+    </form>
+</body>
+</html>
