@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>控制用户输入字符个数</title>
+    <style>
+        <!--
+        form {
+            padding: 0px;
+            margin: 0px;
+            background: #3399FF;
+            font: 14px Arial;
+        }
+
+        input.txt { /* 文本框单独设置 */
+            border: 1px inset #00008B;
+            background-color: #ADD8E6;
+        }
+
+        input.btn { /* 按钮单独设置 */
+            color: #00008B;
+            background-color: #ADD8E6;
+            border: 1px outset #00008B;
+            padding: 1px 2px 1px 2px;
+        }
+        -->
+    </style>
+    <script language="javascript">
+        function LessThan(oTextArea) {
+            // 返回文本框字符个数是否符合要求的boolean值
+            return oTextArea.value.length < oTextArea.getAttribute("maxlenght");
+        }
+    </script>
+</head>
+<body>
+    <form method="post" name="myForm1" action="addInfo.aspx">
+        <p>
+            <label for="name">请输入您的姓名:</label>
+            <input type="text" name="name" id="name" class="txt" value="姓名" maxlength="10">
+        </p>
+        <p>
+            <label for="comments">我要留言:</label><br>
+<textarea name="comments" id="comments" cols="40" rows="4" maxlength="50" onkeypress="return LessThan(this);"></textarea>
+        </p>
+        <p>
+            <input type="submit" name="btnSubmit" id="btnSubmit" value="提交" class="btn">
+            <input type="reset" name="btnReset" id="btnReset" value="重置" class="btn">
+        </p>
+    </form>
+</body>
+</html>
