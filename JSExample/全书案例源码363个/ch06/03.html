@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>设置表格的边框</title>
+    <style type="text/css">
+        table {
+            color: #000066;
+            background-color: #999999;
+            font-family: "宋体";
+            border-collapse: separate; /*表格边框分开不合并*/
+            border-spacing: 5pt; /*相邻单元格边框的间距*/
+            border-top: 5px solid red; /*表格的上边框*/
+            border-left: 5px solid red; /*表格的左边框*/
+            border-right: 5px dashed black; /*表格的右边框*/
+            border-bottom: 5px dashed blue; /*表格的下边框*/
+        }
+
+        th {
+            color: #000033;
+            background-color: #9900CC;
+            border: outset 5pt; /*表头边框*/
+        }
+
+        caption {
+            font-size: 16px;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    <table width="200" border="1" summary="该表格显示了学生的语文数学成绩">
+        <caption>
+            成绩表
+        </caption>
+        <thead>姓名</thead>
+        <thead>语文</thead>
+        <thead>数学</thead>
+        <tr>
+            <td>张三</td>
+            <td>88</td>
+            <td>90</td>
+        </tr>
+        <tr>
+            <td>李四</td>
+            <td>65</td>
+            <td>82</td>
+        </tr>
+        <tr>
+            <td>王五</td>
+            <td>95</td>
+            <td>78</td>
+        </tr>
+    </table>
+</body>
+</html>
