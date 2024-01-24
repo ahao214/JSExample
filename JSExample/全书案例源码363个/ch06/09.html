@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>用CSS控制表单样式</title>
+    <style>
+        <!--
+        /* 直接控制各个标记 */
+        form {
+            border: 1px dotted #AAAAAA;
+            padding: 3px 6px 3px 6px;
+            background: #3399FF;
+            margin: 0px;
+            font: 14px Arial;
+        }
+
+        input {
+            color: #00008B;
+            background-color: #ADD8E6;
+            border: 1px solid #00008B;
+        }
+
+        select {
+            width: 80px;
+            color: #00008B;
+            background-color: #ADD8E6;
+            border: 1px solid #00008B;
+        }
+
+        textarea {
+            width: 200px;
+            height: 40px;
+            color: #00008B;
+            background-color: #ADD8E6;
+            border: 1px solid #00008B;
+        }
+        -->
+    </style>
+</head>
+<body>
+    <form method="post" name="myForm1" action="addInfo.aspx">
+        <p><label for="name">请输入您的姓名:</label><br><input type="text" name="name" id="name"></p>
+        <p><label for="passwd">请输入您的密码:</label><br><input type="password" name="passwd" id="passwd"></p>
+        <p>
+            <label for="color">请选择你最喜欢的颜色:</label><br>
+            <select name="color" id="color">
+                <option value="red">红</option>
+                <option value="green">绿</option>
+                <option value="blue">蓝</option>
+                <option value="yellow">黄</option>
+                <option value="cyan">青</option>
+                <option value="purple">紫</option>
+            </select>
+        </p>
+        <p>
+            请选择你的性别:<br>
+            <input type="radio" name="sex" id="male" value="male"><label for="male">男</label><br>
+            <input type="radio" name="sex" id="female" value="female"><label for="female">女</label>
+        </p>
+        <p>
+            你喜欢做些什么:<br>
+            <input type="checkbox" name="hobby" id="book" value="book"><label for="book">看书</label>
+            <input type="checkbox" name="hobby" id="net" value="net"><label for="net">上网</label>
+            <input type="checkbox" name="hobby" id="sleep" value="sleep"><label for="sleep">睡觉</label>
+        </p>
+        <p><label for="comments">我要留言:</label><br><textarea name="comments" id="comments" cols="30" rows="4"></textarea></p>
+        <p>
+            <input type="submit" name="btnSubmit" id="btnSubmit" value="提交">
+            <input type="reset" name="btnReset" id="btnReset" value="重置">
+        </p>
+    </form>
+</body>
+</html>
