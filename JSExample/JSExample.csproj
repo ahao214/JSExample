@@ -98,9 +98,13 @@
     <Content Include="全书案例源码363个\ch04\images\01.jpg" />
     <Content Include="全书案例源码363个\ch04\images\logo.jpg" />
     <Content Include="全书案例源码363个\ch04\images\meitu.jpg" />
-    <Content Include="全书案例源码363个\ch05\01.jpg" />
-    <Content Include="全书案例源码363个\ch05\02.jpg" />
-    <Content Include="全书案例源码363个\ch05\Chap5.1.html" />
+    <Content Include="全书案例源码363个\ch05\04.html" />
+    <Content Include="全书案例源码363个\ch05\05.html" />
+    <Content Include="全书案例源码363个\ch05\images\01.jpg" />
+    <Content Include="全书案例源码363个\ch05\images\02.jpg" />
+    <Content Include="全书案例源码363个\ch05\03.html" />
+    <Content Include="全书案例源码363个\ch05\01.html" />
+    <Content Include="全书案例源码363个\ch05\02.html" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
