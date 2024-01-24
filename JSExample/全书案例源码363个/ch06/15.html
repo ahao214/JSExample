@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>下拉菜单，多选</title>
+    <style>
+        <!--
+        form {
+            padding: 0px;
+            margin: 0px;
+            font: 14px Arial;
+        }
+
+        p {
+            margin: 0px;
+            padding: 2px;
+        }
+        -->
+    </style>
+
+    <script language="javascript">
+        function checkMultiple() {
+            var oForm = document.forms["myForm1"];
+            var oSelectBox = oForm.constellation;
+            var aChoices = new Array();
+            // 遍历整个下拉菜单
+            for (var i = 0; i < oSelectBox.options.length; i++) {
+                if (oSelectBox.options[i].selected) {
+                    aChoices.push(oSelectBox.options[i].text);  // 压入到数组中
+                }
+            }
+            alert("你选了：" + aChoices.join());
+        }
+
+    </script>
+
+</head>
+<body>
+    <form method="post" name="myForm1">
+        <label for="constellation">本月幸运星座</label>
+        <p>
+            <select id="constellation" name="constellation" multiple="multiple" style="height:180px;">
+                <option value="Aries">白羊座</option>
+                <option value="Taurus">金牛座</option>
+                <option value="Gemini">双子座</option>
+                <option value="Cancer">巨蟹座</option>
+                <option value="Leo">狮子座</option>
+                <option value="Virgo">处女座</option>
+                <option value="Libra">天秤座</option>
+                <option value="Scorpio">天蝎座</option>
+                <option value="Sagittarius">射手座</option>
+                <option value="Capricorn">摩羯座</option>
+                <option value="Aquarius">水瓶座</option>
+                <option value="Pisces">双鱼座</option>
+            </select>
+        </p>
+        <input type="button" onclick="checkMultiple()" value="查看结果" />
+    </form>
+</body>
+</html>
