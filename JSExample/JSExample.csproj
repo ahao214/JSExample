@@ -106,7 +106,7 @@
     <Content Include="全书案例源码363个\ch05\09.html" />
     <Content Include="全书案例源码363个\ch05\10.html" />
     <Content Include="全书案例源码363个\ch05\11.html" />
-    <Content Include="全书案例源码363个\ch05\12.css" />
+    <Content Include="全书案例源码363个\ch05\css\12.css" />
     <Content Include="全书案例源码363个\ch05\12.html" />
     <Content Include="全书案例源码363个\ch05\images\01.jpg" />
     <Content Include="全书案例源码363个\ch05\images\02.jpg" />
@@ -130,6 +130,7 @@
     <Content Include="全书案例源码363个\ch01\Chap1.1.html" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="全书案例源码363个\ch06\" />
     <Folder Include="案例资源库\" />
   </ItemGroup>
   <PropertyGroup>
