@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>设置复选框</title>
+    <script language="javascript">
+        // 全选
+        function checkAll() {
+            var objBox = document.form1.getFun;
+            for (var i = 0; i <= objBox.length; i++) {
+                objBox[i].checked = true;
+            }
+        }
+        // 全不选
+        function noCheck() {
+            var objBox = document.form1.getFun;
+            for (var i = 0; i <= objBox.length; i++) {
+                objBox[i].checked = false;
+            }
+        }
+        // 反选
+        function switchCheck() {
+            var objBox = document.form1.getFun;
+            for (var i = 0; i <= objBox.length; i++) {
+                objBox[i].checked = !objBox[i].checked;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form id="form1" method="post" action="regInfo.aspx" name="form1">
+        请选择您平时娱乐的方式：
+        <p>
+            <input type="checkbox" name="getFun" id="TV" value="TV" />
+            <label for="TV">电视</label>
+        </p>
+        <p>
+            <input type="checkbox" name="getFun" id="internet" value="internet" />
+            <label for="internet">网络</label>
+        </p>
+        <p>
+            <input type="checkbox" name="getFun" id="newspaper" value="nerspaper" />
+            <label for="newspaper">报纸</label>
+        </p>
+        <p>
+            <input type="checkbox" name="getFun" id="radio" value="rradio" />
+            <label for="radio">电台</label>
+        </p>
+        <p>
+            <input type="checkbox" name="getFun" id="others" value="others" />
+            <label for="others">其它</label>
+        </p>
+        <p>
+            <input type="button" value="全选" onclick="checkAll();" />
+            <input type="button" value="全不选" onclick="noCheck();" />
+            <input type="button" value="反选" onclick="switchCheck();" />
+        </p>
+    </form>
+</body>
+</html>
