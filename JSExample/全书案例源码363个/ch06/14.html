@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        <!--
+        form {
+            padding: 0px;
+            margin: 0px;
+            font: 14px Arial;
+        }
+        -->
+    </style>
+    <script language="javascript">
+        function checkSingle() {
+            var oForm = document.forms["myForm1"];
+            var oSelectBox = oForm.constellation;
+            var iChoice = oSelectBox.selectedIndex;
+            alert("aaa" + oSelectBox.options[iChoice].text);
+        }
+    </script>
+</head>
+<body>
+    <form method="post" name="myForm1">
+        <label for="constellation">ÇëÑ¡ÔñÄúµÄÐÇ×ù</label>
+        <p>
+            <select id="constellation" name="constellation">
+                <option value="Aries" selected="selected">°×Ñò×ù</option>
+                <option value="Taurus">½ðÅ£×ù</option>
+                <option value="Gemini">Ë«×Ó×ù</option>
+                <option value="Cancer">¾ÞÐ·×ù</option>
+                <option value="Leo">Ê¨×Ó×ù</option>
+                <option value="Virgo">´¦Å®×ù</option>
+                <option value="Libra">Ìì³Ó×ù</option>
+                <option value="Scorpio">ÌìÐ«×ù</option>
+                <option value="Sagittarius">ÉäÊÖ×ù</option>
+                <option value="Capricorn">Ä¦ôÉ×ù</option>
+                <option value="Aquarius">Ë®Æ¿×ù</option>
+                <option value="Pisces">Ë«Óã×ù</option>
+            </select>
+        </p>
+        <input type="button" onclick="checkSingle()" value="²é¿´½á¹û" />
+    </form>
+</body>
+</html>
