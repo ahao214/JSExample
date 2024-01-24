@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>删除选项</title>
+    <style>
+        <!--
+        form {
+            padding: 0px;
+            margin: 0px;
+            font: 14px Arial;
+        }
+
+        p {
+            margin: 0px;
+            padding: 5px;
+        }
+
+        input {
+            margin: 0px;
+            border: 1px solid #000000;
+        }
+        -->
+    </style>
+    <script language="javascript">
+        function RemoveOption(Box, iNum) {
+            var oForm = document.forms["myForm1"];
+            var oBox = oForm.elements[Box];
+            oBox.options[iNum] = null;	//删除选项
+        }
+    </script>
+</head>
+<body>
+    <form method="post" name="myForm1">
+        适合幼儿读的图书：
+        <p>
+            <select id="book" name="book" multiple="multiple" style="height:90px">
+                <option value="Sbook ">国学《三字经》</option>
+                <option value="Qbook ">《神奇的校车》</option>
+                <option value="Wbook ">国学《千字文》</option>
+                <option value="Bbook ">国学《百家姓》</option>
+                <option value="Dbook">国学《弟子规》</option>
+            </select>
+        </p>
+        <input type="button" value="删除《神奇的校车》" onclick="RemoveOption('book',1);" />
+    </form>
+</body>
+</html>
+
+

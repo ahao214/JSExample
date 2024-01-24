@@ -130,6 +130,9 @@
     <Content Include="全书案例源码363个\ch06\13.html" />
     <Content Include="全书案例源码363个\ch06\14.html" />
     <Content Include="全书案例源码363个\ch06\15.html" />
+    <Content Include="全书案例源码363个\ch06\16.html" />
+    <Content Include="全书案例源码363个\ch06\17.html" />
+    <Content Include="全书案例源码363个\ch06\18.html" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
