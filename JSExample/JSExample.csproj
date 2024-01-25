@@ -133,6 +133,10 @@
     <Content Include="全书案例源码363个\ch06\16.html" />
     <Content Include="全书案例源码363个\ch06\17.html" />
     <Content Include="全书案例源码363个\ch06\18.html" />
+    <Content Include="全书案例源码363个\ch07\01.html" />
+    <Content Include="全书案例源码363个\ch07\02.html" />
+    <Content Include="全书案例源码363个\ch07\03.html" />
+    <Content Include="全书案例源码363个\ch07\04.html" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -148,6 +152,7 @@
     <Content Include="全书案例源码363个\ch01\Chap1.1.html" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="全书案例源码363个\ch08\" />
     <Folder Include="案例资源库\" />
   </ItemGroup>
   <PropertyGroup>
