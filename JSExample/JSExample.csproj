@@ -137,6 +137,20 @@
     <Content Include="全书案例源码363个\ch07\02.html" />
     <Content Include="全书案例源码363个\ch07\03.html" />
     <Content Include="全书案例源码363个\ch07\04.html" />
+    <Content Include="全书案例源码363个\ch07\05.html" />
+    <Content Include="全书案例源码363个\ch07\06.html" />
+    <Content Include="全书案例源码363个\ch07\07.html" />
+    <Content Include="全书案例源码363个\ch07\08.html" />
+    <Content Include="全书案例源码363个\ch07\09.html" />
+    <Content Include="全书案例源码363个\ch07\10.html" />
+    <Content Include="全书案例源码363个\ch07\11.html" />
+    <Content Include="全书案例源码363个\ch07\12.html" />
+    <Content Include="全书案例源码363个\ch07\13.html" />
+    <Content Include="全书案例源码363个\ch07\14.html" />
+    <Content Include="全书案例源码363个\ch07\15.html" />
+    <Content Include="全书案例源码363个\ch07\16.html" />
+    <Content Include="全书案例源码363个\ch07\17.html" />
+    <Content Include="全书案例源码363个\ch07\18.html" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
