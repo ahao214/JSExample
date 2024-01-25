@@ -67,6 +67,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="90套JS特效案例库\特效案例01、javascript彩虹圈效果\body_bg.gif" />
+    <Content Include="90套JS特效案例库\特效案例01、javascript彩虹圈效果\btn.gif" />
+    <Content Include="90套JS特效案例库\特效案例01、javascript彩虹圈效果\color_ball.html" />
+    <Content Include="90套JS特效案例库\特效案例01、javascript彩虹圈效果\qun_1.png" />
+    <Content Include="90套JS特效案例库\特效案例01、javascript彩虹圈效果\qun_2.png" />
+    <Content Include="90套JS特效案例库\特效案例01、javascript彩虹圈效果\qun_3.png" />
+    <Content Include="90套JS特效案例库\特效案例01、javascript彩虹圈效果\qun_4.png" />
+    <Content Include="90套JS特效案例库\特效案例01、javascript彩虹圈效果\qun_5.png" />
     <Content Include="Web.config" />
     <Content Include="全书案例源码363个\ch01\Chap1.2.html" />
     <Content Include="全书案例源码363个\ch01\Chap1.3.html" />
