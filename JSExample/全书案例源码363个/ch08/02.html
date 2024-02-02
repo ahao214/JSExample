@@ -5,6 +5,15 @@
     <title></title>
 </head>
 <body>
-
+    <p>建两个变量x和y。x赋值5，y赋值6。然后输出x + y的结果:</p>
+    <button onclick="myFunc()">计算</button>
+    <p id="demo"></p>
+    <script>
+        function myFunc() {
+            var x = 5;
+            var y = 6;
+            document.getElementById("demo").innerHTML = x + y;
+        }
+    </script>
 </body>
 </html>
