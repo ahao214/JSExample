@@ -163,6 +163,10 @@
     <Content Include="全书案例源码363个\ch08\02.html" />
     <Content Include="全书案例源码363个\ch08\03.html" />
     <Content Include="全书案例源码363个\ch08\04.html" />
+    <Content Include="全书案例源码363个\ch08\05.html" />
+    <Content Include="全书案例源码363个\ch08\06.html" />
+    <Content Include="全书案例源码363个\ch08\07.html" />
+    <Content Include="全书案例源码363个\ch08\08.html" />
     <Content Include="案例资源库\01按钮事件类案例\01页面刷新按钮.html" />
   </ItemGroup>
   <ItemGroup>

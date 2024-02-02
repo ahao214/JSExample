@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>if语句的嵌套</title>
+</head>
+<body>
+    <script language="javascript">
+<!--
+        var x = 25; y = x;  //x、y值都为25
+        document.write("<p>目前变量x的值为：x=" + x);
+        document.write("<p>目前变量y的值为：y=" + y);
+        if (x < 10)  //x为25，不满足此条件，故其下面的代码不会执行
+        {
+            if (y == 1)
+                document.write("<p>所以，可以得出结论：x<10&&y==1");
+            else
+                document.write("<p>所以，可以得出结论：x<10&&y!==1");
+        }
+        else if (x > 10) //x满足条件，继续执行下面的语句
+        {
+            if (y == 1)  //y为12,不满足此条件，故其下面的代码不会执行
+                document.write("<p>所以，可以得出结论：x>10&&y==1");
+            else  //y满足条件，继续执行下面的语句
+                document.write("<p>所以，可以得出结论：x>10&&y!==1");
+        }
+        else
+            document.write("<p>所以，可以得出结论：x==10");
+        //-->
+    </script>
+</body>
+</html>

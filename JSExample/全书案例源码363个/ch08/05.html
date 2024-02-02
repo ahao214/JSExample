@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <p>点击这个按钮，获得基于时间的问候。</p>
+    <button onclick="myFunc()">获取问候</button>
+    <p id="demo">
+    </p>
+    <script>
+        function myFunc() {
+            var x = "";
+            var time = new Date().getHours();
+            if (time < 20) {
+                x = "Good day";
+            } else {
+                x = "Good Evening";
+            }
+            document.getElementById("demo").innerHTML = x;
+        }
+    </script>
+
+</body>
+</html>
