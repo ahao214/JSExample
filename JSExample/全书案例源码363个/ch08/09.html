@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>switch语句</title>
+</head>
+<body>
+    <p>点击下面的按钮来显示今天是周几：</p>
+    <button onclick="myFunc()">获取星期信息</button>
+    <p id="demo"></p>
+    <script>
+        function myFunc() {
+            var x;
+            var d = new Date().getDay();
+            switch (d) {
+                case 0: x = "今天是星期日";
+                    break;
+                case 1: x = "今天是星期一";
+                    break;
+                case 2: x = "今天是星期二";
+                    break;
+                case 3: x = "今天是星期三";
+                    break;
+                case 4: x = "今天是星期四";
+                    break;
+                case 5: x = "今天是星期五";
+                    break;
+                case 6: x = "今天是星期六";
+                    break;
+
+            }
+            document.getElementById("demo").innerHTML = x;
+        }
+    </script>
+</body>
+</html>
