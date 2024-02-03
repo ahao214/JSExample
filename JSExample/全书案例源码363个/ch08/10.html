@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>while语句的应用示例</title>
+</head>
+<body>
+    <p>单击下面的按钮，只要i小于5就一直循环代码块，并输出数字。</p>
+    <button onclick="myFunction()">单击这里</button>
+    <p id="demo"></p>
+    <script>
+function myFunction(){
+	var x="",i=0;
+	while (i<5){
+		x=x + "该数字为 " + i + "<br>";
+		i++;
+	}
+	document.getElementById("demo").innerHTML=x;
+}
+    </script>
+</body>
+</html>
+
