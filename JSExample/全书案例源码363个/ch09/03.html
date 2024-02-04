@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>创建JavaScript对象</title>
+</head>
+<body>
+    <script>
+        function person(firstName, lastName, age, eyecolor) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.age = age;
+            this.eyecolor = eyecolor;
+        }
+        mySon = ne person("liu", "hao", 3, "black");
+        document.write(person.firstname + person.lastname + "现在" + person.age + "岁了");
+    </script>
+</body>
+</html>
