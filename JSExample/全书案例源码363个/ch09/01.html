@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>创建JavaScript对象</title>
+</head>
+<body>
+    <p>创建JavaScript对象</p>
+    <p id="demo"></p>
+    <script>
+        var person = {
+            firstName: "liu",
+            lastName: "peng",
+            age: 23,
+            eyeColor: "black"
+        };
+
+        document.getElementById("demo").innerHTML =
+            person.firstName + person.lastName + "现在" +
+            person.age + "岁了";
+
+    </script>
+</body>
+</html>
