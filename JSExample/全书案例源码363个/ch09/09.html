@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Boolean对象属性的应用</title>
+</head>
+<body>
+
+    <p id="demo">单击【获取颜色】按钮，如果boolean值为<em>true</em>显示“green”,否则显示“red”。</p>
+    <button onclick="myFunction()">获取颜色</button>
+    <script>
+        Boolean.prototype.myColor = function () {
+            if (this.valueOf() == true) {
+                this.color = "green";
+            }
+            else {
+                this.color = "red";
+            }
+        }
+        function myFunction() {
+            var a = new Boolean(1);
+            a.myColor();
+            var x = document.getElementById("demo");
+            x.innerHTML = a.color;
+        }
+    </script>
+</body>
+</html>
