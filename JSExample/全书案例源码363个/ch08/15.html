@@ -1,10 +1,74 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <title></title>
+    <title>自动计算借贷支付金额</title>
 </head>
-<body>
-
+<body bgcolor="white">
+    <form name="loandata">
+        <table>
+            <tr><td colspan="3"><b>输入贷款信息：</b></td></tr>
+            <tr>
+                <td>(1)</td>
+                <td>贷款总额：</td>
+                <td><input type="text" name="principal" size="12" onchange="calculate();"></input></td>
+            </tr>
+            <tr>
+                <td>(2)</td>
+                <td>年利率(%)：</td>
+                <td><input type="text" name="interest" size="12" onchange="calculate();"></input></td>
+            </tr>
+            <tr>
+                <td>(3)</td>
+                <td>借款期限(年)：</td>
+                <td><input type="text" name="years" size="12" onchange="calculate();"></input></td>
+            </tr>
+            <tr><td colspan="3"><input type="button" value="计算" onclick="calculate();"></td></tr>
+            <tr><td colspan="3"><b>输入还款信息：</b></td></tr>
+            <tr>
+                <td>(4)</td>
+                <td>每月还款金额：</td>
+                <td><input type="text" name="payment" size="12"></input></td>
+            </tr>
+            <tr>
+                <td>(5)</td>
+                <td>还款总金额：</td>
+                <td><input type="text" name="total" size="12"></input></td>
+            </tr>
+            <tr>
+                <td>(6)</td>
+                <td>还款总利息：</td>
+                <td><input type="text" name="totalinterest" size="12"></input></td>
+            </tr>
+        </table>
+    </form>
 </body>
+<script type="text/javascript">
+    function calculate() {
+        //贷款总额
+        //把年利率从百分比转换成十进制，并转换成月利率。
+        //还款月数
+        var principal = document.loandata.principal.value;
+        var interest = document.loandata.interest.value / 100 / 12;
+        var payments = document.loandata.years.value * 12;
+        //计算月支付额，使用了相关的数学函数。
+        var x = Math.pow(1 + interest, payments);
+        var monthly = (principal * x * interest) / (x - 1)
+        //检查结果是否是无穷大的数。如果不是，就显示出结果。
+        if (!isNaN(monthly) &&
+            (monthly != Number.POSITIVE_INFINITY) &&
+            (monthly != Number.NEGATIVE_INFINITY)) {
+            document.loandata.payment.value = round(monthly); document.loandata.total.value = round(monthly * payments); document.loandata.totalinterest.value = round((monthly * payments) - principal);
+        }
+        //否则，用户输入的数据是无效的，因此什么都不显示。
+        else {
+            document.loandata.payment.value = "";
+            document.loandata.total.value = "";
+            document.loandata.totalinterest.value = "";
+        }
+    }
+    //把数字舍入成两位小数的形式。
+    function round(x) {
+        return Math.round(x * 100) / 100;
+    }
+</script>
 </html>
