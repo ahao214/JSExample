@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title> Date对象属性的应用</title>
+</head>
+<body>
+    <p id="demo">单击【获取月份】按钮来调用新的myMet()方法，并显示这个月的月份</p>
+    <button onclick="myFunction()">获取月份</button>
+    <script>
+        //创建一个新的日期对象方法：
+        Date.prototype.myMet = function () {
+            if (this.getMonth() == 0) { this.myProp = "一月" };
+            if (this.getMonth() == 1) { this.myProp = "二月" };
+            if (this.getMonth() == 2) { this.myProp = "三月" };
+            if (this.getMonth() == 3) { this.myProp = "四月" };
+            if (this.getMonth() == 4) { this.myProp = "五月" };
+            if (this.getMonth() == 5) { this.myProp = "六月" };
+            if (this.getMonth() == 6) { this.myProp = "七月" };
+            if (this.getMonth() == 7) { this.myProp = "八月" };
+            if (this.getMonth() == 8) { this.myProp = "九月" };
+            if (this.getMonth() == 9) { this.myProp = "十月" };
+            if (this.getMonth() == 10) { this.myProp = "十一月" };
+            if (this.getMonth() == 11) { this.myProp = "十二月" };
+        }
+        //创建一个Date对象,调用对象的myMet方法:
+        function myFunction() {
+            var d = new Date();
+            d.myMet();
+            var x = document.getElementById("demo");
+            x.innerHTML = d.myProp;
+        }
+    </script>
+</body>
