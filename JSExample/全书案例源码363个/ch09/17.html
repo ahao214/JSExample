@@ -1,0 +1,18 @@
+﻿<!DOCTYPE>
+<html>
+<head>
+    <title>with语句的使用</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var date_time = new Date();
+        with (date_time) {
+            var a = getMonth() + 1;
+            alert(getFullYear() + "年" + a + "月" + getDate() + "日" + getHours() + ":" + getMinutes() + ":" + getSeconds());
+        }
+        var date_time = new Date();
+        alert(date_time.getFullYear() + "年" + date_time.getMonth() + 1 + "月" + date_time.getDate() + "日" + date_time.getHours() + ":" + date_time.getMinutes() + ":" + date_time.getSeconds());
+    </script>
+</body>
+</html>
+
