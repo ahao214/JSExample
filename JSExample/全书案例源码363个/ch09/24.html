@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>prototype属性的使用</title>
+</head>
+<body>
+
+    <p id="demo">创建一个新的数组，将数组值转为大写</p>
+
+    <button onclick="myFunction()">获取结果</button>
+
+    <script>
+        Array.prototype.myUcase = function () {
+            for (i = 0; i < this.length; i++) {
+                this[i] = this[i].toUpperCase();
+            }
+        }
+
+        function myFunction() {
+            var fruits = ["Banana", "Orange", "Apple", "Mango"];
+            fruits.myUcase();
+            var x = document.getElementById("demo");
+            x.innerHTML = fruits;
+
+        }
+    </script>
+
+</body>
+</html>
