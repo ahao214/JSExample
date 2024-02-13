@@ -1,0 +1,14 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>函数构造器定义</title>
+</head>
+<body>
+    <p>JavaScrip内置函数构造器定义</p>
+    <p id="demo"></p>
+    <script>
+        var myFunction = new Function("a", "b", "return a * b");
+        document.getElementById("demo").innerHTML = myFunction(5, 6);
+    </script>
+</body>
+</html>
