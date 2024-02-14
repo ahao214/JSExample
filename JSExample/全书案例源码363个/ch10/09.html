@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>函数作为方法调用</title>
+</head>
+<body>
+    <p>在一个对象方法中，<b>this</b>的值是对象本身。</p>
+    <p id="demo"></p>
+    <script>
+        var myObject = {
+            firstName: "刘",
+            lastName: "天佑",
+            fullName: function () {
+                return this;
+            }
+        }
+        document.getElementById("demo").innerHTML = myObject.fullName();
+    </script>
+</body>
+</html>
