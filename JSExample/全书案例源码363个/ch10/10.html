@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>使用构造函数调用函数</title>
+</head>
+<body>
+    <p>该实例中，myFunction是函数构造函数:</p>
+    <p id="demo"></p>
+    <script>
+        function myFunction(arg1, arg2) {
+            this.firstName = arg1;
+            this.lastName = arg2;
+        }
+        var x = new myFunction("刘天佑", "刘天翼")
+        document.getElementById("demo").innerHTML = x.firstName;
+    </script>
+</body>
+</html>
