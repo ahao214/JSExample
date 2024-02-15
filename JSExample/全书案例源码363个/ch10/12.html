@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>使用apply()方法调用</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        var myObject, myArray;
+        function myFunction(a, b) {
+            return a * b;
+        }
+        myArray = [30, 6]
+        myObject = myFunction.apply(myObject, myArray);
+        document.getElementById("demo").innerHTML = myObject;
+    </script>
+</body>
+</html>
