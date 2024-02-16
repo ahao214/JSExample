@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>嵌套函数的应用</title>
+    <script type="text/javascript">
+        var outter = 30;                               //定义全局变量
+        function add(number1, number2) {                     //定义外部函数
+            function innerAdd() {                         //定义内部函数
+                alert("参数的和为：" + (number1 + number2 + outter));         //取参数的和
+            }
+            return innerAdd();                                    //调用内部函数
+        }
+    </script>
+</head>
+<body>
+    <script type="text/javascript">
+        add(30, 30);	                        //调用外部函数
+    </script>
+</body>
+</html>
