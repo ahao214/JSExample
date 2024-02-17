@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>函数的递归调用</title>
+    <script type="text/javascript">
+<!--
+var msg="\n函数的递归调用 : \n\n";
+//响应按钮的onclick事件处理程序
+function Test()
+{
+  var result;
+  msg+="调用语句 : \n";
+  msg+="        result = sum(30);\n";
+  msg+="调用步骤 : \n";
+  result=sum(30);
+  msg+="计算结果 : \n";
+  msg+="        result = "+result+"\n";
+  alert(msg);
+}
+//计算当前步骤加和值
+function sum(m)
+{
+  if(m==0)
+    return 0;
+  else
+  {
+    msg+="        语句 : result = " +m+ "+sum(" +(m-2)+"); \n";
+    result=m+sum(m-2);
+  }
+  return result;
+}
+-->
+    </script>
+</head>
+<body>
+    <center>
+        <form>
+            <input type=button value="测试" onclick="Test()">
+        </form>
+    </center>
+</body>
+</html>
