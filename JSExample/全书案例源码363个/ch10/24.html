@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Êä³öÍ¬Ñ§ÐÕÃû</title>
+</head>
+<body>
+    <script>
+        function MyClass(x) {
+            this.x = x;
+        }
+        var proObj = new MyClass('x');
+        InheritClass.prototype = proObj;
+        MyClass.prototype.protox = 'xxx';
+        function InheritClass(y) {
+            this.y = y;
+        }
+        var obj = new InheritClass('Hello class');
+        MyClass.prototype.protox = 'ÁõÒàæÃ';
+        proObj.x = 'ÍôÒ»º­';
+        alert(obj.protox);
+        alert(obj.x);
+    </script>
+</body>
+</html>
