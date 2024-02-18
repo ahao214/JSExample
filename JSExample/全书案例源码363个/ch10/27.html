@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>制作伸缩两级菜单</title>
+    <style>
+        body {
+            background-color: #eed0e0;
+        }
+
+        #navigation {
+            width: 200px;
+            font-family: Arial;
+        }
+
+            #navigation > ul > li {
+                border-bottom: 1px solid #AD9F9F; /* 添加下划线 */
+            }
+
+                #navigation > ul > li > a {
+                    display: block;
+                    padding: 5px 5px 5px 0.5em;
+                    text-decoration: none;
+                    border-left: 12px solid #711111; /* 左边的粗边 */
+                }
+
+                    #navigation > ul > li > a:link, #navigation > ul > li > a:visited {
+                        background-color: #c11136;
+                        color: #FFFFFF;
+                    }
+
+                    #navigation > ul > li > a:hover { /* 鼠标经过时 */
+                        background-color: #880020; /* 改变背景色 */
+                        color: #ff0000; /* 改变文字颜色 */
+                    }
+
+        h1 {
+            color: red; /* 文字颜色*/
+            background-color: #49ff01; /* 背景色 */
+            text-align: center; /* 居中 */
+            padding: 20px; /* 边距 */
+        }
+
+        img {
+            float: left; /*居左*/
+            border: 2px #F00 solid; /*设置边框*/
+            margin: 5px; /*设置边距*/
+        }
+
+        #navigation ul li ul {
+            margin: 0px;
+            padding: 0px 0px 0px 0px;
+        }
+
+            #navigation ul li ul li {
+                border-top: 1px solid #ED9F9F;
+            }
+
+                #navigation ul li ul li a {
+                    display: block;
+                    padding: 3px 3px 3px 0.5em;
+                    text-decoration: none;
+                    border-left: 28px solid #a71f1f;
+                    border-right: 1px solid #711515;
+                }
+
+                    #navigation ul li ul li a:link, #navigation ul li ul li a:visited {
+                        background-color: #e85070;
+                        color: #FFFFFF;
+                    }
+
+                    #navigation ul li ul li a:hover {
+                        background-color: #c2425d;
+                        color: #ffff00;
+                    }
+
+            #navigation ul li ul.myHide { /* 隐藏子菜单 */
+                display: none;
+            }
+
+            #navigation ul li ul.myShow { /* 显示子菜单 */
+                display: block;
+            }
+    </style>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript">
+        function change() {
+            var SecondDiv = this.parentNode.getElementsByTagName("ul")[0];
+            if (SecondDiv.className == "myHide")  //通过CSS交替更换实现显隐
+                SecondDiv.className = "myShow";
+            else
+                SecondDiv.className = "myHide";
+        }
+        window.onload = function () {
+            var Ul = document.getElementById("listUL");
+            var aLi = Ul.childNodes;
+            var A;
+            for (var i = 0; i < aLi.length; i++) {
+                //如果子元素为li，且这个li有子菜单ul
+                if (aLi[i].tagName == "LI" && aLi[i].getElementsByTagName("ul").length) {
+                    A = aLi[i].firstChild;	//找到超链接
+                    A.onclick = change;	//动态添加点击函数
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="navigation">
+        <ul id="listUL">
+            <li>
+                <a href="#">个人中心</a>
+                <ul>
+                    <li><a href="#">个人资料</a></li>
+                    <li><a href="#">与我相关</a></li>
+                    <li><a href="#">好友动态</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">我的主页</a>
+                <ul>
+                    <li><a href="#">日志</a></li>
+                    <li><a href="#">相册</a></li>
+                    <li><a href="#">状态</a></li>
+                </ul>
+            </li>
+            <li><a href="#">留言板</a></li>
+            <li>
+                <a href="#">应用中心</a>
+                <ul>
+                    <li><a href="#">游戏</a></li>
+                    <li><a href="#">音乐</a></li>
+                </ul>
+            </li>
+            <li><a href="#">更多</a></li>
+        </ul>
+    </div>
+</body>
+</html>
