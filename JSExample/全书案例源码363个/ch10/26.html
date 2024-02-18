@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>回调函数的应用</title>
+</head>
+<body>
+    <script>
+        var emitter = {
+            // 为了能够注册多个回调函数而通过数组管理
+            callbacks: [],
+            // 回调函数的注册方法
+            register: function (fn) {
+                this.callbacks.push(fn);
+            },
+            // 事件的触发处理
+            onOpen: function () {
+                for (var f in this.callbacks) {
+                    this.callbacks[f]();
+                }
+            }
+        };
+        emitter.register(function () { alert("event handler1 is called"); })
+        emitter.register(function () { alert("event handler2 is called"); })
+        emitter.onOpen();
+        // "event handler1 is called"
+        // "event handler2 is called"
+    </script>
+</body>
+</html>
