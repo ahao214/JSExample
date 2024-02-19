@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>检查当前窗口的状态</title>
+    <script>
+        function check() {
+            if (window.top != window.self) {
+                document.write("<p>这个窗口不是最顶层窗口!我在一个框架?</p>")
+            }
+            else {
+                document.write("<p>这个窗口是最顶层窗口!</p>")
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="button" onclick="check()" value="检查窗口" />
+</body>
+</html>
