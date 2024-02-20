@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>弹出Hello信息提示框</title>
+
+</head>
+<body>
+    <p>单击[开始]按钮 3秒后弹出hello</p>
+    <button onclick="myFunction()">开始</button>
+
+    <script>
+        var myVar;
+        function myFunction() {
+            myVar = setTimeout(alertFunc, 3000);
+        }
+        function alertFunc() {
+            alert("hello!");
+        }
+    </script>
+</body>
+</html>
