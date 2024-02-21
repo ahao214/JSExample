@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Windows提示框</title>
+    <script>
+        window.alert("提示信息");
+        function showMsg(msg) {
+            if (msg == "简介") {
+                window.alert("提示信息：简介");
+            }
+            window.status = "显示本站的：" + msg;
+            return true;
+        }
+        window.defaultStatus = "欢迎光临本网站";
+    </script>
+</head>
+<body>
+    <form name="frmData" method="post" action="#">
+        <table width="400" align="center" border="1" cellspacing="0">
+            <thead>
+            <th colspan="3">在线购物网站</th>
+            </thead>
+            <SCRIPT LANGUAGE="JavaScript" type="text/javaScript">
+			<!--
+                window.alert("加载过程中的提示信息");
+                //-->
+            </SCRIPT>
+            <tr>
+                <td valign="top" width="200">
+                    <ul>
+                        <li>
+                            <a href="#" onmouseover="return showMsg('主页')">主页</a>
+                        </li>
+                        <li>
+                            <a href="#" onmouseover="return showMsg('简介')">简介</a>
+                        </li>
+                        <li>
+                            <a href="#" onmouseover="return showMsg('联系方式')">联系方式</a>
+                        </li>
+                        <li>
+                            <a href="#" onmouseover="return showMsg('业务介绍')">业务介绍</a>
+                        </li>
+                    </ul>
+                </td>
+                <td valign="top" width="300">
+                    上网购物是新的一种购物理念
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
