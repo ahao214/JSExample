@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>显示一个提示框，并输入内容</title>
+    <script>
+        function askGuru() {
+            var question = prompt("请输入数字？", "");
+            if (question != null) {
+                if (question == "") {
+                    alert("你还没有输入数字");
+                } else {
+                    alert("你输入的是数字哦！");
+                }
+            }
+        }
+    </script>
+
+
+</head>
+<body>
+    <div align="center">
+        <h1>显示一个提示框 并输入内容</h1>
+        <hr />
+        <br />
+        <form action="#" method="get">
+            <input type="button" value="确定" onclick="askGuru();" />
+        </form>
+    </div>
+</body>
+</html>
