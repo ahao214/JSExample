@@ -258,6 +258,7 @@
     <Content Include="全书案例源码363个\ch11\main.html" />
     <Content Include="全书案例源码363个\ch11\top.html" />
     <Content Include="全书案例源码363个\ch12\01.html" />
+    <Content Include="全书案例源码363个\ch12\02.html" />
     <Content Include="案例资源库\01按钮事件类案例\01页面刷新按钮.html" />
   </ItemGroup>
   <ItemGroup>
