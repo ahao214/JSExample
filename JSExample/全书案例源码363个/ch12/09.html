@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>添加两个单击事件</title>
+</head>
+<body>
+    <p>使用addEventListener()方法来向文档添加单击事件。</p>
+    <p>单击文档任意处。</p>
+    <script>
+        document.addEventListener("click", myFunction);
+        document.addEventListener("click", someOtherFunction);
+        function myFunction() {
+            alert("Hello World!")
+        }
+        function someOtherFunction() {
+            alert("Hello JavaScript!")
+        }
+    </script>
+</body>
+</html>
