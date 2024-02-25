@@ -1,0 +1,38 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <title>颜色属性</title>
+    <script language="JavaScript" type="text/javascript">
+        //设置文档的颜色显示
+        function SetColor() {
+            document.bgColor = "yellow";
+            document.fgColor = "green";
+            document.linkColor = "red";
+            document.alinkColor = "blue";
+            document.vlinkColor = "purple";
+        }
+        //改变文档的背景色为海蓝色
+        function ChangeColorOver() {
+            document.bgColor = "navy";
+            return;
+        }
+        //改变文档的背景色为黄色
+        function ChangeColorOut() {
+            document.bgColor = "yellow";
+            return;
+        }
+        //-->
+    </script>
+</head>
+<body onload="SetColor()">
+    <center>
+        <br>
+        <p>设置颜色</p>
+        <a href="个人主页.html">链接颜色</a>
+        <form name="MyForm3">
+            <input type="submit" name="MySure" value="动态背景色"
+                   onmouseover="ChangeColorOver()" onmouseOut="ChangeColorOut()">
+        </form>
+        <center>
+</body>
+</html>
