@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>动态标题栏</title>
+</head>
+<body>
+    <img src="02.jpg">
+    <script language="JavaScript">
+var n=0;
+function title(){
+	n++;
+    if (n==3) {n=1}
+    if (n==1) {document.title='☆★美丽风光★☆'}
+    if (n==2) {document.title='★☆个人主页☆★'}
+    setTimeout("title()",1000);
+}
+title();
+    </script>
+</body>
+</html>
