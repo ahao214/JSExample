@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>创建节点示例</title>
+    <script>
+        function createMessge() {
+            var op = document.createElement("p");
+            var otext = document.createTextNode("hellojs");
+            op.appendChild(otext);
+            document.body.appendChild(op);
+        }
+    </script>
+</head>
+<body onload="createMessage()">
+
+</body>
+</html>
