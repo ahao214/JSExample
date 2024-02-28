@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>创建节点</title>
+</head>
+<body>
+    <ul id="myList">
+        <li>
+            咖啡
+        </li>
+        <li>
+            红茶
+        </li>
+    </ul>
+    <p id="demo">
+        单击按钮将项目添加到列表中 从而创建一个节点
+    </p>
+    <button onclick="myFunction()">创建节点</button>
+    <script>
+        function myFunction() {
+            var node = document.createElement("LI");
+            var textnode = document.createTextNode("开水");
+            node.appendChild(textnode);
+            document.getElementById("myList").appendChild(node);
+        }
+    </script>
+    <p><strong>注意:</strong><br>首先创建一个节点，<br> 然后创建一个文本节点，<br>然后将文本节点添加到LI节点上。<br>最后将节点添加到列表中。</p>
+</body>
+</html>
