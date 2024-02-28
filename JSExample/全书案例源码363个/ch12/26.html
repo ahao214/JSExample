@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>插入节点</title>
+</head>
+<body>
+    <ul id="myList1"><li>咖啡</li><li>红茶</li></ul>
+    <ul id="myList2"><li>开水</li><li>牛奶</li></ul>
+    <p id="demo">单击该按钮将一个项目从一个列表移动到另一个列表，从而完成插入节点的操作</p>
+    <button onclick="myFunction()">插入节点</button>
+
+    <script>
+        function myFunction() {
+            var node = document.getElementById("myList2").lastChild;
+            var list = document.getElementById("myList1");
+            list.insertBefore(node, list.childNodes[0]);
+        }
+    </script>
+
+</body>
+</html>
