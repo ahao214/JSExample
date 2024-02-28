@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>文本节点示例</title>
+    <script>
+        function getNodeProperty() {
+            var d = document.getElementById("td")[0].firstChild;
+            alert(d.nodeType);
+            alert(d.nodeName);
+            alert(d.nodeValue);
+        }
+    </script>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td id="will" name="myname">Will</td>
+            <td id="smith">Smith</td>
+        </tr>
+    </table>
+    <br />
+    <input type="button" onclick="getNodeProperty()" value="点击获取文本节点属性值" />
+</body>
+</html>
