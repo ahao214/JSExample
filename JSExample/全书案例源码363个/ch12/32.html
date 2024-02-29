@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>className属性</title>
+    <style type="text/css">
+        .myUL1 {
+            Color: #0000FF;
+            Font-family: Arial;
+            Font-weight: bold;
+        }
+
+        .myUL2 {
+            Color: #FF0000;
+            Font-family: Georgia, "Times New Roman"Times,serif;
+            Font-size: large;
+        }
+    </style>
+    <script language="javascript">
+        function changeStyleClassName() {
+            var oMy = document.getElementsByTagName("ul")[0];
+            oMy.className = "myUL2";
+        }
+    </script>
+</head>
+<body>
+    <ul class="myUL1">
+        <li>旧时王谢堂前燕</li>
+        <li>飞入寻常百姓家</li>
+    </ul>
+    </br>
+    <input type="button" onclick="changeStyleClassName();" value="修改CSS样式" />
+</body>
+</html>
