@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>DOMCSS示例</title>
+    <script>
+        function changeStyle() {
+            document.getElementById("p2").style.color = "blue";
+            document.getElementById("p2").style.fontFamily = "Arial";
+            document.getElementById("p2").style.fontSize = "larger";
+        }
+    </script>
+</head>
+<body>
+    <p id="p1">一望二三里</p>
+    <p id="p2">烟村四五家</p>
+    <br />
+    <input type="button" onclick="changeStyle()" value="修改段落2样式" />
+</body>
+</html>
