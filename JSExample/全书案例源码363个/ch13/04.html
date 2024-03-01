@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>改变超链接文本颜色</title>
+    <script>
+        function myFunction(elmnt, clr) {
+            elmnt.style.color = clr;           
+        }
+    </script>
+</head>
+<body>
+    <p onmousedown="myFunction(this,'red')" onmouseup="myFunction(this,'green')">
+        <u>按下鼠标改变超链接文本颜色</u>
+    </p>
+</body>
+</html>
