@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>onkeyup事件应用示例</title>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("fname");
+            x.value = x.value.toUpperCase();
+        }
+    </script>
+</head>
+<body>
+    <p>当用户在输入字段释放一个按键时触发函数，该函数将字符转换为大写。</p>
+    请输入你的英文名字: <input type="text" id="fname" onkeyup="myFunction()">
+</body>
+</html>
