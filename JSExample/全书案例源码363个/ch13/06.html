@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>显示鼠标在页面中的当前位置</title>
+</head>
+<body>
+    <script language="javascript">
+        var x = 0, y = 0;
+        function MousePlace() {
+            x = window.event.x;
+            y = window.event.y;
+            window.status = "X: " + x + "  " + "Y: " + y;
+        }
+        document.onmousemove = MousePlace;
+    </script>
+    在状态栏中显示了鼠标在页面中的当前位置。
+</body>
+</html>
