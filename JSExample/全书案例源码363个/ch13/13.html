@@ -59,6 +59,28 @@
             </td>
         </tr>
     </table>
-
+    <script>
+        function AllReset() {
+            if (window.confirm("是否进行重置？"))
+                return true;
+            else
+                return false;
+        }
+        function AllSubmit() {
+            var T = true;
+            var e = window.event;
+            var obj = e.srcElement;
+            for (var i = 1; i <= 7; i++) {
+                if (eval("obj." + "txt" + i).value == "") {
+                    T = false;
+                    break;
+                }
+            }
+            if (!T) {
+                alert("提交信息不允许为空");
+            }
+            return T;
+        }
+    </script>
 </body>
 </html>
