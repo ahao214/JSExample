@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>用下拉列表框改变字体颜色</title>
+</head>
+<body>
+    <form name="form1" method="post" action="">
+        <input name="textfield" type="text" value="请选择字体颜色" />
+        <select name="menu1" onchange="Fcolor()">
+            <option value="black">黑色</option>
+            <option value="yellow">黄色</option>
+            <option value="red">红色</option>
+            <option value="purple">紫色</option>
+            <option value="blue">蓝色</option>
+            <option value="green">绿色</option>
+        </select>
+    </form>
+    <script>
+        function Fcolor() {
+            var e = window.event;
+            var obj = e.srcElement;
+            form1.textfield.style.color = obj.options[obj.selectedIndex].value;
+        }
+    </script>
+</body>
+</html>
