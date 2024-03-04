@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>表单提交的验证</title>
+</head>
+<body style="font-size:12px">
+    <table width="486" height="333" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+            <td align="center" valign="top">
+                <br>
+                <br>
+                <br>
+                <br>      <br>      <table width="86%" border="0" align="center" cellpadding="2" cellspacing="1" bgcolor="#6699CC">
+                    <form name="form1" onReset="return AllReset()" onsubmit="return AllSubmit()">
+                    <tr bgcolor="#FFFFFF">
+                        <td height="22" align="right">所属类别:</td>
+                        <td height="22" align="left">
+                            <select name="txt1" id="txt1">
+                                <option value="蔬菜水果">蔬菜水果</option>
+                                <option value="干果礼盒">干果礼盒</option>
+                                <option value="礼品工艺">礼品工艺</option>
+                            </select>
+                            <select name="txt2" id="txt2">
+                                <option value="西红柿">西红柿</option>
+                                <option value="红富士">红富士</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr bgcolor="#FFFFFF">
+                        <td height="22" align="right">商品名称:</td>
+                        <td height="22" align="left"><input name="txt3" type="text" id="txt3" size="30" maxlength="50"></td>
+                    </tr>
+                    <tr bgcolor="#FFFFFF">
+                        <td height="22" align="right">会员价:</td>
+                        <td height="22" align="left"><input name="txt4" type="text" id="txt4" size="10"></td>
+                    </tr>
+                    <tr bgcolor="#FFFFFF">
+                        <td height="22" align="right">提供厂商:</td>
+                        <td height="22" align="left"><input name="txt5" type="text" id="txt5" size="30" maxlength="50"></td>
+                    </tr>
+                    <tr bgcolor="#FFFFFF">
+                        <td height="22" align="right">商品简介:</td>
+                        <td height="22" align="left"><textarea name="txt6" cols="35" rows="4" id="txt6"></textarea></td>
+                    </tr>
+                    <tr bgcolor="#FFFFFF">
+                        <td height="22" align="right">商品数量:</td>
+                        <td height="22" align="left"><input name="txt7" type="text" id="txt7" size="10"></td>
+                    </tr>
+                    <tr bgcolor="#FFFFFF">
+                        <td height="22" colspan="2" align="center">
+                            <input name="sub" type="submit" id="sub2" value="提交">
+                            &nbsp;
+                            <input type="reset" name="Submit2" value="重 置">
+                        </td>
+                    </tr>
+                    </form>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>
