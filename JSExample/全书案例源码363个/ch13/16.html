@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>onpaste事件应用示例</title>
+</head>
+<body>
+    <input type="text" onpaste="myFunction()" value="尝试在此处粘贴文本" size="40">
+    <p id="demo"></p>
+    <script>
+        function myFunction() {
+            document.getElementById("demo").innerHTML = "你粘贴了文本!";
+        }
+    </script>
+</body>
+</html>
