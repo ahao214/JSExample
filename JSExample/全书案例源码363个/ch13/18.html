@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body onunload="pclose()">
+    <img src="01.jpg" name="img1" onload="blowup(this)" onmouseout="blowup()" onmouseover="reduce()" />
+    <script>
+        var h = img1.height;
+        var w = img1.width;
+        function blowup() {
+            if (img1.height >= h) {
+                img1.height = h - 100;
+                img1.width = w - 100;
+            }
+        }
+
+        function reduce() {
+            if (img1.height < h) {
+                img1.height = h;
+                img1.width = w;
+            }
+        }
+    </script>
+
+</body>
+</html>
