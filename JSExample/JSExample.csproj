@@ -313,10 +313,12 @@
     <Content Include="全书案例源码363个\ch13\18.html" />
     <Content Include="全书案例源码363个\ch13\19.html" />
     <Content Include="全书案例源码363个\ch13\20.html" />
+    <Content Include="全书案例源码363个\ch13\21.html" />
     <Content Include="全书案例源码363个\ch13\close.png" />
     <Content Include="全书案例源码363个\ch13\reg.gif" />
     <Content Include="全书案例源码363个\ch13\smiley.gif" />
     <Content Include="全书案例源码363个\ch13\top_03.jpg" />
+    <Content Include="前端开发入门\ch05\class03\13检测用户名和密码.html" />
     <Content Include="案例资源库\01按钮事件类案例\01页面刷新按钮.html" />
   </ItemGroup>
   <ItemGroup>
