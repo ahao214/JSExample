@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>设置下拉框中的选中项</title>
+</head>
+<body>
+    <input type="button" value="设置" id="btnSet" />
+    <select id="selCities">
+        <option value="1">北京</option>
+        <option value="2">上海</option>
+        <option value="3" selected="selected">广州</option>
+        <option value="4">深圳</option>
+        <option value="5">郑州</option>
+    </select>
+    <script>
+        //1.给按钮注册事件
+        var btnSet = document.getElementById('btnSet');
+        btnSet.onclick = function () {
+            //2.获取下拉框中的所有option
+            var selCities = document.getElementById('selCities');
+            var options = selCities.getElementsByTagName('option');
+            //3.随机生成索引
+            var randomIndex = parseInt(Math.random() * options.length);
+            //4.根据索引获取option,并让option选中
+            var option = options[randomIndex];
+            option.selected = true;
+        }
+        
+    </script>
+</body>
+</html>
