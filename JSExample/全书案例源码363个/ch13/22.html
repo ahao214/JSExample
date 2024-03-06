@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>通过匿名函数处理事件</title>
+</head>
+<body>
+    <p>
+        通过匿名函数处理事件
+    </p>
+    <form name="MyForm" id="MyForm">
+        <input type="button" name="MyButton" id="MyButton" value="测试" />
+
+    </form>
+
+    <script>
+        document.MyForm.MyButton.onclick = new Function(){
+            alert("已经单击该按钮");
+        }
+    </script>
+
+</body>
+</html>
