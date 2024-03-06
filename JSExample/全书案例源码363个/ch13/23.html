@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>通过使用鼠标变换图片</title>
+    <script>
+        function MyImageA() {
+            document.all.MyPic.src = "01.jpg";
+        }
+        function MyImageB() {
+            document.all.MyPic.src = "02.jpg";
+        }
+    </script>
+</head>
+<body>
+    <center>
+        <p>在图片内外移动鼠标，图片轮换</p>
+        <img name="MyPic" id="MyPic" src="01.jpg" width=300 height=200></img>
+        <script language="JavaScript" type="text/javascript">
+            document.all.MyPic.onmouseover = MyImageA;
+            document.all.MyPic.onmouseout = MyImageB;
+        </script>
+    </center>
+</body>
+</html>
