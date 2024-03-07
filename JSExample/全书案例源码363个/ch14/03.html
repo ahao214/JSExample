@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>m修饰符的应用示例</title>
+</head>
+<body>
+    <script>
+        var mutiline = /^abc/m;
+        var singleline = /^abc/;
+        var target = "ef\r\nabcd";
+        alert(mutiline.test(target));//true
+        alert(singleline.test(target));//false
+    </script>
+</body>
+</html>
