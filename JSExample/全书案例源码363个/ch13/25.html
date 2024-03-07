@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script type="text/javascript">
+        function badAD(html) {
+            var ad = document.body.appendChild(document.createElement('div'));
+            ad.style.cssText = "border:1px solid #000;background:#FFF;position:absolute;padding:4px 4px 4px 4px;font: 12px/1.5 verdana;";
+            ad.innerHTML = html || 'This is bad idea!';
+            var c = ad.appendChild(document.createElement('span'));
+            c.innerHTML = "¡Á";
+            c.style.cssText = "position:absolute;right:4px;top:2px;cursor:pointer";
+            c.onclick = function () {
+                document.onmousemove = null;
+                this.parentNode.style.left = '-99999px'
+            };
+            document.onmousemove = function (e) {
+                e = e || window.event;
+                var x = e.clientX, y = e.clientY;
+                setTimeout(function () {
+                    if (ad.hover) return;
+                    ad.style.left = x + 5 + 'px';
+                    ad.style.top = y + 5 + 'px';
+                }, 120)
+            }
+            ad.onmouseover = function () {
+                this.hover = true
+            };
+            ad.onmouseout = function () {
+                this.hover = false
+            }
+        }
+        badAD('<img src="smiley.gif">')
+    </script>
+</body>
+</html>
