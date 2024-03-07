@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>使用手工触发的方式处理事件</title>
+    <script language="JavaScript" type="text/javascript">
+        function MyTest() {
+            var msg = "通过不同的方式返回不同的结果：\n\n";
+            msg += "单击【测试】按钮,即可直接提交表单\n";
+            msg += "单击【确定】按钮,即可触发onsubmit()方法,然后才提交表单\n";
+            alert(msg);
+        }
+    </script>
+</head>
+<body>
+    <br>
+    <center>
+        <form name=MyForm1 id=MyForm1 onsubmit="MyTest()" method=post action="haapyt.asp">
+            <input type=button value="测试" onclick="document.all.MyForm1.submit();">
+            <input type=submit value="确定">
+    </center>
+</body>
+</html>
