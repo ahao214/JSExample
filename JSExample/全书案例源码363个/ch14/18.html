@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>创建RegExp对象</title>
+</head>
+<body>
+    <script language="JavaScript">
+      var myString="如何创建RegExp对象";
+      var myregex = new RegExp("创建");  				// 创建RegExp对象
+      if (myregex.test(myString)){
+           alert("已创建RegExp对象，并找到了指定的模式！");
+      }
+      else{
+           alert("已创建RegExp对象，但未找到匹配的模式。");
+      }
+    </script>
+</body>
+</html>
