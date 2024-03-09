@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>exec()方法应用示例</title>
+</head>
+<body>
+    <script>
+        var str = "Hello JavaScript!";
+        //查找"Hello"
+        var patt = /Hello/g;
+        var result = patt.exec(str);
+        document.write("返回值: " + result);
+        //查找 "JavaScript"
+        patt = /JavaScript/g;
+        result = patt.exec(str);
+        document.write("<br>返回值: " + result);
+    </script>
+</body>
+</html>
