@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>search()方法的应用示例</title>
+</head>
+<body>
+    <p id="demo">单击显示查找的位置</p>
+    <button onclick="myFunction()">查找</button>
+    <script>
+        function myFunction() {
+            var str = "Hello JavaScript!";
+            var n = str.search("JavaScript");
+            document.getElementById("demo").innerHTML = n;
+        }
+    </script>
+</body>
+</html>
