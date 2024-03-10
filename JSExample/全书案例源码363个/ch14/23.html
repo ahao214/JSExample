@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title> match()方法的应用示例</title>
+</head>
+<body>
+    <p id="demo">单击按钮显示匹配结果。</p>
+    <button onclick="myFunction()">显示</button>
+    <script>
+        function myFunction() {
+            var str = "I am a good BOY,but not boys";
+            var n = str.match(/boy/gi);
+            document.getElementById("demo").innerHTML = n;
+        }
+    </script>
+</body>
+</html>
