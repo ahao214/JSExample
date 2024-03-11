@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title> split()方法的应用示例</title>
+</head>
+<body>
+    <p id="demo">单击按钮显示分割后的数组</p>
+    <button onclick="myFunction()">显示</button>
+    <script>
+        function myFunction() {
+            var str = "How are you doing today?";
+            var n = str.split(" ", 3);
+            document.getElementById("demo").innerHTML = n;
+        }
+    </script>
+</body>
+</html>
