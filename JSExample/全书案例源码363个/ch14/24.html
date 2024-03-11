@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>replace()方法的应用示例</title>
+</head>
+<body>
+    <p>单击按钮将段落中所有“JavaScript”替换成“World”：</p>
+    <p id="demo">Hello JavaScript! Hello JavaScript! Hello JavaScript!</p>
+    <button onclick="myFunction()">替换</button>
+    <script>
+String.prototype.replaceAll = function(search, replacement) {
+    var target = this;
+    return target.replace(new RegExp(search, 'g'), replacement);
+};
+function myFunction() {
+	var str=document.getElementById("demo").innerHTML;
+	var n=str.replaceAll("JavaScript","World");
+	document.getElementById("demo").innerHTML=n;
+}
+    </script>
+</body>
+</html>
