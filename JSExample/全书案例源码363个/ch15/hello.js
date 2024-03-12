@@ -1,0 +1,1 @@
+﻿alert("欢迎大家学习JavaScript");
