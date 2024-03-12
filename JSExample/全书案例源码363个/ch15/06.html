@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>客户端JavaScript的简单应用</title>'
+    <script>
+        // 页面加载时执行的函数
+        function showEnter() {
+            alert("尊敬的客户，欢迎您光临本网站");
+        }
+        // 页面关闭时执行的函数
+        function showLeave() {
+            alert("欢迎下次光临");
+        }
+        //页面加载事件触发时调用函数
+        window.onload = showEnter;
+        //页面关闭载事件触发时调用函数
+        window.onbeforeunload = showLeave;
+    </script>
+</head>
+<body>
+
+</body>
+</html>
