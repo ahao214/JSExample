@@ -356,6 +356,7 @@
     <Content Include="全书案例源码363个\ch15\06.html" />
     <Content Include="全书案例源码363个\ch15\hello.js" />
     <Content Include="全书案例源码363个\ch16\制作网页版时钟.html" />
+    <Content Include="全书案例源码363个\ch17\01.html" />
     <Content Include="前端开发入门\ch05\class03\13检测用户名和密码.html" />
     <Content Include="前端开发入门\ch05\class03\14设置下拉框中的选中项.html" />
     <Content Include="前端开发入门\ch05\class03\15搜索文本框.html" />
@@ -374,9 +375,7 @@
     </None>
     <Content Include="全书案例源码363个\ch01\Chap1.1.html" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="全书案例源码363个\ch17\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
