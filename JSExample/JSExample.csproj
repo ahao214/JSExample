@@ -374,7 +374,9 @@
     </None>
     <Content Include="全书案例源码363个\ch01\Chap1.1.html" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="全书案例源码363个\ch17\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
