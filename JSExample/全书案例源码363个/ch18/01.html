@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<head>
+    <title>alert和document.write方法监视变量值</title>
+    <script type="text/javascript">
+        var a = ["bag", "bird", "egg", "bit", "cake"];
+        function show() {
+            var b = new Array("");
+            for (var i = 0; i < a.length; i++) {
+                if (a[i].indexOf("b") == 0)
+                    document.write(a[i] + " ");
+                b.push(a[i]);
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="检测数据" onclick="show()" />
+</body>
+</html>
