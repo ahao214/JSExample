@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>禁止新建IE窗口</title>
+    <script>
+        function keydown() {
+            if ((event.ctrlkey) && (event.keyCode == 78)) {
+                event.returnValue = false;
+                alert("当前设置不允许使用Ctrl+n新建IE窗口");
+            }
+        }
+    </script>
+</head>
+<body onkeydown="keydown()">
+    <img src="01.jpg" />
+</body>
+</html>
