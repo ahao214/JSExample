@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>屏蔽鼠标右键</title>
+    <script>
+        function click() {
+            event.returnValue = false;
+            alert("当前设置不允许使用右键！");
+        }
+        document.oncontextmenu = click;
+    </script>
+</head>
+<body>
+    <img src="01.jpg" />
+</body>
+</html>
