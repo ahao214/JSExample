@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>id选择器的应用</title>
+    <style>
+        div {
+            width: 90px;
+            height: 90px;
+            float: left;
+            padding: 5px;
+            margin: 5px;
+            background-color: #eee;
+        }
+    </style>
+    <script src="jquery.min.js">
+
+    </script>
+</head>
+
+<body>
+    <div id="notMe">
+        <p>
+            id="notMe"
+        </p>
+    </div>
+    <div id="myDiv">id="myDiv"</div>
+    <script>
+        $("myDiv").css("border", "3px solid red");
+    </script>
+</body>
+</html>
