@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery表格奇偶行异色</title>
+    <style>
+        <!--
+        .datalist {
+            border: 1px solid #007108; /* 表格边框 */
+            font-family: Arial;
+            border-collapse: collapse; /* 边框重叠 */
+            background-color: #d999dc; /* 表格背景色:紫色 */
+            font-size: 14px;
+        }
+
+            .datalist th {
+                border: 1px solid #007108; /* 行名称边框 */
+                background-color: #000000; /* 行名称背景色 ：黑色*/
+                color: #FFFFFF; /* 行名称颜色：白色 */
+                font-weight: bold;
+                padding-top: 4px;
+                padding-bottom: 4px;
+                padding-left: 12px;
+                padding-right: 12px;
+                text-align: center;
+            }
+
+            .datalist td {
+                border: 1px solid #007108; /* 单元格边框 */
+                text-align: left;
+                padding-top: 4px;
+                padding-bottom: 4px;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            .datalist tr.altrow {
+                background-color: #a5e5ff; /* 隔行变色:蓝色 */
+            }
+        -->
+    </style>
+    <script language="javascript" src="jquery.min.js">
+    </script>
+    <script language="javascript">
+        $(function () {
+            $("table.datalist tr:nth-child(odd)").addClass("altrow");
+        });
+    </script>
+</head>
+<body>
+    <table class="datalist" summary="list of members in EE Studay" id="Table">
+        <tr>
+            <th scope="col">姓名</th>
+            <th scope="col">性别</th>
+            <th scope="col">出生年月</th>
+            <th scope="col">移动电话</th>
+
+        </tr>
+        <tr>
+            <td>刘一诺</td>
+            <td>女</td>
+            <td>1984年10月20日</td>
+            <td>13112345678</td>
+        </tr>
+        <tr>
+            <td>李青莲</td>
+            <td>女</td>
+            <td>1990年2月5日</td>
+            <td>13012345678</td>
+        </tr>
+        <tr>
+            <td>王占青</td>
+            <td>男</td>
+            <td>1988年12月1日</td>
+            <td>13801234678</td>
+        </tr>
+        <tr>
+            <td>李飞翔</td>
+            <td>男</td>
+            <td>1998年5月12日</td>
+            <td>13312345678</td>
+        </tr>
+    </table>
+</body>
+</html>
