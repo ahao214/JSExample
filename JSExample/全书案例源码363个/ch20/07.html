@@ -3,8 +3,29 @@
 <head>
     <meta charset="utf-8" />
     <title>:first-child选择器的应用</title>
+    <style>
+        span {
+            color: #008;
+        }
+
+            span.sogreen {
+                color: green;
+                font-weight: bolder;
+            }
+    </style>
+    <script src=" jquery.min.js"></script>
 </head>
 <body>
+    <div>
+        <span>苹果</span>
+        <span>香蕉</span>
+        <span>梨子</span>
+    </div>
+    <div>
+        <span>西红柿</span>
+        <span>西兰花</span>
+        <span>小油菜</span>
+    </div>
     <script>
         $("div span:first-child")
             .css("text-decoration", "underline")
