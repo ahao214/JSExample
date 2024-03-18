@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>checked选择器的应用示例</title>
+    <style>
+        input, label {
+            line-height: 1.5em;
+        }
+    </style>
+    <script src="jquery.min.js"></script>
+</head>
+<body>
+    <form>
+        <div>
+            <input type="radio" name="fruit" value="橘子" id="orange">
+            <label for="orange">橘子</label>
+        </div>
+        <div>
+            <input type="radio" name="fruit" value="苹果" id="apple">
+            <label for="apple">苹果</label>
+        </div>
+        <div>
+            <input type="radio" name="fruit" value="香蕉" id="banana">
+            <label for="banana">香蕉</label>
+        </div>
+        <div id="log"></div>
+    </form>
+    <script>
+        $("input").on("click", function () {
+            $("#log").html($("input:checked").val() + "被选中!");
+        });
+    </script>
+
+</body>
+</html>
