@@ -3,8 +3,22 @@
 <head>
     <meta charset="utf-8" />
     <title>input选择器的应用示例</title>
+    <script src="jquery.min.js">
+    </script>
+    <script>
+        $(document).ready(function () {
+            $(":input").css("background-color", "green");
+        });
+    </script>
 </head>
 <body>
-
+    <form action="">
+        用户名: <input type="text" name="user"><br>
+        密码: <input type="password" name="password"><br>
+        <button type="button">注册</button>
+        <input type="button" value="清空"><br>
+        <input type="reset" value="重置">
+        <input type="submit" value="提交"><br>
+    </form>
 </body>
 </html>
