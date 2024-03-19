@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>设置图片宽度与高度</title>
+    <script src="jquery.min.js">
+
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("img").attr({ width: "250", height: "150" });
+            });
+        });
+    </script>
+</head>
+<body>
+    <img src="01.jpg" width="284" height="213" />
+    <br />
+    <button>设置图片宽度与高度</button>
+</body>
+</html>
