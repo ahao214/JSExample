@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>返回当前元素的值</title>
+    <script src="jquery.min.js">
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                alert($("input:text").val());
+            });
+        });
+    </script>
+</head>
+<body>
+    姓氏: <input type="text" name="fname" value="刘"><br>
+    名字: <input type="text" name="lname" value="天佑"><br><br>
+    <button>返回第一个输入字段的值</button>
+</body>
+</html>
