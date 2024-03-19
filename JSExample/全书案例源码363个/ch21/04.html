@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>设置HTML内容</title>
+    <script src="jquery.min.js">
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("p").html("Hello <b>jQuery!</b>");
+            });
+        });
+    </script>
+</head>
+<body>
+    <button>设置所有P元素的内容</button>
+    <p>清明时节雨纷纷，</p>
+    <p>路上行人欲断魂。</p>
+</body>
+</html>
