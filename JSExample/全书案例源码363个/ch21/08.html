@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script language="javascript" src="jquery.min.js"></script>
+    <script language="javascript">
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("p:first").addClass("one two");
+            });
+        });
+    </script>
+    <style type="text/css">
+        .one {
+            font-size: 120%;
+            color: blue;
+        }
+
+        .two {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <p>ÖìÈ¸ÇÅ±ßÒ°²Ý»¨£¬</p>
+    <p>ÎÚÒÂÏï¿ÚÏ¦ÑôÐ±¡£</p>
+    <button>ÏòµÚÒ»¸öpÔªËØÌí¼ÓÁ½¸öÀà</button>
+</body>
+</html>
+

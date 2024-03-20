@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>ÒÆ³ýCSSÀà±ð</title>
+    <script src="jquery.min.js">
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("p,h1").removeClass("head intro main");
+            });
+        });
+    </script>
+    <style type="text/css">
+        .head {
+            font-size: 2em;
+            color: green;
+        }
+
+        .intro {
+            font-size: 120%;
+            color: red;
+        }
+
+        .main {
+            font-size: 20px;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="head">´ºÏþ</h1>
+    <p class="intro">´ºÃß²»¾õÏþ£¬</p>
+    <p class="main">´¦´¦ÎÅÌäÄñ¡£</p>
+    <button>ÒÆ³ýÑ¡ÔñÔªËØµÄCSSÀà</button>
+</body>
+</html>
