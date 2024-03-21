@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>删除元素的所有子元素</title>
+    <script src="jquery.min.js">
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("div").empty();
+            });
+        });
+    </script>
+</head>
+<body>
+    <div style="height:100px;background-color:yellow">
+        div块中的内容。
+        <p> div块中的内容。</p>
+    </div>
+    <p>div块外部的内容。</p>
+    <button>删除div块中的内容</button>
+</body>
+</html>
