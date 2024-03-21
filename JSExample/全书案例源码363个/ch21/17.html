@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>replaceAll()方法应用示例</title>
+    <script src="jquery.min.js">
+
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("<span><b>Hello world!</b></span>").replaceAll("p:last");
+            });
+        });
+    </script>
+</head>
+<body>
+    <button>替换（replaceAll()方法）</button><br>
+    <p>孤帆远影碧空尽，</p>
+    <p>唯见长江天际流。</p>
+</body>
+</html>
