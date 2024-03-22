@@ -3,9 +3,35 @@
 <head>
     <meta charset="utf-8" />
     <title>hide()方法隐藏匹配元素</title>
+    <script src="jquery.min.js">
 
+    </script>
+    <script>
+        $(document).ready(function () {
+            $(".ex .hide").click(function () {
+                $(this).parents(".ex").hide("slow");
+            });
+        });
+    </script>
+    <style>
+        div.ex {
+            background-color: #e5eecc;
+            padding: 7px;
+            border: solid 1px #c3c3c3;
+        }
+    </style>
 </head>
 <body>
+    <h3>《清明》</h3>
+    <div class="ex">
+        <button class="hide">隐藏</button>
+        <p>
+            清明时节雨纷纷，<br>
+            路上行人欲断魂。<br>
+            借问酒家何处有，<br>
+            牧童遥指杏花村。<br>
+        </p>
+    </div>
 
 </body>
 </html>
