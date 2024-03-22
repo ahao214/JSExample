@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".flip").click(function () {
+                $(".panel").toggle("slow");
+            });
+        });
+    </script>
+    <style>
+        div.panel, p.flip {
+            padding: 5px;
+            text-align: center;
+            background: #e5ee99;
+            border: solid 1px #c3c3c3;
+        }
+    </style>
+</head>
+<body>
+    <div class="panel">
+        <p>春花秋月何时了，</p>
+        <p>往事知多少？</p>
+    </div>
+    <p class="flip">请点击这里</p>
+</body>
+</html>
