@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>显示匹配元素</title>
+    <script src="jquery.min.js">
+    </script>
+    <script>
+        $(document).ready(function () {
+            $(".btn1").click(function () {
+                $("p").hide();
+            });
+            $(".btn2").click(function () {
+                $("p").show();
+            });
+        });
+    </script>
+    <style type="text/css">
+        div.ex {
+            background-color: #e5eecc;
+            padding: 7px;
+            border: solid 1px #c3c3c3;
+        }
+    </style>
+</head>
+<body>
+    <h3>《清明》</h3>
+    <div class="ex">
+        <p>
+            清明时节雨纷纷，<br>
+            路上行人欲断魂。<br>
+            借问酒家何处有，<br>
+            牧童遥指杏花村。<br>
+        </p>
+    </div>
+    <button class="btn1">隐藏</button>
+    <button class="btn2">显示</button>
+</body>
+</html>
