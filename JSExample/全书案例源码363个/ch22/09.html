@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script language="javascript" src="jquery.min.js"></script>
+    <script language="javascript">
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("#div1").fadeTo("slow", 0.15);
+                $("#div2").fadeTo("slow", 0.4);
+                $("#div3").fadeTo("slow", 0.7);
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>观察不同参数的淡出效果</p>
+    <button>点击使矩形淡出</button>
+    <br><br>
+    <div id="div1" style="width:80px;height:80px;background-color:blue;"></div><br>
+    <div id="div2" style="width:80px;height:80px;background-color:blue;"></div><br>
+    <div id="div3" style="width:80px;height:80px;background-color:blue;"></div>
+</body>
+</html>
