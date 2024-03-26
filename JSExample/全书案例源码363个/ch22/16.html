@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html>
+<title>伸缩的导航条</title>
+<style type="text/css">
+    <!--
+    body {
+        padding: 0px;
+        margin: 0px;
+        background: url(bg3.jpg) no-repeat;
+    }
+
+    #wrapper {
+        min-height: 600px;
+    }
+
+    #navigation {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        margin: 0px;
+        padding: 0px;
+        width: 120px;
+        list-style: none;
+    }
+
+        #navigation li {
+            position: relative;
+            float: left;
+            margin: 0px;
+            padding: 0px;
+            height: 40px;
+            width: 120px;
+        }
+
+            #navigation li a {
+                position: absolute;
+                display: block;
+                top: 0px;
+                left: 0px;
+                height: 40px;
+                width: 120px;
+                line-height: 50px;
+                text-align: center;
+                color: #FFFFFF;
+            }
+
+        #navigation .n0 a {
+            background: #F50065;
+        }
+
+        #navigation .n1 a {
+            background: #D60059;
+        }
+
+        #navigation .n2 a {
+            background: #B0004A;
+        }
+
+        #navigation .n3 a {
+            background: #F26B00;
+        }
+
+        #navigation .n4 a {
+            background: #D75F00;
+        }
+
+        #navigation .n5 a {
+            background: #B24F00;
+        }
+
+        #navigation .n6 a {
+            background: #007f9f;
+        }
+
+        #navigation .n7 a {
+            background: #006b87;
+        }
+
+        #navigation .n8 a {
+            background: #005065;
+        }
+    -->
+</style>
+<script language="javascript" src="jquery.min.js"></script>
+<script language="javascript">
+    $(function () {
+        $('#navigation li').each(function () {
+            if (this.className.indexOf("current_page") == -1) {
+                $("a", this).css("left", "-120px");	//不是当前页的移动到页面左侧外
+                $(this).hover(function () {
+                    $("a", this).animate({ left: "0px" }, "slow");
+                }, function () {
+                    $("a", this).animate({ left: "-120px" }, "slow");
+                });
+            }
+        });
+    });
+</script>
+
+<body>
+    <div id="wrapper">
+        <ul id="navigation">
+            <li class="n0 current_page"><a href="#">主页</a></li>
+            <li class="n1"><a title="日志" href="#">日志</a></li>
+            <li class="n2"><a title="相册" href="#">相册</a></li>
+            <li class="n3"><a title="留言板" href="#">留言板</a></li>
+            <li class="n4"><a title="说说" href="#">说说</a></li>
+            <li class="n5"><a title="个人档" href="#">个人档</a></li>
+            <li class="n6"><a title="音乐" href="#">音乐</a></li>
+            <li class="n7"><a title="时光轴" href="#">时光轴</a></li>
+            <li class="n8"><a title="更多" href="#">更多</a></li>
+        </ul>
+    </div>
+</body>
+</html>
