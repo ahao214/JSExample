@@ -3,8 +3,20 @@
 <head>
     <meta charset="utf-8" />
     <title>键盘keydown和keyup事件</title>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("input").keydown(function () {
+                $("input").css("background-color", "red");
+            });
+            $("input").keyup(function () {
+                $("input").css("background-color", "yellow");
+            });
+        });
+    </script>
 </head>
 <body>
-
+    请输入内容 <input type="text" />
+    <p>当发生keydown和keyup事件时，输入域会改变颜色!!</p>
 </body>
 </html>
