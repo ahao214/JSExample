@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>select事件</title>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("input").select(function () {
+                $("input").after("输入域中的内容被选中!");
+            });
+        });
+    </script>
+
+</head>
+<body>
+    <input type="text" name="txtName" value="Hello jQuery!!!" />
+    <p>请选取输入域中的文本，看看会出现什么结果！</p>
+</body>
+</html>
