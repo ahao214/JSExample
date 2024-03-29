@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>hover()切换事件</title>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript">
+
+        $(function () {
+            $(".clsTitle").hover(function () {
+                $(".clsContent").show();
+            },
+                function () {
+                    $(".clsContent").hide();
+                })
+        })
+    </script>
+</head>
+<body>
+    <div class="clsTitle">《九月九日忆山东兄弟》</div>
+    <div class="clsContent">独在异乡为异客，每逢佳节倍思亲。遥知兄弟登高处，遍插茱萸少一人。</div>
+</body>
+</html>
