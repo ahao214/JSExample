@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>unbind()方法移除事件</title>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("p").click(function () {
+                $(this).slideToggle();
+            });
+            $("button").click(function () {
+                $("p").unbind();
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>清明时节雨纷纷，</p>
+    <p>路上行人欲断魂。</p>
+    <p>点击任意段落(p元素)，该段落就会消失。</p>
+    <button>移除所有段落(p元素)的事件句柄</button>
+</body>
+</html>
