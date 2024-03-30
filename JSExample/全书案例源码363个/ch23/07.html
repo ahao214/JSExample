@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>事件触发trigger()</title>
+    <script language="javascript" src="jquery.min.js"></script>
+    <script language="javascript">
+        function Counter(Span) {
+            var iNum = parseInt(Span.text());	//获取span中本身的值
+            Span.text(iNum + 1);		//点击次数加1
+        }
+        $(function () {
+            $("input:eq(0)").click(function () {
+                Counter($("span:first"));
+            });
+            $("input:eq(1)").click(function () {
+                Counter($("span:last"));
+                $("input:eq(0)").trigger("click");	//触发按钮1的点击事件
+            });
+        });
+    </script>
+</head>
+<body>
+    <input type="button" value="苹果">
+    <input type="button" value="橘子"><br><br>
+    <div>苹果点击次数：<span>0</span></div>
+    <div>橘子点击次数：<span>0</span></div>
+</body>
+</html>
