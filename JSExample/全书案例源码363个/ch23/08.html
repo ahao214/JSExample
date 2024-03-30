@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+        <!--
+        body {
+            padding: 0px;
+            margin: 10px 0px 0px 160px;
+            font-size: 12px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #FFFFFF;
+            background: #000000 no-repeat;
+        }
+
+            body > div {
+                margin: 5px;
+                padding: 0px;
+            }
+
+        div.detail {
+            display: none;
+            margin: 3px 0px 2px 15px;
+        }
+
+        div#totalPrice {
+            padding: 10px 0px 0px 280px;
+            margin-top: 15px;
+            width: 85px;
+            border-top: 1px solid #FFFFFF;
+        }
+
+        input {
+            font-size: 12px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+            input.quantity {
+                border: 1px solid #CCCCCC;
+                background: #3f1415;
+                color: #FFFFFF;
+                width: 15px;
+                text-align: center;
+                margin: 0px 0px 0px 210px
+            }
+        -->
+    </style>
+
+    <script language="javascript" src="jquery.min.js"></script>
+    <script type="text/javascript">
+        function addTotal() {
+            //计算总价格的函数
+            var fTotal = 0;
+            //对于选中了的复选项进行遍历
+            $(":checkbox:checked").each(function () {
+                //获取每一个的数量
+                var iNum = parseInt($(this).parent().find("input[type=text]").val());
+                //获取每一个的单价
+                var fPrice = parseFloat($(this).parent().find("span[price]").attr("price"));
+                fTotal += iNum * fPrice;
+            });
+            $("#totalPrice").html("合计￥" + fTotal + "元");
+        }
+        $(function () {
+            $(":checkbox").click(function () {
+                var bChecked = this.checked;
+                //如果选中则显示子菜单
+                $(this).parent().find(".detail").css("display", bChecked ? "block" : "none");
+                $(this).parent().find("input[type=text]")
+                    //每次改变选中状态，都将值重置为1，触发change事件，重新计算价格
+                    .attr("disabled", !bChecked).val(1).change()
+                    .each(function () {
+                        if (bChecked) this.focus();
+                    });
+            });
+            $("span[price] input[type=text]").change(function () {
+                //根据单价和数量计算价格
+                $(this).parent().find("span").text($(this).val() * $(this).parent().attr
+                    ("price"));
+                addTotal();	//计算总价格
+            });
+            //加载页面完全后，统一设置输入文本框
+            $("span[price] input[type=text]")
+                .attr({
+                    "disabled": true,//文本框为禁用
+                    "value": "1",	//表示份数为1
+                    "maxlength": "2"	//不能超多100份（包括100）
+                }).change();			//触发change事件，让span都显示出价格
+        });
+    </script>
+</head>
+<body>
+    <div>
+        1. <input type="checkbox" id="zhushi"><label for="zhushi">汉堡</label>
+        <span price="5"><input type="text" class="quantity"> ￥<span></span>元</span>
+        <div class="detail">
+            <label><input type="radio" name="hanbao" checked="checked">牛肉堡</label>
+            <label><input type="radio" name="hanbao">超级鸡腿堡</label>
+            <label><input type="radio" name="hanbao">香辣鸡腿堡</label>
+            <label><input type="radio" name="hanbao">至珍七虾堡</label>
+        </div>
+    </div>
+    <div>
+        2. <input type="checkbox" id="xiaoshi"><label for="xiaoshi">小食</label>
+        <span price="3"><input type="text" class="quantity"> ￥<span></span>元</span>
+        <div class="detail">
+            <label><input type="radio" name="xiaoshi" checked="checked">薯条</label>
+            <label><input type="radio" name="xiaoshi">甜甜圈</label>
+            <label><input type="radio" name="xiaoshi">布丁</label>
+        </div>
+    </div>
+    <div>
+        3. <input type="checkbox" id="HunCaiCheck"><label for="HunCaiCheck">肉类</label>
+        <span price="4"><input type="text" class="quantity"> ￥<span></span>元</span>
+        <div class="detail">
+            <label><input type="radio" name="HunCai" checked="checked" />炸鸡腿</label>
+            <label><input type="radio" name="HunCai">炸鸡翅</label>
+            <label><input type="radio" name="HunCai">奥尔良烤鸡翅</label>
+            <label><input type="radio" name="HunCai">鸡米花</label>
+        </div>
+    </div>
+    <div>
+        4. <input type="checkbox" id="SoupCheck"><label for="SoupCheck">饮品</label>
+        <span price="3"><input type="text" class="quantity"> ￥<span></span>元</span>
+        <div class="detail">
+            <label><input type="radio" name="Soup" checked="checked" />可乐</label>
+            <label><input type="radio" name="Soup">橙汁</label>
+            <label><input type="radio" name="Soup">咖啡</label>
+            <label><input type="radio" name="Soup">牛奶</label>
+        </div>
+    </div>
+    <div id="totalPrice"></div>
+</body>
+</html>
+
