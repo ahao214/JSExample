@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>异步连接服务器</title>
+    <script language="javascript">
+        var xmlhttp;
+        function createXMLHttpRequest() {
+            if (window.ActiveXObject)
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            else if (window.XMLHttpRequest)
+                xmlhttp = new XMLHttpRequest();
+        }
+        function HandleStateChange() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                alert("服务器返回的结果为：" + xmlhttp.responseText);
+            }
+        }
+        function test() {
+            createXMLHttpRequest();
+            xmlhttp.open("GET", "Chap24.1.aspx", true);
+            HandleStateChange();
+            xmlhttp.onreadystatechange = HandleStateChange();
+            xmlhttp.send(null);
+
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="测试是否连接成功" onClick="test()" />
+</body>
+</html>
