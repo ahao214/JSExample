@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<list>
+  <caption>Score List</caption>
+  <student>
+    <id>001</id>
+    <name>张三</name>
+    <Chinese>80</Chinese>
+    <Maths>85</Maths>
+    <English>92</English>
+  </student>
+  <student>
+    <id>002</id>
+    <name>李四</name>
+    <Chinese>86</Chinese>
+    <Maths>91</Maths>
+    <English>80</English>
+  </student>
+  <student>
+    <id>003</id>
+    <name>王五</name>
+    <Chinese>77</Chinese>
+    <Maths>89</Maths>
+    <English>79</English>
+  </student>
+  <student>
+    <id>004</id>
+    <name>赵六</name>
+    <Chinese>95</Chinese>
+    <Maths>81</Maths>
+    <English>88</English>
+  </student>
+</list>
