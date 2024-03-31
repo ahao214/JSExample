@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<head>
+    <title>GET和POST模式</title>
+    <script language="javascript">
+        var xmlhttp;
+        var username;// = document.getElementById("username").value;
+        function createXMLHttpRequest() {
+            //if(window.ActiveXObject)
+            //    xmlhttp= new ActiveXObject("Microsoft.XMLHTTP");
+            //else if (window.XMLHttpRequest)
+            //    xmlhttp= new XMLHttpRequest();
+
+
+            if (window.XMLHttpRequest) {
+                //code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp = new XMLHttpRequest();
+            } else {
+                //code for IE5, IE6
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+        }
+        //使用GET方式发送数据
+        function doRequest_GET() {
+            createXMLHttpRequest();
+            username = document.getElementById("username").value;
+            var url = " Chap10.2.aspx?username=" + encodeURIComponent(username);
+
+            xmlhttp.onreadystatechange = function () {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                    alert("服务器返回的结果为：" + decodeURIComponent(xmlhttp.responseText));
+                }
+            }
+
+            xmlhttp.open("GET", url);
+            xmlhttp.send(null);
+        }
+        //使用POST方式发送数据
+        function doRequest_POST() {
+            createXMLHttpRequest();
+            username = document.getElementById("username").value;
+            var url = " Chap24.2.aspx?";
+            var queryString = encodeURI("username=" + encodeURIComponent(username));
+            xmlhttp.open("POST", url, true);
+            xmlhttp.onreadystatechange = function () {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                    alert("服务器返回的结果为：" + decodeURIComponent(xmlhttp.responseText));
+                }
+            }
+            xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xmlhttp.send(queryString);
+        }
+    </script>
+</head>
+<body>
+    <form>
+        用户名：
+        <input type="text" id="username" name="username" />
+        <input type="button" id="btn_GET" value="GET发送" onclick="doRequest_GET();" />
+        <input type="button" id="btn_POST" value="POST发送" onclick="doRequest_POST();" />
+    </form>
+</body>
+</html>
+
