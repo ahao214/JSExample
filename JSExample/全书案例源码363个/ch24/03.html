@@ -3,9 +3,77 @@
 <head>
     <meta charset="utf-8" />
     <title>服务器返回XML</title>
+    <script>
+        var xmlhttp;
+        function createXMLHttpRequest() {
+            if (window.XMLHttpRequest) {
+                xmlhttp = new XMLHttpRequest();
+            } else {
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+        }
 
+        function getXML(xmlUrl) {
+            var url = xmlUrl + "?timestamp=" + new Data();
+            createXMLHttpRequest();
+            xmlhttp.onreadystatechange = HandleStateChange;
+            xmlhttp.open("GET", url);
+            xmlhttp.send(null);
+        }
+
+        function HandleStateChange() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                DrawTable(xmlhttp, responseXML);
+            }
+        }
+
+
+        function DrawTable(myXML) {
+            var objStudents = myXML.getElementsByTagName(student);
+            var objStudent = "", stuID = "", stuName = "", stuChinese = "", stuMaths = "", stuEnglish = "";
+            for (var i = 0; i < objStudents.length; i++) {
+                objStudent = objStudent[i];
+                stuID = objStudent.getElementsByTagName("id")[0].firstChild.nodeValue;
+                stuName = objStudent.getElementsByTagName("name")[0].firstChild.nodeValue;
+                stuChinese = objStudent.getElementsByTagName("Chinese")[0].firstChild.nodeValue;
+                stuMaths = objStudent.getElementsByTagName("Maths")[0].firstChild.nodeValue;
+                stuEnglish = objStudent.getElementsByTagName("English")[0].firstChild.nodeValue;
+                addRow(stuID, stuName, StuChinese, stuMaths, stuEnglish);
+            }
+        }
+
+        function addRow(stuID, stuName, stuChinese, stuMaths, stuEnglish) {
+            var objTable = document.getElementById("score");
+            var objRow = objTable.insertRow(objTable.rows.length);
+            var stuInfo = new Array();
+            stuInfo[0] = document.createTextNode(stuID);
+            stuInfo[1] = document.createTextNode(stuName);
+            stuInfo[2] = document.createTextNode(stuChinese);
+            stuInfo[3] = document.createTextNode(stuMaths);
+            stuInfo[4] = document.createTextNode(stuEnglish);
+            for (var i = 0; i < stuInfo.length; i++) {
+                var objColumn = objRow.insertCell(i);
+                objColumn.appendChild(stuInfo[i]);
+            }
+        }
+    </script>
 </head>
 <body>
-
+    <form>
+        <p>
+            <input type="button" id="btn" value="获取XML文档" onclick="getXML(03.xml);" />
+        </p>
+        <p>
+            <table id="score">
+                <tr>
+                    <th>学号</th>
+                    <th>姓名</th>
+                    <th>语文</th>
+                    <th>数学</th>
+                    <th>英语</th>
+                </tr>
+            </table>
+        </p>
+    </form>
 </body>
 </html>
