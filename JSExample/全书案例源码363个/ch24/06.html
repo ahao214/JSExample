@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="jquery.min.js">
+
+    </script>
+    <script>
+        $(document).ready(function () {
+            var is_loaded = false;
+            $("#button1").click(function () {
+                $.getScript("06.js", function (response, status) {
+                    if (status == 'success') {
+                        $('#div1').html('<h2>脚本文件成功载入</h2>');
+                        is_loaded = true;
+                    }
+                    else {
+                        $('#div1').html('<h2>脚本文件载入失败</h2>');
+                    }
+                });
+            });
+
+            $("#button2").click(function () {
+                if (is_loaded) {
+                    function2();
+                }
+                else {
+                    alert('脚本文件未载入');
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <button id="button1" type="button">载入外部脚本文件</button>
+    <button id="button2" type="button">调用所载入脚本文件中的函数</button>
+    <div id="div1"><h2>文件未载入</h2></div>
+</body>
+</html>
