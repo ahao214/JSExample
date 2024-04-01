@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html ">
+<html>
+<head>
+    <title>多个异步对象请求示例</title>
+    <script language="javascript">
+
+        function createQueryString(oText) {
+            var sInput = document.getElementById(oText).value;
+            var queryString = "oText=" + sInput;
+            return queryString;
+        }
+        function getData(oServer, oText, oSpan) {
+            var xmlhttp;   //处理为局部变量
+            if (window.XMLHttpRequest) {
+                //code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp = new XMLHttpRequest();
+            } else {
+                //code for IE5, IE6
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+
+            var queryString = oServer + "?";
+            queryString += createQueryString(oText) + "&timestamp=" + new Date().getTime();
+            xmlhttp.onreadystatechange = function () {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                    var responseSpan = document.getElementById(oSpan);
+                    responseSpan.innerHTML = xmlhttp.responseText;
+                    delete xmlhttp;  //收到返回结果后手动删除
+                    xmlhttp = null;
+                }
+            }
+            xmlhttp.open("GET", queryString);
+            xmlhttp.send(null);
+        }
+        function test() {
+            //同时发送两个不同的异步请求
+            getData('Chap24.4.aspx', 'first', 'firstSpan');
+            getData('Chap24.4.aspx', 'second', 'secondSpan');
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        first: <input type="text" id="first">
+        <span id="firstSpan"></span>
+        <br>
+        second: <input type="text" id="second">
+        <span id="secondSpan"></span>
+        <br>
+        <input type="button" value="发送" onclick="test()">
+    </form>
+</body>
+</html>
