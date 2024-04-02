@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>serialize()序列化表单</title>
+    <script language="javascript" src="jquery.min.js"></script>
+    <script language="javascript">
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                alert($("#form1").serialize());
+            });
+        });
+    </script>
+</head>
+<body>
+    <form id="form1">
+        <div><input type="text" name="username" value="abc" id="usr" /></div>
+        <div><input type="password" name="password" value="123" id="psw" /></div>
+        <div>
+            <select name="career">
+                <option value="student" selected="selected">student</option>
+                <option value="teacher">teacher</option>
+                <option value="doctor">doctor</option>
+            </select>
+        </div>
+        <div>
+            <input id="btn1" value="查看序列化结果" type="button" />
+        </div>
+    </form>
+</body>
+</html>
