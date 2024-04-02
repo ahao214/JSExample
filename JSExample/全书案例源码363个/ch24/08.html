@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>$.post()请求数据</title>
+    <script src="jquery.min.js"></script>
+    <script>
+        function createQueryString() {
+            var username = encodeURI($("#username").val());
+            //组合成键/值对集合的形式
+            var queryString = { username: username };
+            return queryString;
+        }
+        function doRequest_POST() {
+            $.post("Chap24.8.aspx", createQueryString(),
+                function (data) {
+                    $("#div1").html(decodeURI(data));
+                }
+            );
+        }
+    </script>
+
+</head>
+<body>
+    <form>
+        用户名<input type="text" id="username" />
+        <input type="button" value="POST获取数据" onclick="doRequest_POST();" />
+    </form>
+    <div id="div1"></div>
+</body>
+</html>
