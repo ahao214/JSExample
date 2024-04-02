@@ -445,6 +445,7 @@
     <Content Include="全书案例源码363个\ch24\08.html" />
     <Content Include="全书案例源码363个\ch24\09.html" />
     <Content Include="全书案例源码363个\ch24\10.html" />
+    <Content Include="全书案例源码363个\ch24\11.html" />
     <Content Include="全书案例源码363个\ch24\jquery.min.js" />
     <Content Include="全书案例源码363个\ch24\load.txt" />
     <Content Include="前端开发入门\ch05\class03\13检测用户名和密码.html" />
@@ -466,7 +467,9 @@
     <Content Include="全书案例源码363个\ch01\Chap1.1.html" />
     <Content Include="全书案例源码363个\ch24\05.json" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="全书案例源码363个\ch25\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

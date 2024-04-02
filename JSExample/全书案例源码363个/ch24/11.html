@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>可自动校验的表单</title>
+    <script language="javascript">
+        var xmlhttp;
+        function createXMLHttpRequest() {
+            if (window.XMLHttpRequest) {
+                //code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp = new XMLHttpRequest();
+            } else {
+                //code for IE5, IE6
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+        }
+        function show(result) {
+            var objSpan = document.getElementById("check_usr");
+            objSpan.innerHTML = result;
+            //如果用户名已存在，提示信息显示为红色
+            if (result.indexOf("sorry") >= 0)
+                objSpan.style.color = "red";
+            //如果用户名不存在，提示信息显示为黑色
+            else
+                objSpan.style.color = "black";
+        }
+        function ifNull(objText) {
+            //文本框为空的话返回并给出提示信息
+            if (!objText.value) {
+                objText.focus();
+                document.getElementById("check_usr").innerHTML = "用户名不能为空";
+                return;
+            }
+            //创建异步请求
+            createXMLHttpRequest();
+            var url = "Chap10.7.aspx?username=" + objText.value + "&timestamp=" + new Date().getTime();
+            xmlhttp.open("GET", url, true);
+            xmlhttp.onreadystatechange = function () {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
+                    show(xmlhttp.responseText);
+            }
+            xmlhttp.send(null);
+        }
+    </script>
+
+</head>
+<body>
+    <form name="reg_Form">
+        <table>
+            <tr>
+                <td>用户名:</td>
+                <td><input type="text" onblur="ifNull(this)" name="username"></td>
+                <td><span id="check_usr"></span></td>
+            </tr>
+            <tr>
+                <td>密码:</td>
+                <td><input type="password" name="password1"></td>
+            </tr>
+            <tr>
+                <td>确认密码:</td>
+                <td><input type="password" name="password2"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="注册">
+                    <input type="reset" value="重置">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
