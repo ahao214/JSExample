@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>$.get()请求数据</title>
+    <script language="javascript" src="jquery.min.js"></script>
+    <script language="javascript">
+        function createQueryString() {
+            var username = encodeURI($("#username").val());
+            //组合成键/值对集合的形式
+            var queryString = { username: username };
+            return queryString;
+        }
+        function doRequest_GET() {
+            $.get("Chap24.7.aspx", createQueryString(),
+                function (data) {
+                    $("#div1").html(decodeURI(data));
+                }
+            );
+        }
+    </script>
+</head>
+<body>
+    <form>
+        用户名<input type="text" id="username" />
+        <input type="button" value="GET获取数据" onclick="doRequest_GET();" />
+    </form>
+    <div id="div1"></div>
+</body>
+</html>
