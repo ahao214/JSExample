@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>ajaxstart与ajaxstop全局事件</title>
+    <script language="javascript" src="jquery.min.js"></script>
+    <script type="text/javascript">
+
+        function createQueryString() {
+            var username = encodeURI($("#username").val());
+            //组合成键/值对集合的形式
+            var queryString = { username: username };
+            return queryString;
+        };
+        $(document).ready(function () {
+            $("#div1").ajaxStart(function () {
+                $(this).show();
+            });
+            $("#div1").ajaxStop(function () {
+                $(this).hide();
+            });
+        });
+        function doClick() {
+            $.get("Chap24.10.aspx", createQueryString(),
+                function (data) {
+                    $("#div2").html(decodeURI(data));
+                });
+        };
+    </script>
+</head>
+<body>
+    <form>
+        <input type="text" id="username" value="abc" />
+        <input type="button" id="btn1" value="测试加载" onclick="doClick();" />
+        <div id="div1" style="display:none">加载中...</div>
+        <div id="div2"></div>
+    </form>
+</body>
+</html>
+
