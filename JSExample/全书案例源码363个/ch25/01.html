@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style type="text/css">
+        .block {
+            border: 2px solid #760022;
+            background-color: #ffb5bb;
+            width: 80px;
+            height: 25px;
+            margin: 5px;
+            float: left;
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+    </style>
+    <script src="jquery-1.2.4a.js"></script>
+    <script src="ui.base.min.js"></script>
+    <script src="ui.draggable.min.js"></script>
+    <script>
+        $(function () {
+            for (var i = 0; i < 4; i++) {
+                $(document.body).append($("<div class='block'>ÍÏ¿é" + i.toString() + "</div>").css("opacity", 0.6));
+            }
+            $(".block").draggable();
+        })
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>
