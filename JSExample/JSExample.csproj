@@ -458,6 +458,7 @@
     <Content Include="全书案例源码363个\ch25\ui.draggable.min.js" />
     <Content Include="全书案例源码363个\ch25\ui.droppable.min.js" />
     <Content Include="全书案例源码363个\ch25\ui.sortable.min.js" />
+    <Content Include="全书案例源码363个\ch26\css\main.css" />
     <Content Include="全书案例源码363个\ch26\image\background_1.png" />
     <Content Include="全书案例源码363个\ch26\image\boom.png" />
     <Content Include="全书案例源码363个\ch26\image\bullet1.png" />
@@ -473,6 +474,7 @@
     <Content Include="全书案例源码363个\ch26\image\我的飞机.gif" />
     <Content Include="全书案例源码363个\ch26\image\本方飞机爆炸.gif" />
     <Content Include="全书案例源码363个\ch26\image\飞机爆炸.gif" />
+    <Content Include="全书案例源码363个\ch26\js\main.js" />
     <Content Include="前端开发入门\ch05\class03\13检测用户名和密码.html" />
     <Content Include="前端开发入门\ch05\class03\14设置下拉框中的选中项.html" />
     <Content Include="前端开发入门\ch05\class03\15搜索文本框.html" />
