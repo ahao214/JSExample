@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>droppable()</title>
+    <style type="text/css">
+        <!--
+        .draggable {
+            width: 70px;
+            height: 40px;
+            border: 2px solid;
+            padding: 10px;
+            margin: 5px;
+            text-align: center;
+        }
+
+        .green {
+            background-color: #73d216;
+            border-color: #4e9a06;
+        }
+
+        .red {
+            background-color: #ef2929;
+            border-color: #cc0000;
+        }
+
+        .droppable {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            width: 400px;
+            height: 300px;
+            background-color: #b3a233;
+            border: 3px double #c17d11;
+            padding: 5px;
+            text-align: center;
+        }
+        -->
+    </style>
+    <script language="javascript" src="jquery-1.2.4a.js"></script>
+    <script language="javascript" src="ui.base.min.js"></script>
+    <script language="javascript" src="ui.draggable.min.js"></script>
+    <script language="javascript" src="ui.droppable.min.js"></script>
+    <script language="javascript">
+$(function(){
+	$(".draggable").draggable({helper:"clone"});
+	$("#droppable-accept").droppable({
+		accept: function(draggable){
+			return $(draggable).hasClass("green");
+		},
+		drop: function(){
+			$(this).append($("<div></div>").html("接收一次!"));
+		}
+	});
+});
+    </script>
+</head>
+<body>
+    <div class="draggable red">draggable red</div>
+    <div class="draggable green">draggable green</div>
+    <div id="droppable-accept" class="droppable">购物车<br></div>
+</body>
+</html>
