@@ -494,6 +494,7 @@
     </None>
     <Content Include="全书案例源码363个\ch01\Chap1.1.html" />
     <Content Include="全书案例源码363个\ch24\05.json" />
+    <Content Include="全书案例源码363个\ch27\data\getJsonData.json" />
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>

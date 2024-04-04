@@ -1,0 +1,119 @@
+{
+  "users": [
+    {
+      "name": "zhangsan",
+      "id": "10001",
+      "pwd": "a12345",
+      "balance": "1000000",
+      "riskLevel": "1",
+      "tran_pwd":"111111",
+      "haveFinances":null,
+      "personalOrCompany":"0",
+      "sex":"b"
+    },
+    {
+      "name": "zl",
+      "id": "10002",
+      "pwd": "zlzlzl",
+      "balance": "5000000",
+      "riskLevel": "2",
+      "tran_pwd":"222222",
+      "haveFinances":null,
+      "personalOrCompany":"1",
+      "sex":"g"
+    },
+    {
+      "name": "zcl",
+      "id": "10003",
+      "pwd": "zcl",
+      "balance": "5000000",
+      "riskLevel": "3",
+      "tran_pwd":"333333",
+      "haveFinances":null,
+      "personalOrCompany":"1",
+      "sex":"b"
+    }
+  ],
+  "finances": [
+    {
+      "prd_name": "稳赚一号",
+      "prd_code": "9856",
+      "prd_qgje": "50000",
+      "prd_yqnhsyl": "5.70%",
+      "prd_riskLevel": "1",
+      "prd_kssj": "2017-10-10",
+      "prd_sqsyl": "5.00%",
+      "prd_qmgmrs": "560",
+      "prd_tzlb": "个人投资/企业投资",
+      "prd_bz": "人民币",
+      "prd_tzqx": "一年",
+      "prd_rgsx": "250000",
+      "prd_AMT":"2000000",
+      "prd_jssj":"2018-10-10"
+    },
+    {
+      "prd_name": "稳赚二号",
+      "prd_code": "98561",
+      "prd_qgje": "60000",
+      "prd_yqnhsyl": "5.60%",
+      "prd_riskLevel": "1",
+      "prd_kssj": "2017-12-10",
+      "prd_sqsyl": "5.00%",
+      "prd_qmgmrs": "560",
+      "prd_tzlb": "个人投资",
+      "prd_bz": "人民币",
+      "prd_tzqx": "一个月",
+      "prd_rgsx": "250000",
+      "prd_AMT":"2000000",
+      "prd_jssj":"2018-10-10"
+    },
+    {
+      "prd_name": "盆满钵满1号",
+      "prd_code": "98562",
+      "prd_qgje": "100000",
+      "prd_yqnhsyl": "8.60%",
+      "prd_riskLevel": "2",
+      "prd_kssj": "2017-10-10",
+      "prd_sqsyl": "5.00%",
+      "prd_qmgmrs": "990",
+      "prd_tzlb": "企业投资",
+      "prd_bz": "人民币",
+      "prd_tzqx": "一个月",
+      "prd_rgsx": "250000",
+      "prd_AMT":"2000000",
+      "prd_jssj":"2018-10-10"
+    },
+    {
+      "prd_name": "盆满钵满2号",
+      "prd_code": "985633",
+      "prd_qgje": "200000",
+      "prd_yqnhsyl": "15.60%",
+      "prd_riskLevel": "3",
+      "prd_kssj": "2017-10-10",
+      "prd_sqsyl": "5.00%",
+      "prd_qmgmrs": "50",
+      "prd_tzlb": "个人投资",
+      "prd_bz": "人民币",
+      "prd_tzqx": "一年",
+      "prd_rgsx": "500000",
+      "prd_AMT":"2000000",
+      "prd_jssj":"2018-10-10"
+    },
+    {
+      "prd_name": "投机高收益",
+      "prd_code": "9856111",
+      "prd_qgje": "500000",
+      "prd_yqnhsyl": "25.60%",
+      "prd_riskLevel": "3",
+      "prd_kssj": "2017-10-10",
+      "prd_sqsyl": "5.00%",
+      "prd_qmgmrs": "560",
+      "prd_tzlb": "个人投资/企业投资",
+      "prd_bz": "人民币",
+      "prd_tzqx": "一年",
+      "prd_rgsx": "2500000",
+      "prd_AMT":"2000000",
+      "prd_jssj":"2018-10-10"
+    }
+  ]
+}
