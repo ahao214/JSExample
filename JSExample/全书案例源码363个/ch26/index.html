@@ -1,0 +1,65 @@
+﻿<html>
+<head>
+    <title></title>
+    <meta http-equiv="content" content="text/html" charset="utf-8" />
+    <!-- 背景样式 -->
+    <!-- 引入CSS -->
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+</head>
+
+<body>
+
+    <!-- 主体div  -->
+
+    <div id="mysteryDiv">
+
+        <!-- 首页  -->
+        <div id="mysteryHomeDiv">
+            <!-- 开始按钮 的点击事件  -->
+            <button onclick="startGame()">开始游戏</button>
+        </div>
+
+        <!-- 游戏界面的div -->
+        <div id="gameDiv">
+
+            <!-- 得分的div -->
+            <div id="scoreDiv">
+                <label>得分：</label>
+                <!-- 设置初始得分  -->
+                <label id="initialScore">0</label>
+            </div>
+
+            <!-- 暂停-->
+            <div id="pauseDiv">
+
+                <button>继续</button><br />
+
+                <button>结束游戏</button>
+
+            </div>
+
+            <!-- 结束的div -->
+
+            <div id="endDiv">
+
+                <!-- 最终的分数  -->
+                <p class="lastScore">飞机大战分数</p>
+
+                <p id="mysteryPlanScoreText">0</p>
+
+                <!-- 再玩一次 -->
+
+                <div><button onclick="tryAgain()">再玩一次</button></div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 引入js -->
+
+    <script type="text/javascript" src="js/main.js"></script>
+
+</body>
+
+</html>
