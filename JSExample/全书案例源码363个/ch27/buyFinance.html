@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>理财购买</title>
+    <link type="text/css" rel="stylesheet" href="css/finance.css" />
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/Util.js"></script>
+    <script src="js/coreSystemCheck.js"></script>
+</head>
+<body>
+    <div class="bg-color myPrdDiv1">
+        <h1>理财购买</h1>
+        <marquee class="marqueeStyle">
+            <h2 class="h2Style">
+                尊敬的<span id="user_name"></span><span id="user_sex"></span>欢迎您购买该产品，您当前账户余额为：<span id="user_balance"></span>元，账户类型为<span id="user_zhlx"></span>，请保证账户余额高于产品起购金额方能购买成功！
+            </h2>
+        </marquee>
+
+        <div class="headDiv">
+            <div><span>产品名称：</span><span id="prd_name"></span></div>
+            <div class="paddingTop-10"><span>产品代码：</span><span id="prd_code"></span></div>
+            <p>
+                <label for="buyNum">购买份额</label>
+                <input id="buyNum" name="buyNum" type="text">
+            </p>
+            <p>
+                <label for="pwd">交易密码</label>
+                <input id="pwd" name="pwd" type="password">
+            </p>
+            <div class="buyButton">
+                <button type="submit" onclick="checkAll()">确认购买</button>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        /*
+         * 页面初始化加载页面数据
+         * */
+        $(document).ready(function () {
+            var sessionData = strToJson(window.localStorage.getItem("sessionData"));
+            var idcard = window.localStorage.getItem("id_card");
+            var prd_code = window.localStorage.getItem("prd_code");
+            $.each(sessionData.finances, function (i, value) {
+                if (value.prd_code == prd_code) {
+                    $("#prd_name").text(value.prd_name);
+                    $("#prd_code").text(prd_code);
+                }
+            });
+            $.each(sessionData.users, function (i, value) {
+                if (value.id == idcard) {
+                    $("#user_name").text(value.name);
+                    if (value.sex == "g") {
+                        $("#user_sex").text("女士");
+                    } else {
+                        $("#user_sex").text("先生");
+                    }
+                    $("#user_balance").text(fmtMoney(value.balance));
+                    if (value.personalOrCompany == "0") {
+                        $("#user_zhlx").text("个人账户");
+                    } else if (value.personalOrCompany == "1") {
+                        $("#user_zhlx").text("企业账户");
+                    }
+                }
+            });
+        });
+        /*
+         * 提交交易按钮时校验金额密码非空、校验风险等级、校验账户类型、校验余额信息、校验认购上限、校验起购金额、校验产品余额、校验登录密码、执行交易并进行缓存数据修改
+         * */
+        function checkAll() {
+            var buyNUm = $("#buyNum").val();
+            var tranPwd = $("#pwd").val();
+            var accountType = $("#user_zhlx").text();
+            if (buyNUm == null || buyNUm == "" || buyNUm == "undefined" || buyNUm == "0") {
+                alert("请输入购买金额，购买金额必须大于0！");
+                return
+            }
+            if (tranPwd == null || tranPwd == "" || tranPwd == "undefined") {
+                alert("交易密码不能为空！");
+                return
+            }
+            if (checkRiskLevel()) {
+                if (checkAccountType(accountType)) {
+                    if (checkSelfMoney(buyNUm)) {
+                        if (checkRGXE(buyNUm)) {
+                            if (checkQGJE(buyNUm)) {
+                                if (checkPrdBalance(buyNUm)) {
+                                    if (checkTranPwd(tranPwd)) {
+                                        doTran(buyNUm);
+                                    } else {
+                                        alert("交易密码错误，请重新输入");
+                                    }
+                                } else {
+                                    alert("该产品所剩额度已不足，请适当减少购买份额！");
+                                }
+                            } else {
+                                alert("个人/企业账户单次购买金额不能低于起购金额，请重新输入购买份额！")
+                            }
+                        } else {
+                            alert("个人/企业账户持有份额总数不能超过认购限额，请重新输入购买份额！")
+                        }
+                    } else {
+                        alert("您的余额不足，请重新输入购买份额！")
+                    }
+                } else {
+                    alert("该产品不支持当前账户类型！");
+                }
+            }
+            else {
+                alert("您的风险等级低于该产品风险等级，请进入风险评估功能重新评估!")
+            }
+        }
+    </script>
+</body>
+</html>
