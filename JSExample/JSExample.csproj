@@ -478,6 +478,8 @@
     <Content Include="全书案例源码363个\ch26\js\main.js" />
     <Content Include="全书案例源码363个\ch27\buyFinance.html" />
     <Content Include="全书案例源码363个\ch27\css\finance.css" />
+    <Content Include="全书案例源码363个\ch27\financeDetail.html" />
+    <Content Include="全书案例源码363个\ch27\financeList.html" />
     <Content Include="全书案例源码363个\ch27\js\coreSystemCheck.js" />
     <Content Include="全书案例源码363个\ch27\js\echarts.min.js" />
     <Content Include="全书案例源码363个\ch27\js\echarts_common.js" />
