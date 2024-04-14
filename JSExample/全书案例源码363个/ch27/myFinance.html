@@ -35,6 +35,74 @@
     }
 </style>
 <body>
+    <h1>我的理财产品</h1>
+    <div class="myPrdDiv1">
+        <div id="form">
+        </div>
+    </div>
+
+    <script>
+        /*
+         * 页面初始化 加载我的产品列表
+         * */
+        $(document).ready(function () {
+            var idcard = window.localStorage.getItem("id_card");
+            var sessionData = strToJson(window.localStorage.getItem("sessionData"));
+            var str = "";
+            var detailArr = new Array();
+            $("#form").empty();
+            $.each(sessionData.users, function (i, value) {
+                console.log("id  " + value.id)
+                console.log("idcard   " + idcard)
+                if (idcard == value.id) {
+                    if (sessionData.users[i].haveFinances != null) {
+                        $.each(sessionData.users[i].haveFinances, function (i1, value1) {
+                            $.each(sessionData.finances, function (i2, value2) {
+                                if (value1.finance.prd_code == value2.prd_code) {
+                                    detailArr[0] = value2.prd_name;
+                                    detailArr[1] = value2.prd_code;
+                                    detailArr[2] = value1.finance.hasNum;
+                                    detailArr[3] = value2.prd_AMT;
+                                    detailArr[4] = value2.prd_jssj;
+                                    str += '<div class="border" onclick="showMyfinanceDetail(\'' + value2.prd_code + '\',\'' + detailArr + '\')">' +
+                                        '<div class="inline">' +
+                                        '<div>' + value2.prd_name + '</div>' +
+                                        '<div>' +
+                                        '<label>预期年利率:</label>' +
+                                        '<span>' + value2.prd_yqnhsyl + '</span>' +
+                                        '</div>' +
+                                        '<div>' +
+                                        '<label>持有份额:</label>' +
+                                        '<span>' + value1.finance.hasNum + '</span>' +
+                                        '</div>' +
+                                        '</div>' +
+                                        '<div class="arrow-right"></div>' +
+                                        '</div>'
+                                }
+                            });
+                        });
+                    } else {
+                        $("#form").empty();
+                        $("#form").html("<b>您没有持有的理财商品，可前往理财产产品列表选购！</b>");
+                    }
+                }
+            });
+            if (str == "") {
+                $("#form").empty();
+                $("#form").html("<b>您没有持有的理财产品，可前往“购买理财产品功能”进行选购！</b>");
+            } else {
+                $("#form").append(str);
+            }
+        });
+        /*
+         * 跳转至持有理财产品详情页面
+         * */
+        function showMyfinanceDetail(val, detailArr) {
+            window.localStorage.setItem("prd_code", val);
+            window.localStorage.setItem("detailArr", detailArr);
+            window.location.href = "myFinanceDetail.html";
+        }
+    </script>
 
 </body>
 </html>
