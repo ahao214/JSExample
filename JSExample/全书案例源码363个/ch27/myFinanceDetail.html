@@ -11,6 +11,87 @@
 
 </head>
 <body>
+    <h1>持有（<span id="title_id"></span>）产品明细</h1>
+    <div class="myPrdDiv2 bg-color">
+        <div class="padding-10">
+            <div class="myPrdDiv3">
+                <div class="padding-10">
+                    <div class="padding-top-10">
+                        <span>产品名称：</span>
+                        <span id="prd_name"></span>
+                    </div>
+                    <div class="padding-top-10">
+                        <span>产品代码：</span>
+                        <span id="prd_code"></span>
+                    </div>
+                    <div class="padding-top-10">
+                        <span>持有份额：</span>
+                        <span id="prd_hadBuy"></span>
+                    </div>
+                    <div class="padding-top-10">
+                        <span>产品剩余份额：</span>
+                        <span id="prd_amt"></span>
+                    </div>
+                    <div class="padding-top-10">
+                        <span>募集期结束时间：</span>
+                        <span id="jssj"></span>
+                    </div>
+                </div>
+            </div>
+            <div id="zxt2" class="echars-zxt"></div>
+            <div style="padding-left:42%;">
+                <button type="submit" onclick="addThisFinance()" class="myfinanceButton">继续增加持有份额</button>
+            </div>
+        </div>
+    </div>
 
+    <script>
+        /*
+        * 页面初始化 加载产品详情
+        * */
+        $(document).ready(function () {
+            var detailArr = (window.localStorage.getItem("detailArr")).split(',')
+            for (var i = 0; i < detailArr.length; i++) {
+                $("#prd_name").text(detailArr[0]);
+                $("#title_id").text(detailArr[0]);
+                $("#prd_code").text(detailArr[1]);
+                $("#prd_hadBuy").text(detailArr[2]);
+                $("#prd_amt").text(detailArr[3]);
+                $("#jssj").text(detailArr[4]);
+            }
+        });
+        /*
+        * 加载静态echars折线图
+        * */
+        $(function () {
+            var data = new Date();
+            var month = data.getMonth() + 1;
+            var ckTransactionAmount = echarts.init(document.getElementById('zxt2'));
+            var ckAmountData = {
+                "seriesData": {
+                    "近六月收益率 单位（%）": [4.23, 4.53, 5.21, 5.03, 6.23, 5.87],
+                    "近六月预期收益率 单位（%）": [3.25, 4.00, 5.56, 4.88, 6.24, 5.86]
+                },
+                "gtitle": ["近六月收益率 单位（%）", "近六月预期收益率 单位（%）"],
+                "legend": [getMonth(month, 6), getMonth(month, 5), getMonth(month, 4), getMonth(month, 3), getMonth(month, 2), getMonth(month, 1)]
+            };
+            //var titleText = "存款交易金额";
+            var type = "line";
+            if (type == "") {
+                type = "bar";
+            }
+            drawBarChart(ckTransactionAmount, ckAmountData, type, "收益率对比");
+
+            window.onresize = function () {
+                ckTransactionAmount.resize();
+            }
+        });
+        /*
+        * 增持该产品
+        * */
+        function addThisFinance() {
+            window.location.href = "buyFinance.html";
+        }
+    </script>
 </body>
 </html>
