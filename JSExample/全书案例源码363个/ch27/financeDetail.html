@@ -28,5 +28,59 @@
 
 <body>
 
+    <h1>理财列表页面</h1>
+    <table class="tableList myPrdDiv1">
+        <thead class="tableList_head">
+            <tr>
+                <td>产品名称</td>
+                <td>预期年化收益率</td>
+                <td>起购金额</td>
+                <td>风险等级</td>
+                <td>开市日期</td>
+                <td>查看详情/购买</td>
+            </tr>
+        </thead>
+        <tbody id="financeList">
+        </tbody>
+    </table>
+</body>
+<script>
+    /*
+    * 页面初始化 加载所有产品的列表
+    * */
+    $(document).ready(function () {
+        var sessionData = strToJson(window.localStorage.getItem("sessionData"));
+        var str = "";
+        var riskType = ""
+        $.each(sessionData.finances, function (i, value) {
+            if (value.prd_riskLevel == "1") {
+                riskType = '<td>稳健型</td>'
+            } else if (value.prd_riskLevel == "2") {
+                riskType = '<td>平衡型</td>'
+            } else if (value.prd_riskLevel == "3") {
+                riskType = '<td>增长型</td>'
+            } else {
+                riskType = '<td>无</td>'
+            }
+            str += '<tr>' +
+                '<td>' + value.prd_name + '</td>' +
+                '<td>' + value.prd_yqnhsyl + '</td>' +
+                '<td>' + fmtMoney(value.prd_qgje) + '</td>' +
+                riskType +
+                '<td>' + value.prd_kssj + '</td>' +
+                '<td><a style="color: blue" onclick="qeuryFinanceDetail(' + value.prd_code + ')">点我购买</a></td>' +
+                '</tr>'
+        });
+        $("#financeList").append(str);
+    });
+    /*
+    * 点击 “点我购买” 跳转至下一个页面
+    * */
+    function qeuryFinanceDetail(val) {
+        window.localStorage.setItem("prd_code", val);
+        window.location.href = "financeDetail.html";
+    }
+</script>
+
 </body>
 </html>
