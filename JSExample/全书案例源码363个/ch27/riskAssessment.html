@@ -12,5 +12,73 @@
 </head>
 <body>
 
+    <h1 style="width: 100%;text-align: center">欢迎进行风险评估！</h1>
+
+    <div class="myPrdDiv1 bg-color">
+        <div>
+            <div class="quest">
+                <div class="text-item border-b">Q1.您的年龄是？</div>
+                <div>
+                    <div class="option" data-value="1">18-25</div>
+                    <div class="option" data-value="2">26-50</div>
+                    <div class="option" data-value="3">51-60</div>
+                    <div class="option" data-value="4">61-64</div>
+                    <div class="option" data-value="5">高于65岁（含）</div>
+                </div>
+            </div>
+            <div class="quest">
+                <div class="text-item border-b">Q2.您的家庭总资产净值（折合人民币）？</div>
+                <div>
+                    <div class="option" data-value="1">15万元以下</div>
+                    <div class="option" data-value="2">十五万元（不含）-50万元（含）</div>
+                    <div class="option" data-value="3">50万元（不含）-100万元（含）</div>
+                    <div class="option" data-value="4">100万元（不含）-1000万元（含）</div>
+                    <div class="option" data-value="5">1000万元（不含）</div>
+                </div>
+            </div>
+            <div class="quest">
+                <div class="text-item border-b">Q3.在您的家庭总资产净值中，可用于金融投资（储蓄存款除外）的比例为？</div>
+                <div>
+                    <div class="option" data-value="1">小于10%</div>
+                    <div class="option" data-value="2">10%至25%</div>
+                    <div class="option" data-value="3">25%至50%</div>
+                    <div class="option" data-value="4">大于50%</div>
+                </div>
+            </div>
+            <div class="quest">
+                <div class="text-item border-b">Q4.以下哪项能说明您的投资经验？</div>
+                <div>
+                    <div class="option" data-value="1">除存款、国债外，我几乎不投资其他金融产品</div>
+                    <div class="option" data-value="2">大部分投资于存款、国债等，较少投资于股票、基金等风险产品</div>
+                    <div class="option" data-value="3">资产均衡地分布于存款、国债、银行理财产品、信托产品等</div>
+                    <div class="option" data-value="4">大部分投资于股票，较少投资于存款</div>
+                </div>
+            </div>
+            <div class="quest">
+                <div class="text-item border-b">Q5.您有多少年投资股票、基金等风险投资品的经验？</div>
+                <div>
+                    <div class="option" data-value="1">没有经验</div>
+                    <div class="option" data-value="2">有经验，但少于2年</div>
+                    <div class="option" data-value="3">2至5年</div>
+                    <div class="option" data-value="4">5至8年</div>
+                    <div class="option" data-value="5">8年以上</div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="next-btn margin-top">
+        <button onclick="getRiskRes(this)">提交</button>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $(".option").on("click", function () {
+                $(this).addClass("checked").siblings("div").removeClass("checked");
+            })
+        })
+    </script>
+
 </body>
 </html>
