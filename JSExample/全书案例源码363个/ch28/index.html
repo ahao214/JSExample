@@ -1,0 +1,71 @@
+﻿<!doctype html>
+<html>
+<head>
+    <title>我的菜谱</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        var i = 0;
+        var img = new Array("piece1.jpg", "piece2.jpg", "piece3.jpg");
+        var msg = new Array("“西红柿炒鸡蛋”－又名番茄炒蛋，是许多百姓家庭中一道普通的大众菜肴。烹调方法简单易学，营养搭配合理。",
+            "“酸辣土豆丝”－是一道人见人爱的家常菜，制作原料有土豆、辣椒、白醋等。",
+            "“红烧狮子头”－汉族特色名菜，是中国逢年过节常吃的一道菜，也称四喜丸子。");
+        function prev() {
+            i--;
+            if (i < 0) { i = 2; }
+            $("#roleimg").attr("src", img[i]);
+            $("#rolemsg").text(msg[i]);
+        }
+        function next() {
+            i++;
+            if (i > 2) { i = 0; }
+            $("#roleimg").attr("src", img[i]);
+            $("#rolemsg").text(msg[i]);
+        }
+    </script>
+</head>
+<body>
+    <div data-role="page" id="home">
+        <div data-role="header" data-position="fixed">
+            <h1>好逗菜谱</h1>
+        </div>
+        <div data-role="content">
+            <img src="piece.jpg" width="100%">
+            <a href="#story" data-rel="dialog" data-role="button" data-icon="arrow-r">川味菜系</a>
+            <a href="#role" data-role="button" data-icon="arrow-r">家常菜系</a>
+            <a href="#jiangnan" data-rel="external" data-role="button" data-icon="arrow-r">江南风味</a>
+        </div>
+
+    </div>
+
+    <div data-role="page" id="story">
+        <div data-role="header">
+            <h1>菜系介绍</h1>
+        </div>
+        <div data-role="content">
+            <p>川菜作为中国汉族传统的四大菜系之一、中国八大菜系之一，取材广泛，调味多变，菜式多样，口味清鲜醇浓并重，以善用麻辣调味著称。</p>
+        </div>
+    </div>
+
+    <div data-role="page" id="role">
+        <div data-role="header">
+            <h1>菜谱介绍</h1>
+        </div>
+        <div data-role="content">
+            <img id="roleimg" src="piece1.jpg" width="100%">
+            <p id="rolemsg">“西红柿炒鸡蛋”－又名番茄炒蛋，是许多百姓家庭中一道普通的大众菜肴。烹调方法简单易学，营养搭配合理。</p>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#home" class="ui-btn-active ui-state-persist">回首页</a></li>
+                    <li><a href="javascript:prev();">上一个</a></li>
+                    <li><a href="javascript:next();">下一个</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
