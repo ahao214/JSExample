@@ -510,6 +510,7 @@
     <Content Include="全书案例源码363个\ch31\css\main.css" />
     <Content Include="全书案例源码363个\ch31\index.html" />
     <Content Include="全书案例源码363个\ch31\js\main.js" />
+    <Content Include="全书案例源码363个\ch32\css\style.css" />
     <Content Include="全书案例源码363个\ch32\images\gobottom.gif" />
     <Content Include="全书案例源码363个\ch32\images\gobottom2.gif" />
     <Content Include="全书案例源码363个\ch32\images\gotop.gif" />
@@ -530,6 +531,7 @@
     <Content Include="全书案例源码363个\ch32\images\img07s.jpg" />
     <Content Include="全书案例源码363个\ch32\images\img08.jpg" />
     <Content Include="全书案例源码363个\ch32\images\img08s.jpg" />
+    <Content Include="全书案例源码363个\ch32\index.html" />
     <Content Include="前端开发入门\ch05\class03\13检测用户名和密码.html" />
     <Content Include="前端开发入门\ch05\class03\14设置下拉框中的选中项.html" />
     <Content Include="前端开发入门\ch05\class03\15搜索文本框.html" />
@@ -551,7 +553,6 @@
     <Content Include="全书案例源码363个\ch27\data\getJsonData.json" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="全书案例源码363个\ch32\css\" />
     <Folder Include="全书案例源码363个\ch32\js\" />
   </ItemGroup>
   <PropertyGroup>

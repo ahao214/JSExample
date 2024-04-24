@@ -1,0 +1,189 @@
+﻿*, *:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background: -webkit-linear-gradient(45deg, #228B22 0%, rgba(225, 5, 34, 0) 70%), -webkit-linear-gradient(315deg, #8DEEEE 10%, rgba(49, 5, 209, 0) 80%), -webkit-linear-gradient(225deg, #5D478B 10%, rgba(10, 219, 216, 0) 80%), -webkit-linear-gradient(135deg, #00688B 100%, rgba(9, 245, 5, 0) 70%);
+    background: linear-gradient(45deg, #228B22 0%, rgba(225, 5, 34, 0) 70%), linear-gradient(135deg, #8DEEEE 10%, rgba(49, 5, 209, 0) 80%), linear-gradient(225deg, #5D478B 10%, rgba(10, 219, 216, 0) 80%), linear-gradient(315deg, #00688B 100%, rgba(9, 245, 5, 0) 70%);
+}
+
+.absolute-center, .menu, .menu .btn .fa, .menu .btn.target .line {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.menu {
+    width: 5em;
+    height: 5em;
+}
+
+    .menu .btn {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.15);
+        opacity: 0;
+        z-index: -10;
+        cursor: pointer;
+        -webkit-transition: opacity 1s, z-index 0.3s, -webkit-transform 1s;
+        transition: opacity 1s, z-index 0.3s, -webkit-transform 1s;
+        transition: opacity 1s, z-index 0.3s, transform 1s;
+        transition: opacity 1s, z-index 0.3s, transform 1s, -webkit-transform 1s;
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+        .menu .btn .fa {
+            font-size: 1em;
+            -webkit-transition: color 0.3s;
+            transition: color 0.3s;
+        }
+
+        .menu .btn:hover .fa {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .menu .btn.target {
+            opacity: 1;
+            z-index: 100;
+            cursor: pointer;
+            -webkit-transition: -webkit-transform 0.3s;
+            transition: -webkit-transform 0.3s;
+            transition: transform 0.3s;
+            transition: transform 0.3s, -webkit-transform 0.3s;
+        }
+
+            .menu .btn.target:hover {
+                -webkit-transform: scale(1.2);
+                transform: scale(1.2);
+            }
+
+                .menu .btn.target:hover .line {
+                    background-color: rgba(255, 255, 255, 0.7);
+                }
+
+                    .menu .btn.target:hover .line:before, .menu .btn.target:hover .line:after {
+                        background-color: rgba(255, 255, 255, 0.7);
+                    }
+
+            .menu .btn.target .line {
+                width: 60%;
+                height: 6px;
+                background: #000;
+                border-radius: 6px;
+                -webkit-transition: background-color 0.3s, height 0.3s, top 0.3s;
+                transition: background-color 0.3s, height 0.3s, top 0.3s;
+            }
+
+                .menu .btn.target .line:before, .menu .btn.target .line:after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    width: 100%;
+                    height: 6px;
+                    background: #000;
+                    border-radius: 6px;
+                    -webkit-transition: background-color 0.3s, -webkit-transform 0.3s;
+                    transition: background-color 0.3s, -webkit-transform 0.3s;
+                    transition: background-color 0.3s, transform 0.3s;
+                    transition: background-color 0.3s, transform 0.3s, -webkit-transform 0.3s;
+                }
+
+                .menu .btn.target .line:before {
+                    top: -12px;
+                    -webkit-transform-origin: 15% 100%;
+                    transform-origin: 15% 100%;
+                }
+
+                .menu .btn.target .line:after {
+                    top: 12px;
+                    -webkit-transform-origin: 25% 30%;
+                    transform-origin: 25% 30%;
+                }
+
+    .menu .rotater {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+    }
+
+    .menu.active .btn-icon {
+        opacity: 1;
+        z-index: 50;
+    }
+
+    .menu.active .target .line {
+        height: 0px;
+        top: 45%;
+    }
+
+        .menu.active .target .line:before {
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+            width: 110%;
+        }
+
+        .menu.active .target .line:after {
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            width: 110%;
+        }
+
+<!-- 确定菜单栏的数量和位置 -->
+.rotater:nth-child(1) {
+    -webkit-transform: rotate(-0deg);
+    transform: rotate(-0deg);
+}
+
+.menu.active .rotater:nth-child(1) .btn-icon {
+    -webkit-transform: translateY(-10em) rotate(0deg);
+    transform: translateY(-10em) rotate(0deg);
+}
+
+.rotater:nth-child(2) {
+    -webkit-transform: rotate(120deg);
+    transform: rotate(120deg);
+}
+
+.menu.active .rotater:nth-child(2) .btn-icon {
+    -webkit-transform: translateY(-10em) rotate(-120deg);
+    transform: translateY(-10em) rotate(-120deg);
+}
+
+.rotater:nth-child(3) {
+    -webkit-transform: rotate(240deg);
+    transform: rotate(240deg);
+}
+
+.menu.active .rotater:nth-child(3) .btn-icon {
+    -webkit-transform: translateY(-10em) rotate(-240deg);
+    transform: translateY(-10em) rotate(-240deg);
+}
+
+.rotater:nth-child(4) {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+
+.menu.active .rotater:nth-child(4) .btn-icon {
+    -webkit-transform: translateY(-10em) rotate(-360deg);
+    transform: translateY(-10em) rotate(-360deg);
+}
