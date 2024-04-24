@@ -3,10 +3,41 @@
 <head>
     <meta charset="utf-8" />
     <title>首页</title>
-
+    <link rel="stylesheet" href="css/style.css" />
 
 </head>
 <body>
+    <div class="menu">
+        <div class="btn target">
+            <span class="line"></span>
+        </div>
+        <div class="rotater">
+            <div class="btn btn-icon" onclick="goTo('elephant.html');">
+                <i class="fa">大象</i>
+            </div>
+        </div>
+        <div class="rotater">
+            <div class="btn btn-icon" onclick="goTo('lunbo.html');">
+                <i class="fa">轮播</i>
+            </div>
+        </div>
+        <div class="rotater">
+            <div class="btn btn-icon" onclick="goTo('weather.html');">
+                <i class="fa">天气</i>
+            </div>
+        </div>
+    </div>
 
+    <script src="js/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".target").click(function () {
+                $(".menu").toggleClass("active");
+            });
+        });
+        function goTo(target) {
+            window.location.href = target;
+        }
+    </script>
 </body>
 </html>
