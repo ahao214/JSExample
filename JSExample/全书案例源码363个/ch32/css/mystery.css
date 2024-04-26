@@ -1,0 +1,82 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.mysterycontainer {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    margin: 100px auto 0 auto;
+    box-shadow: 0 0 5px green;
+    overflow: hidden;
+}
+
+    .mysterycontainer .mysterywrap {
+        position: absolute;
+        width: 4200px;
+        height: 400px;
+        z-index: 1;
+    }
+
+        .mysterycontainer .mysterywrap img {
+            float: left;
+            width: 600px;
+            height: 400px;
+        }
+
+    .mysterycontainer .mysterybuttons {
+        position: absolute;
+        right: 5px;
+        bottom: 40px;
+        width: 150px;
+        height: 10px;
+        z-index: 2;
+    }
+
+        .mysterycontainer .mysterybuttons span {
+            margin-left: 5px;
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: green;
+            text-align: center;
+            color: white;
+            cursor: pointer;
+        }
+
+            .mysterycontainer .mysterybuttons span.mysteryon {
+                background-color: red;
+            }
+
+    .mysterycontainer .arrow {
+        position: absolute;
+        top: 35%;
+        color: green;
+        padding: 0px 14px;
+        border-radius: 50%;
+        font-size: 50px;
+        z-index: 2;
+        display: none;
+    }
+
+    .mysterycontainer .arrow_left {
+        left: 10px;
+    }
+
+    .mysterycontainer .arrow_right {
+        right: 10px;
+    }
+
+    .mysterycontainer:hover .arrow {
+        display: block;
+    }
+
+    .mysterycontainer .arrow:hover {
+        background-color: rgba(0,0,0,0.2);
+    }
