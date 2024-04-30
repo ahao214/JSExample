@@ -515,6 +515,7 @@
     <Content Include="全书案例源码363个\ch32\css\mystery.css" />
     <Content Include="全书案例源码363个\ch32\css\style.css" />
     <Content Include="全书案例源码363个\ch32\css\elephantStyles.css" />
+    <Content Include="全书案例源码363个\ch32\css\weatherStyle.css" />
     <Content Include="全书案例源码363个\ch32\elephant.html" />
     <Content Include="全书案例源码363个\ch32\images\gobottom.gif" />
     <Content Include="全书案例源码363个\ch32\images\gobottom2.gif" />
@@ -540,6 +541,12 @@
     <Content Include="全书案例源码363个\ch32\js\jquery-2.2.4.min.js" />
     <Content Include="全书案例源码363个\ch32\js\jquery.min.js" />
     <Content Include="全书案例源码363个\ch32\js\mystery.js" />
+    <Content Include="全书案例源码363个\ch32\js\mysteryMzp-packed.js" />
+    <Content Include="全书案例源码363个\ch32\js\mysteryScrollpic.js" />
+    <Content Include="全书案例源码363个\ch32\js\snap.svg-min.js" />
+    <Content Include="全书案例源码363个\ch32\js\TweenMax.min.js" />
+    <Content Include="全书案例源码363个\ch32\js\weatherIndex.js" />
+    <Content Include="全书案例源码363个\ch32\js\zbvakw.js" />
     <Content Include="全书案例源码363个\ch32\lunbo.html" />
     <Content Include="全书案例源码363个\ch32\magnify.html" />
     <Content Include="全书案例源码363个\ch32\weather.html" />
