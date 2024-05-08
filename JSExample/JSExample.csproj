@@ -552,6 +552,7 @@
     <Content Include="全书案例源码363个\ch32\weather.html" />
     <Content Include="全书案例源码363个\ch33\book.html" />
     <Content Include="全书案例源码363个\ch33\css\bookStyle.css" />
+    <Content Include="全书案例源码363个\ch33\css\renderStyle.css" />
     <Content Include="全书案例源码363个\ch33\css\reset.css" />
     <Content Include="全书案例源码363个\ch33\css\selectStyle.css" />
     <Content Include="全书案例源码363个\ch33\css\style.css" />
@@ -571,6 +572,7 @@
     <Content Include="全书案例源码363个\ch33\js\jquery.js" />
     <Content Include="全书案例源码363个\ch33\js\prefixfree.min.js" />
     <Content Include="全书案例源码363个\ch33\js\selectIndex.js" />
+    <Content Include="全书案例源码363个\ch33\render.html" />
     <Content Include="全书案例源码363个\ch33\select.html" />
     <Content Include="前端开发入门\ch05\class03\13检测用户名和密码.html" />
     <Content Include="前端开发入门\ch05\class03\14设置下拉框中的选中项.html" />
