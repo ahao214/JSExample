@@ -32,6 +32,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -618,6 +619,7 @@
     <Content Include="案例资源库\01按钮事件类案例\03  动态创建按钮.html" />
     <Content Include="案例资源库\01按钮事件类案例\04  平面按钮.html" />
     <Content Include="案例资源库\01按钮事件类案例\05  按钮的嵌入效果.html" />
+    <Content Include="案例资源库\01按钮事件类案例\06  按钮改变状态栏信息.html" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
