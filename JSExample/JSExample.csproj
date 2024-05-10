@@ -609,6 +609,7 @@
     <Content Include="全书案例源码363个\ch34\static\js\bootstrap.min.js" />
     <Content Include="全书案例源码363个\ch34\static\js\jquery.min.js" />
     <Content Include="全书案例源码363个\ch34\static\js\main.js" />
+    <Content Include="全书案例源码363个\ch34\static\map\map.html" />
     <Content Include="前端开发入门\ch05\class03\13检测用户名和密码.html" />
     <Content Include="前端开发入门\ch05\class03\14设置下拉框中的选中项.html" />
     <Content Include="前端开发入门\ch05\class03\15搜索文本框.html" />
@@ -634,7 +635,6 @@
     <Content Include="全书案例源码363个\ch34\static\fonts\glyphicons-halflings-regular.woff" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="全书案例源码363个\ch34\static\map\" />
     <Folder Include="全书案例源码363个\ch35\" />
   </ItemGroup>
   <PropertyGroup>
