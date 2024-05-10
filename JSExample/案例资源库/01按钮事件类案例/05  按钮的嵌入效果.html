@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>标题页</title>
+    <style type="text/css">
+        .over {
+            color: yellow;
+            background: navy
+        }
+
+        .down {
+            color: yellow;
+            background: navy;
+            font-style: italic
+        }
+    </style>
+</head>
+<body>
+    <input type="Button"
+           onMouseOver="this.className='over';"
+           onMouseOut="this.className='';"
+           onMouseDown="this.className='down';"
+           onMouseUp="this.className='over';"
+           value="让按钮嵌入"
+           onClick="this.value='嵌入成功！'" name="Button">
+</body>
+</html>
