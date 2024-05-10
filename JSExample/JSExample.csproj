@@ -575,6 +575,34 @@
     <Content Include="全书案例源码363个\ch33\render.html" />
     <Content Include="全书案例源码363个\ch33\select.html" />
     <Content Include="全书案例源码363个\ch34\index.html" />
+    <Content Include="全书案例源码363个\ch34\static\images\ab.jpg" />
+    <Content Include="全书案例源码363个\ch34\static\images\arrow.gif" />
+    <Content Include="全书案例源码363个\ch34\static\images\banner\banner1.jpg" />
+    <Content Include="全书案例源码363个\ch34\static\images\banner\banner2.jpg" />
+    <Content Include="全书案例源码363个\ch34\static\images\banner\banner3.jpg" />
+    <Content Include="全书案例源码363个\ch34\static\images\c.jpg" />
+    <Content Include="全书案例源码363个\ch34\static\images\list1.jpg" />
+    <Content Include="全书案例源码363个\ch34\static\images\list2.jpg" />
+    <Content Include="全书案例源码363个\ch34\static\images\list3.jpg" />
+    <Content Include="全书案例源码363个\ch34\static\images\list4.jpg" />
+    <Content Include="全书案例源码363个\ch34\static\images\list5.jpg" />
+    <Content Include="全书案例源码363个\ch34\static\images\listcon.jpg" />
+    <Content Include="全书案例源码363个\ch34\static\images\navbg.jpg" />
+    <Content Include="全书案例源码363个\ch34\static\images\news\news1.jpg" />
+    <Content Include="全书案例源码363个\ch34\static\images\news\news2.jpg" />
+    <Content Include="全书案例源码363个\ch34\static\images\news\news3.jpg" />
+    <Content Include="全书案例源码363个\ch34\static\images\news\news4.jpg" />
+    <Content Include="全书案例源码363个\ch34\static\images\products\pro1-1.png" />
+    <Content Include="全书案例源码363个\ch34\static\images\products\pro1.jpg" />
+    <Content Include="全书案例源码363个\ch34\static\images\products\pro2.jpg" />
+    <Content Include="全书案例源码363个\ch34\static\images\products\pro3.jpg" />
+    <Content Include="全书案例源码363个\ch34\static\images\products\pro4.jpg" />
+    <Content Include="全书案例源码363个\ch34\static\images\products\pro5.jpg" />
+    <Content Include="全书案例源码363个\ch34\static\images\products\pro6.jpg" />
+    <Content Include="全书案例源码363个\ch34\static\images\products\pro7.jpg" />
+    <Content Include="全书案例源码363个\ch34\static\images\products\pro8.jpg" />
+    <Content Include="全书案例源码363个\ch34\static\images\topbg.png" />
+    <Content Include="全书案例源码363个\ch34\static\images\wx.jpg" />
     <Content Include="全书案例源码363个\ch34\static\js\bootstrap.min.js" />
     <Content Include="全书案例源码363个\ch34\static\js\jquery.min.js" />
     <Content Include="全书案例源码363个\ch34\static\js\main.js" />
@@ -602,7 +630,6 @@
   <ItemGroup>
     <Folder Include="全书案例源码363个\ch34\static\css\" />
     <Folder Include="全书案例源码363个\ch34\static\fonts\" />
-    <Folder Include="全书案例源码363个\ch34\static\images\" />
     <Folder Include="全书案例源码363个\ch34\static\map\" />
     <Folder Include="全书案例源码363个\ch35\" />
   </ItemGroup>
