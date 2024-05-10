@@ -575,6 +575,7 @@
     <Content Include="全书案例源码363个\ch33\render.html" />
     <Content Include="全书案例源码363个\ch33\select.html" />
     <Content Include="全书案例源码363个\ch34\index.html" />
+    <Content Include="全书案例源码363个\ch34\static\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="全书案例源码363个\ch34\static\images\ab.jpg" />
     <Content Include="全书案例源码363个\ch34\static\images\arrow.gif" />
     <Content Include="全书案例源码363个\ch34\static\images\banner\banner1.jpg" />
@@ -626,10 +627,12 @@
     <Content Include="全书案例源码363个\ch24\05.json" />
     <Content Include="全书案例源码363个\ch27\data\getJsonData.json" />
     <Content Include="全书案例源码363个\ch33\scss\style.scss" />
+    <Content Include="全书案例源码363个\ch34\static\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="全书案例源码363个\ch34\static\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="全书案例源码363个\ch34\static\fonts\glyphicons-halflings-regular.woff" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="全书案例源码363个\ch34\static\css\" />
-    <Folder Include="全书案例源码363个\ch34\static\fonts\" />
     <Folder Include="全书案例源码363个\ch34\static\map\" />
     <Folder Include="全书案例源码363个\ch35\" />
   </ItemGroup>
