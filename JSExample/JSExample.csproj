@@ -574,6 +574,10 @@
     <Content Include="全书案例源码363个\ch33\js\selectIndex.js" />
     <Content Include="全书案例源码363个\ch33\render.html" />
     <Content Include="全书案例源码363个\ch33\select.html" />
+    <Content Include="全书案例源码363个\ch34\index.html" />
+    <Content Include="全书案例源码363个\ch34\static\js\bootstrap.min.js" />
+    <Content Include="全书案例源码363个\ch34\static\js\jquery.min.js" />
+    <Content Include="全书案例源码363个\ch34\static\js\main.js" />
     <Content Include="前端开发入门\ch05\class03\13检测用户名和密码.html" />
     <Content Include="前端开发入门\ch05\class03\14设置下拉框中的选中项.html" />
     <Content Include="前端开发入门\ch05\class03\15搜索文本框.html" />
@@ -595,7 +599,13 @@
     <Content Include="全书案例源码363个\ch27\data\getJsonData.json" />
     <Content Include="全书案例源码363个\ch33\scss\style.scss" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="全书案例源码363个\ch34\static\css\" />
+    <Folder Include="全书案例源码363个\ch34\static\fonts\" />
+    <Folder Include="全书案例源码363个\ch34\static\images\" />
+    <Folder Include="全书案例源码363个\ch34\static\map\" />
+    <Folder Include="全书案例源码363个\ch35\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
