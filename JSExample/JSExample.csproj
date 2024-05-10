@@ -614,6 +614,7 @@
     <Content Include="前端开发入门\ch05\class03\14设置下拉框中的选中项.html" />
     <Content Include="前端开发入门\ch05\class03\15搜索文本框.html" />
     <Content Include="案例资源库\01按钮事件类案例\01页面刷新按钮.html" />
+    <Content Include="案例资源库\01按钮事件类案例\02 按回车调用登录按钮.html" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -635,6 +636,7 @@
     <Content Include="全书案例源码363个\ch34\static\fonts\glyphicons-halflings-regular.woff" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="14套网页赏析案例库\" />
     <Folder Include="全书案例源码363个\ch35\" />
   </ItemGroup>
   <PropertyGroup>
