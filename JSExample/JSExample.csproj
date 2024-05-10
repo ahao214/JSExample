@@ -575,6 +575,8 @@
     <Content Include="全书案例源码363个\ch33\render.html" />
     <Content Include="全书案例源码363个\ch33\select.html" />
     <Content Include="全书案例源码363个\ch34\index.html" />
+    <Content Include="全书案例源码363个\ch34\static\css\bootstrap.min.css" />
+    <Content Include="全书案例源码363个\ch34\static\css\main.css" />
     <Content Include="全书案例源码363个\ch34\static\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="全书案例源码363个\ch34\static\images\ab.jpg" />
     <Content Include="全书案例源码363个\ch34\static\images\arrow.gif" />
@@ -632,7 +634,6 @@
     <Content Include="全书案例源码363个\ch34\static\fonts\glyphicons-halflings-regular.woff" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="全书案例源码363个\ch34\static\css\" />
     <Folder Include="全书案例源码363个\ch34\static\map\" />
     <Folder Include="全书案例源码363个\ch35\" />
   </ItemGroup>
