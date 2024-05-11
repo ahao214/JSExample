@@ -575,6 +575,7 @@
     <Content Include="全书案例源码363个\ch33\js\selectIndex.js" />
     <Content Include="全书案例源码363个\ch33\render.html" />
     <Content Include="全书案例源码363个\ch33\select.html" />
+    <Content Include="全书案例源码363个\ch34\about.html" />
     <Content Include="全书案例源码363个\ch34\index.html" />
     <Content Include="全书案例源码363个\ch34\static\css\bootstrap.min.css" />
     <Content Include="全书案例源码363个\ch34\static\css\main.css" />
