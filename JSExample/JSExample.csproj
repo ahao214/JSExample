@@ -622,6 +622,7 @@
     <Content Include="案例资源库\01按钮事件类案例\06  按钮改变状态栏信息.html" />
     <Content Include="案例资源库\01按钮事件类案例\07  定义按钮的热键.html" />
     <Content Include="案例资源库\01按钮事件类案例\08  取得控件的绝对位置.html" />
+    <Content Include="案例资源库\01按钮事件类案例\09  删除时的确认提示.html" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
