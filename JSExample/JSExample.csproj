@@ -739,6 +739,7 @@
     <Content Include="案例资源库\01按钮事件类案例\10  按钮只能单击一次.html" />
     <Content Include="案例资源库\01按钮事件类案例\11  防止按钮连击.html" />
     <Content Include="案例资源库\01按钮事件类案例\12  图片式按钮.html" />
+    <Content Include="案例资源库\01按钮事件类案例\13  文字显示在按钮底部.html" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
