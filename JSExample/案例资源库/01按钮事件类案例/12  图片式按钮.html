@@ -3,9 +3,25 @@
 <head>
     <meta charset="utf-8" />
     <title>标题页</title>
-
+    <script language="javascript">
+        function goTo() {
+            var myindex = document.myform.mailBox.selectedIndex;        // 获取下拉框中的选则索引
+            location = document.myform.mailBox.options[myindex].value;  //获取下拉框的选则值
+        }
+    </script>
 </head>
 <body>
-
+    <form name="myform">
+        <br />
+        <select name="mailBox" size="1">
+            <option selected>选项</option>
+            <option value="http://www.163.com">163电子邮局</option>
+            <option value="http://www.263.com">263电子邮局</option>
+        </select>
+        <br />
+        <a href="javascript:goTo()" onmouseover="self.status = ''; return true" onmouseout="self.status = '';return true">
+            <img src="" border="0" align="middle" style="width:73px; height:40px;" />
+        </a>
+    </form>
 </body>
 </html>
