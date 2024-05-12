@@ -579,6 +579,7 @@
     <Content Include="全书案例源码363个\ch34\contact.html" />
     <Content Include="全书案例源码363个\ch34\index.html" />
     <Content Include="全书案例源码363个\ch34\news-detail.html" />
+    <Content Include="全书案例源码363个\ch34\news.html" />
     <Content Include="全书案例源码363个\ch34\static\css\bootstrap.min.css" />
     <Content Include="全书案例源码363个\ch34\static\css\main.css" />
     <Content Include="全书案例源码363个\ch34\static\fonts\glyphicons-halflings-regular.svg" />
