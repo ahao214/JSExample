@@ -76,6 +76,8 @@
     <Content Include="90套JS特效案例库\特效案例01、javascript彩虹圈效果\qun_3.png" />
     <Content Include="90套JS特效案例库\特效案例01、javascript彩虹圈效果\qun_4.png" />
     <Content Include="90套JS特效案例库\特效案例01、javascript彩虹圈效果\qun_5.png" />
+    <Content Include="90套JS特效案例库\特效案例02、JavaScript实现的3D球面标签云效果\3dLable.jpg" />
+    <Content Include="90套JS特效案例库\特效案例02、JavaScript实现的3D球面标签云效果\index.png" />
     <Content Include="90套JS特效案例库\特效案例02、JavaScript实现的3D球面标签云效果\miaov.js" />
     <Content Include="90套JS特效案例库\特效案例02、JavaScript实现的3D球面标签云效果\miaov_demo.html" />
     <Content Include="90套JS特效案例库\特效案例02、JavaScript实现的3D球面标签云效果\miaov_style.css" />
