@@ -772,7 +772,10 @@
     <Content Include="全书案例源码363个\ch34\static\fonts\glyphicons-halflings-regular.woff" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="100套8大行业软件开发文档模板库\" />
+    <Folder Include="133套网页模板库\" />
     <Folder Include="14套网页赏析案例库\" />
+    <Folder Include="Student Data Files\" />
     <Folder Include="全书案例源码363个\ch35\images\newsimgs\" />
   </ItemGroup>
   <PropertyGroup>
