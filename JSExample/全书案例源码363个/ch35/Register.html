@@ -1,0 +1,259 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- 样式 -->
+    <link href="Css/layout.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="Js/jquery.js"></script>
+    <script type="text/javascript" src="Js/public.js"></script>
+    <!--[if IE 6]>
+    <script src="js/DD_belatedPNG_0.0.8a.js" type="text/javascript" ></script>
+    <script type="text/javascript">
+    DD_belatedPNG.fix(' ');
+    </script>
+    <![endif]-->
+    <!-- banner -->
+    <style type="text/css">
+        .nav_bg .nav ul li .i_home {
+            color: #b5954d;
+        }
+    </style>
+    <meta name="Keywords" />
+    <meta name="Description" />
+    <title>注册</title>
+</head>
+<body>
+    <!-- warp start -->
+    <div class="warp">
+        <!-- top -->
+        <!-- top -->
+        <div class="top_bg" id="topLoginIn">
+            <div class="top">您好，欢迎光临紫金游 <a href="#">请登录</a> | <a href="Register.html">注册</a></div>
+        </div>
+        <div class="top_bg" id="topLoginOut">
+            <div class="top">欢迎您，，【<a href="#">个人中心</a>】 【<a href="#">退出</a>】</div>
+        </div>
+        <script type="text/javascript">
+            var nameuser = ''
+            if (nameuser == "") {
+                $("#topLoginOut").hide();
+                $("#topLoginIn").show();
+            } else {
+                $("#topLoginOut").show();
+                $("#topLoginIn").hide();
+            }
+        </script>
+        <!-- nav -->
+        <!-- nav -->
+        <div class="nav_bg">
+            <div class="nav">
+                <ul>
+                    <li>
+                        <a href="index.html" class="i_home">官网首页</a><br />
+                        <span>HOME</span>
+                    </li>
+                    <li>
+                        <a href="Down.html">下载中心</a><br />
+                        <span>DOWNLOAD</span>
+                    </li>
+                    <li>
+                        <a href="Pay.html">账号充值</a><br />
+                        <span>ACCOUNT SERVICES</span>
+                    </li>
+                    <li class="nav_logo">紫金游</li>
+                    <li>
+                        <a href="News.html">新闻动态</a><br />
+                        <span>NEWS</span>
+                    </li>
+                    <li>
+                        <a href="Mall.html">道具商城</a><br />
+                        <span>ITEM SHOP</span>
+                    </li>
+                    <li>
+                        <a href="Mall.html">奖品乐园</a><br />
+                        <span>PRIZES PARADISE</span>
+                    </li>
+                </ul>
+                <p class="clear"></p>
+            </div>
+            <div class="logo"><a href="/"><img src="images/logo.png" /></a></div>
+        </div>
+        <script type="text/javascript">
+            $(function () {
+                if (index) {
+                    $(".nav ul a").removeClass().parent().eq(index - 1).find("a").addClass("i_home");
+                }
+            })
+        </script>
+        <!-- main -->
+        <div class="main_bg">
+            <div class="main">
+                <div class="m_lf">
+                    <div class="m_download"> <a href="#"> <img src="images/down_load.jpg" width="248" height="109" alt="游戏下载" /> </a> </div>
+                    <div class="m_reg"> <a href="Register.html">快速注册</a> </div>
+                    <div class="con_login">
+                        <h3>拥有账号，你可以</h3>
+                        <dl>
+                            <dt><img src="images/zcImg1.jpg" width="133" height="107" /></dt>
+                            <dd>获取海量奖励</dd>
+                        </dl>
+                        <dl>
+                            <dt><img src="images/zcImg2.jpg" width="133" height="107" /></dt>
+                            <dd>获取海量奖励</dd>
+                        </dl>
+                        <dl>
+                            <dt><img src="images/zcImg3.jpg" width="133" height="107" /></dt>
+                            <dd>获取海量奖励</dd>
+                        </dl>
+                        <dl>
+                            <dt><img src="images/zcImg4.jpg" width="133" height="107" /></dt>
+                            <dd>获取海量奖励</dd>
+                        </dl>
+                    </div>
+                </div>
+                <script type="text/javascript">
+                    var index = 9999;
+                </script>
+                <div class="cont">
+                    <div class="cont_tit"> <strong><img src="images/member_icon.PNG" width="28" height="35" />免费注册</strong> <span>您所在位置：<a href="/">首页</a> >注册</span> </div>
+                    <div class="con_bg">
+                        <div class="member_tit"> <span>免费注册</span> </div>
+                        <div class="member_info">
+                            <table width="686" border="0" cellspacing="0" cellpadding="0" class="member_info_bd1">
+                                <tr>
+                                    <td colspan="2">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td height="40" width="135" align="right">游戏帐号：</td>
+                                    <td>
+                                        <input name="txtUserName" id="txtUserName" maxlength="12" type="text" class="member_infobg" onblur="IsEtis()" />
+                                        <span style="color:Red; margin-right:5px;">*</span><span id="spanUserName">6-12位之间，由字母或数字组成。</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td height="40" align="right">昵称：</td>
+                                    <td>
+                                        <input name="txtNickName" id="txtNickName" maxlength="10" type="text" class=" member_infobg" />
+                                        <span style="color:Red; margin-right:5px;">*</span><span id="spanNickName">2-10位，由字母、数字、特殊符号或中文组成。 </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td height="40" align="right">登录密码：</td>
+                                    <td>
+                                        <input type="password" name="txtPassword" id="txtPassword" maxlength="16" class="member_infobg" />
+                                        <span style="color:Red; margin-right:5px;">*</span><span id="spanPassword">6-16位之间，由字母、数字或特殊符号组成。 </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td height="40" align="right">确认密码：</td>
+                                    <td>
+                                        <input type="password" name="txtPassword2" id="txtPassword2" maxlength="16" class="member_infobg" />
+                                        <span style="color:Red; margin-right:5px;">*</span><span id="spanPassword2">请再次输入登录密码。 </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td height="40" align="right">真实姓名：</td>
+                                    <td>
+                                        <input name="txtTrueName" id="txtTrueName" maxlength="20" type="text" class="member_infobg " />
+                                        <span style="color:Red; margin-right:5px;">*</span><span id="spanTrueName">请认真填写您的真实姓名，长度在2到20位之间。 </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td height="40" align="right">身份证号：</td>
+                                    <td>
+                                        <input name="txtIDC" id="txtIDC" maxlength="18" type="text" class="member_infobg" />
+                                        <span style="color:Red; margin-right:5px;">*</span><span id="spanIDC">请认真填写您的绑定身份证号，已便找回密码。 </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td height="40" align="right">性别：</td>
+                                    <td>
+                                        <input type="radio" id="sex1" name="sex" value="1" checked />
+                                        <label for="sex1">男</label>
+                                        <input type="radio" id="sex2" name="sex" value="0" />
+                                        <label for="sex2">女</label>
+                                        <span style="color:Red; margin-right:5px;">*</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td height="40" align="right">验证码：</td>
+                                    <td>
+                                        <input type="text" maxlength="4" class="member_infobg3" style="width:80px;" onkeypress="return KeyPressNum(this,event);" name="txtValidate" id="txtValidate" />
+                                        &nbsp; <span style="color:Red; margin-right:5px;">*</span> <img src="/Public/Validate.ashx" alt="验证码" title="点击刷新验证码" border="0" id="imgValidate" onclick="this.src='/Public/Validate.ashx?x=' + Math.random();" alt="点击刷新" align="absmiddle"
+                                                                                                        style="cursor:pointer;" /> <span id="spanValidate"> 请输入上面出现的字符。 </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="right">&nbsp;</td>
+                                    <td>
+                                        <input id="cbxEnable" name="" type="checkbox" value="" checked="checked" />
+                                        已阅读并同意《<a href="/Treaty.aspx">用户服务协议</a>》 <span id="spanEnable"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td height="60" align="right">&nbsp;</td>
+                                    <td>
+                                        <input type="button" class="cont_reg_btn" id="btnSubmit" value="完成注册" />
+                                        &nbsp;&nbsp;&nbsp;&nbsp;
+                                        <input class="cont_reg_btn1" type="button" value="重置" style="margin-left:10px; cursor:pointer;" onclick="clearInfo()" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        &nbsp;
+                                        <input type="text" name="txtPromoter" id="txtPromoter" style="display:none;" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <p class="clear"></p>
+                <script type="text/javascript">
+                    var domialname = "pk";
+                    var pcddid = "";
+                    var qbid = "";
+                    var bxdid = "";
+                    var lzid = "";
+                    var mdpid = "";
+                    var mdpgid = "";
+                    var bbid = "";
+                    var tid = "";
+                    var m_game_id = "";
+                    var m_user_id = "";
+                    var mdid = "";
+                </script>
+                <script type="text/javascript" src="Js/HtmlValidate.js"></script>
+                <script type="text/javascript" src="Js/Reg.js"></script>
+                <script type="text/javascript">
+                    var pusername = "";
+                    if (pusername != '') {
+                        $("#txtPromoter").val(pusername).attr("readonly", "readonly");
+                    }
+                    function clearInfo() {
+                        $("input[type='text']").val("");
+                        $("input[type='password']").val("");
+                    }
+                </script>
+            </div>
+            <!-- footer -->
+            <!-- footer -->
+            <div class="footer">
+                <p> <a href="#">&nbsp;网站地图</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">公司介绍</a>&nbsp;|&nbsp;&nbsp;<a href="#">联系我们</a>&nbsp;|&nbsp;&nbsp;<a href="#">游戏协议</a>&nbsp;|&nbsp;<a href="#">&nbsp;免责公告</a></p>
+                <p> 抵制不良游戏 拒绝盗版游戏 注意自我保护 谨防受骗上当 适度<a href="#">游戏</a>益脑 沉迷游戏伤身 合理安排时间 享受健康生活</p>
+                <p>
+                    &nbsp; &nbsp; &nbsp;北京科技至上有限公司&nbsp;<br />
+                    &nbsp;Copyright 2018-2020
+                </p>
+                <p>&nbsp; </p>
+                <h1>&nbsp; </h1>
+            </div>
+            <script type="text/javascript">
+                var domialname = "pk";
+                var pusername = "";
+            </script>
+        </div>
+        <!-- warp end -->
+    </div>
+</body>
+</html>
