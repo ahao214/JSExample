@@ -726,6 +726,12 @@
     <Content Include="全书案例源码363个\ch35\js\jquery.js" />
     <Content Include="全书案例源码363个\ch35\js\lrtk.js" />
     <Content Include="全书案例源码363个\ch35\js\public.js" />
+    <Content Include="全书案例源码363个\ch35\Mall.html" />
+    <Content Include="全书案例源码363个\ch35\News.html" />
+    <Content Include="全书案例源码363个\ch35\Pay.html" />
+    <Content Include="全书案例源码363个\ch35\Register.html" />
+    <Content Include="全书案例源码363个\ch35\ShowMall.html" />
+    <Content Include="全书案例源码363个\ch35\ShowNews.html" />
     <Content Include="案例资源库\01按钮事件类案例\01页面刷新按钮.html" />
     <Content Include="案例资源库\01按钮事件类案例\02 按回车调用登录按钮.html" />
     <Content Include="案例资源库\01按钮事件类案例\03  动态创建按钮.html" />
