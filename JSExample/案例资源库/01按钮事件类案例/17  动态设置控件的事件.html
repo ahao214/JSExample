@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>动态设置控件的事件</title>
+    <script>
+        // 添加事件的参数，参数为控件的标识
+        function addClick(obj) {
+            obj.onclick = function () {
+                alert('动态添加事件成功');
+            }
+        }
+    </script>
+</head>
+<body>
+    <input id="Button2" type="button" value="测试" />
+    <br />
+    <input id="Button1" type="button" value="为上面的按钮添加事件" onclick="addClick(Button2)" />
+</body>
+</html>

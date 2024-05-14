@@ -743,6 +743,7 @@
     <Content Include="案例资源库\01按钮事件类案例\14  选择不同的列表项就显示不同的按钮.html" />
     <Content Include="案例资源库\01按钮事件类案例\15  使用按钮控制文本渐变.html" />
     <Content Include="案例资源库\01按钮事件类案例\16  翻页效果的公告栏.html" />
+    <Content Include="案例资源库\01按钮事件类案例\17  动态设置控件的事件.html" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
