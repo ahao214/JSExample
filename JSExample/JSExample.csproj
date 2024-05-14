@@ -745,6 +745,7 @@
     <Content Include="案例资源库\01按钮事件类案例\16  翻页效果的公告栏.html" />
     <Content Include="案例资源库\01按钮事件类案例\17  动态设置控件的事件.html" />
     <Content Include="案例资源库\02标记类案例\01 使用userData保存文本内容.html" />
+    <Content Include="案例资源库\02标记类案例\02  使用userData保存select标记.html" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
