@@ -2,9 +2,38 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>选择不同的列表项就显示不同的按钮</title>
+    <title>测试列表选择项</title>
+    <script>
+        function butSelect() {
+            var selVal = document.getElementById("sel").value;
+            if (selVal == "1") {
+                document.getElementById("td").innerHTML = '<input type="button" value="按钮1" onclick="btnc1();">';
+            } else if (selVal == "2") {
+                document.getElementById("td").innerHTML = '<input type="button" value="按钮2" onclick="btnc2();">';
+            } else {
+                document.getElementById("td").innerHTML = '';
+            }
+        }
+        function btnc1() {
+            alert("单击了按钮一");
+        }
+        function btnc2() {
+            alert("单击了按钮二");
+        }
+    </script>
 </head>
 <body>
-
+    <table>
+        <tr>
+            <td>
+                <select onchange="butSelect();" id="sel">
+                    <option value=""></option>
+                    <option value="1">but1
+                    <option value="2">but2
+                </select>
+            </td>
+            <td id="td"></td>
+        </tr>
+    </table>
 </body>
 </html>
