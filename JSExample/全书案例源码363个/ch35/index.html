@@ -1,0 +1,471 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <!-- 样式 -->
+    <link href="Css/layout.css" type="text/css" rel="stylesheet" />
+    <link type="text/css" href="Css/lrtk.css" rel="stylesheet" />
+    <script type="text/javascript" src="Js/jquery.js"></script>
+    <script type="text/javascript" src="Js/lrtk.js"></script>
+    <title>紫金游</title>
+    <style>
+        .nav_bg .nav ul li .i_home {
+            color: #b5954b;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="top_bg" id="topLoginIn">
+            <div class="top">您好，欢迎光临紫金游 <a href="#">请登录</a> | <a href="Register.html">注册</a></div>
+        </div>
+        <div class="top_bg" id="topLoginOut">
+            <div class="top">欢迎您，，【<a href="#">个人中心</a>】 【<a href="#">退出</a>】</div>
+        </div>
+
+        <script type="text/javascript">
+            var nameuser = ''
+            if (nameuser == "") {
+                $("#topLoginOut").hide();
+                $("#topLoginIn").show();
+            } else {
+                $("#topLoginOut").show();
+                $("#topLoginIn").hide();
+            }
+        </script>
+
+        <div class="nav_bg">
+            <div class="nav">
+                <ul>
+                    <li>
+                        <a href="index.html" class="i_home">官网首页</a><br />
+                        <span>HOME</span>
+                    </li>
+                    <li>
+                        <a href="Down.html">下载中心</a><br />
+                        <span>DOWNLOAD</span>
+                    </li>
+                    <li>
+                        <a href="Pay.html">账号充值</a><br />
+                        <span>ACCOUNT SERVICES</span>
+                    </li>
+                    <li class="nav_logo">紫金游</li>
+                    <li>
+                        <a href="News.html">新闻动态</a><br />
+                        <span>NEWS</span>
+                    </li>
+                    <li>
+                        <a href="Mall.html">道具商城</a><br />
+                        <span>ITEM SHOP</span>
+                    </li>
+                    <li>
+                        <a href="Mall.html">奖品乐园</a><br />
+                        <span>PRIZES PARADISE</span>
+                    </li>
+                </ul>
+                <p class="clear"></p>
+            </div>
+            <div class="logo"><a href="/"><img src="images/logo.png" /></a></div>
+        </div>
+
+
+        <script type="text/javascript">
+            $(function () {
+                if (index) {
+                    $(".nav ul a").removeClass().parent().eq(index - 1).find("a").addClass("i_home");
+                }
+            })
+        </script>
+        <!-- main -->
+        <div class="main_bg">
+            <div class="main">
+                <div class="m_lf">
+                    <div class="m_download"> <a href="#"> <img src="images/down_load.jpg" width="248" height="109" alt="游戏下载" /> </a> </div>
+                    <div class="m_reg"> <a href="Register.html">快速注册</a> </div>
+                    <div class="fast_track">
+                        <h2>快速通道</h2>
+                        <ul>
+                            <li><a href="#">个人中心</a></li>
+                            <li><a href="/Popularize.aspx">推广赚金</a></li>
+                            <li><a href="/Members/Security.aspx">密码保护</a></li>
+                            <li><a href="/TabooUser.aspx">封号名单</a></li>
+                            <li><a href="/GetPassword.aspx">找回密码</a></li>
+                            <li><a href="/Members/SetPassword.aspx">修改密码</a></li>
+                            <li><a href="/Faq.aspx">帮助中心</a></li>
+                            <li><a href="/Guardian/">家长监护</a></li>
+                            <li><a href="/Match/BattleDefault.aspx">比赛专区</a></li>
+                        </ul>
+                        <p class="clear"></p>
+                    </div>
+                    <!--左侧排行榜，长乐宫业务，按玩家所有乐豆排行-->
+                    <div class="m_ranking">
+                        <table width="248" border="0" cellspacing="0" cellpadding="0" id="tbRanking">
+                            <tr>
+                                <td height="36" align="center"><strong>名次</strong></td>
+                                <td align="center"><strong>昵称</strong></td>
+                                <td align="center"><strong>乐豆</strong></td>
+                            </tr>
+                            <tr>
+                                <td height="33" align="center"> 1 </td>
+                                <td align="center"> 空间环境 </td>
+                                <td align="center"> 1462568172 </td>
+                            </tr>
+                            <tr>
+                                <td height="33" align="center"> 2 </td>
+                                <td align="center"> 小猴子 </td>
+                                <td align="center"> 1434454755 </td>
+                            </tr>
+                            <tr>
+                                <td height="33" align="center"> 3 </td>
+                                <td align="center"> 那家店 </td>
+                                <td align="center"> 1144007429 </td>
+                            </tr>
+                            <tr>
+                                <td height="33" align="center"> 4 </td>
+                                <td align="center"> 小星星 </td>
+                                <td align="center"> 1016712964 </td>
+                            </tr>
+                            <tr>
+                                <td height="33" align="center"> 5 </td>
+                                <td align="center"> QQ </td>
+                                <td align="center"> 1012062566 </td>
+                            </tr>
+                            <tr>
+                                <td height="33" align="center"> 6 </td>
+                                <td align="center"> 中国英航 </td>
+                                <td align="center"> 916027824 </td>
+                            </tr>
+                        </table>
+                        <script type="text/javascript">
+                            $(function () {
+                                $("#tbRanking").css("font-size", "12px");
+                                $("#tbRanking tr:even").css("background-color", "#a3c0ab");
+                                $("#tbRanking tr:odd").css("background-color", "#c0d4c4");
+                                $("#tbRanking tr").eq(0).find("td").css("background-color", "#0C5F67");
+                                if ($("#tbRanking tr").length > 2) {
+                                    $("#tbRanking tr").eq(1).find("td").eq(0).html("<img src='images/icon1.jpg' width='16' height='16' />").siblings().css("color", "#D52B2B");
+                                    $("#tbRanking tr").eq(2).find("td").eq(0).html("<img src='images/icon2.jpg' width='16' height='16' />").siblings().css("color", "#F57316");
+                                    $("#tbRanking tr").eq(3).find("td").eq(0).html("<img src='images/icon3.jpg' width='16' height='16' />").siblings().css("color", "#2B92D5");
+                                }
+                            })
+                        </script>
+                    </div>
+                    <div class="m_ad"><img src="images/lf_1.jpg" width="248" height="96" /></div>
+                    <div class="m_service">
+                        <dl>
+                            <dt>游戏客服</dt>
+                            <dd class="m_service_tel">
+                                客服电话：010-12345678<br />
+                                例行维护：每周二7:00-9:30
+                            </dd>
+                            <dd> <a href="http://wpa.qq.com/msgrd?v=3&uin=00000000000&site=qq&menu=yes" target="_blank" class="m_service_online">在线咨询</a> </dd>
+                        </dl>
+                    </div>
+                </div>
+                <script type="text/javascript">
+                    var index = 1;
+                </script>
+                <div class="m_rg">
+                    <!-- 代码 开始 -->
+                    <div id="zSlider">
+                        <div id="picshow">
+                            <div id="picshow_img">
+                                <ul>
+                                    <li><a href='' target='_blank'><img src='images/256.jpg' alt='紫金游欢迎您的体验' /></a></li>
+                                    <li><a href='#' target='_blank'><img src='images/270.jpg' alt='大圣闹海之龙王现世' /></a></li>
+                                    <li><a href='#' target='_blank'><img src='images/269.jpg' alt='李逵劈鱼 捕鱼' /></a></li>
+                                    <li><a href='#' target='_blank'><img src='images/272.jpg' alt='金鲨银鲨' /></a></li>
+                                    <li><a href='#' target='_blank'><img src='images/271.jpg' alt='安全性高、转化率高、用户体验强' /></a></li>
+                                </ul>
+                            </div>
+                            <div id="picshow_tx">
+                                <ul>
+                                    <li>
+                                        <p>紫金游欢迎您的体验</p>
+                                    </li>
+                                    <li>
+                                        <p>大圣闹海之龙王现世</p>
+                                    </li>
+                                    <li>
+                                        <p>李逵劈鱼，惊喜预售</p>
+                                    </li>
+                                    <li>
+                                        <p>金鲨银鲨 大奖开不停</p>
+                                    </li>
+                                    <li>
+                                        <p>安全性高、转化率高</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="select_btn">
+                            <ul>
+                                <li><a href="javascript:void(0)">紫金游欢迎您的体验</a></li>
+                                <li><a href="javascript:void(0)">大圣闹海之龙王现世</a></li>
+                                <li><a href="javascript:void(0)">李逵劈鱼，惊喜预售</a></li>
+                                <li><a href="javascript:void(0)">金鲨银鲨 大奖开不停</a></li>
+                                <li><a href="javascript:void(0)">安全性高、转化率高</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 代码 结束 -->
+                    <!-- news -->
+                    <DIV id="news_tags">
+                        <div id="tags">
+                            <UL>
+                                <LI class=selectTag><A onClick="selectTag('tagContent0',this)" href="javascript:void(0)">最新</A></LI>
+                                <LI><A onClick="selectTag('tagContent1',this)" href="javascript:void(0)">新闻</A></LI>
+                                <LI><A onClick="selectTag('tagContent2',this)" href="javascript:void(0)">公告</A></LI>
+                                <LI><A onClick="selectTag('tagContent3',this)" href="javascript:void(0)">活动</A></LI>
+                            </UL>
+                            <div class="tags_more"><a href="/News/">更多>></a></div>
+                            <p class="clear"></p>
+                        </div>
+                        <div id=tagContent>
+                            <div class="tagContent selectTag" id=tagContent0>
+                                <dl>
+                                    <dt> <img src='images/267.jpg' width='155' height='80' /> </dt>
+                                    <dd>
+                                        <p><strong><a href='/News/ShowNews.aspx?params=1188' target='_blank'>紫金游全新版本正式发布</a></strong></p>
+                                        <p>紫金游团队致力于打造最专业的棋牌游戏平台，我们将根据产品现状及市场动态定期对版本进行迭代升级。本次版本涉及更新内容如下：</p>
+                                    </dd>
+                                </dl>
+                                <p class="clear"></p>
+                                <div class="news_list">
+                                    <ul class="news_list_lf">
+                                        <li> <strong>[最新]<a href="/News/ShowNews.aspx?params=1184" target="_blank">每日免费充值卡赠送</a></strong> <span>04-03</span> </li>
+                                        <li> <strong>[最新]<a href="/News/ShowNews.aspx?params=1183" target="_blank">紫金游演示平台玩家QQ群</a></strong> <span>03-01</span> </li>
+                                        <li> <strong>[最新]<a href="/News/ShowNews.aspx?params=1182" target="_blank">游戏建议征集(大厅右上角)</a></strong> <span>02-07</span> </li>
+                                        <li> <strong>[最新]<a href="/News/ShowNews.aspx?params=1181" target="_blank">新年行大运，紫金游上拜财神</a></strong> <span>01-26</span> </li>
+                                    </ul>
+                                    <ul class="news_list_rg">
+                                        <li> <strong>[最新]<a href="/News/ShowNews.aspx?params=1180" target="_blank">金鲨银鲨火爆上线</a></strong> <span>01-12</span> </li>
+                                        <li> <strong>[最新]<a href="/News/ShowNews.aspx?params=1179" target="_blank">新增游戏ATT连环炮、大圣闹海</a></strong> <span>01-12</span> </li>
+                                        <li> <strong>[最新]<a href="/News/ShowNews.aspx?params=1177" target="_blank">头奖500W！幸运扑克系统即将上线</a></strong> <span>10-23</span> </li>
+                                        <li> <strong>[最新]<a href="/News/ShowNews.aspx?params=1176" target="_blank">紫金游1.5版本更新至1.6</a></strong> <span>10-23</span> </li>
+                                    </ul>
+                                    <p class="clear"></p>
+                                </div>
+                            </div>
+                            <div class=tagContent id=tagContent1>
+                                <dl>
+                                    <dt> <img src='images/268.jpg' width='155' height='80' /> </dt>
+                                    <dd>
+                                        <p><strong><a href='/News/ShowNews.aspx?params=1161' target='_blank'>紫金游平台 8招打造最稳定棋牌投资项目</a></strong></p>
+                                        <p>紫金游的游戏平台，以稳定的运营性能、丰富的盈利点赢得了棋牌投资者的关注。与其他常见的棋牌产品相比，紫金游这款专门为地方棋牌运营商打造的运营级产品拥有8大优势</p>
+                                    </dd>
+                                </dl>
+                                <p class="clear"></p>
+                                <div class="news_list">
+                                    <ul class="news_list_lf">
+                                        <li> <strong>[新闻]<a href="/News/ShowNews.aspx?params=1161" target="_blank">紫金游平台 8招打造最稳定棋牌投资项...</a></strong> <span>08-29</span> </li>
+                                        <li> <strong>[新闻]<a href="/News/ShowNews.aspx?params=1174" target="_blank">像做团购一样推广棋牌游戏</a></strong> <span>10-10</span> </li>
+                                        <li> <strong>[新闻]<a href="/News/ShowNews.aspx?params=1173" target="_blank">游戏推广三大法宝：视频、新闻、病毒营...</a></strong> <span>10-10</span> </li>
+                                        <li> <strong>[新闻]<a href="/News/ShowNews.aspx?params=1172" target="_blank">5个小技巧让你的新游戏避免失败</a></strong> <span>10-10</span> </li>
+                                    </ul>
+                                    <ul class="news_list_rg">
+                                        <li> <strong>[新闻]<a href="/News/ShowNews.aspx?params=1168" target="_blank">游戏盈利的关键：如何促进虚拟游戏币的...</a></strong> <span>09-24</span> </li>
+                                        <li> <strong>[新闻]<a href="/News/ShowNews.aspx?params=1166" target="_blank">网络游戏推广：得屌丝者得天下</a></strong> <span>09-24</span> </li>
+                                        <li> <strong>[新闻]<a href="/News/ShowNews.aspx?params=1160" target="_blank">在当前市场环境下，棋牌游戏运营还有机...</a></strong> <span>08-29</span> </li>
+                                        <li> <strong>[新闻]<a href="/News/ShowNews.aspx?params=1159" target="_blank">一个棋牌创业者的自述</a></strong> <span>08-29</span> </li>
+                                    </ul>
+                                    <p class="clear"></p>
+                                </div>
+                            </div>
+                            <div class=tagContent id=tagContent2>
+                                <dl>
+                                    <dt> <img src='images/267.jpg' width='155' height='80' /> </dt>
+                                    <dd>
+                                        <p><strong><a href='/News/ShowNews.aspx?params=1188' target='_blank'>紫金游全新版本正式发布</a></strong></p>
+                                        <p>紫金游团队致力于打造最专业的棋牌游戏平台，我们将根据产品现状及市场动态定期对版本进行迭代升级。本次版本涉及更新内容如下：</p>
+                                    </dd>
+                                </dl>
+                                <p class="clear"></p>
+                                <div class="news_list">
+                                    <ul class="news_list_lf">
+                                        <li> <strong>[公告]<a href="/News/ShowNews.aspx?params=1188" target="_blank">紫金游全新版本正式发布</a></strong> <span>07-02</span> </li>
+                                        <li> <strong>[公告]<a href="/News/ShowNews.aspx?params=1176" target="_blank">紫金游1.5版本更新至1.6</a></strong> <span>10-23</span> </li>
+                                        <li> <strong>[公告]<a href="/News/ShowNews.aspx?params=1175" target="_blank">紫金游1.4版本更新至1.5</a></strong> <span>10-14</span> </li>
+                                        <li> <strong>[公告]<a href="/News/ShowNews.aspx?params=1171" target="_blank">紫金游演示平台免责公告</a></strong> <span>10-04</span> </li>
+                                    </ul>
+                                    <ul class="news_list_rg">
+                                        <li> <strong>[公告]<a href="/News/ShowNews.aspx?params=1170" target="_blank">紫金游1.3版本更新至1.4</a></strong> <span>09-27</span> </li>
+                                        <li> <strong>[公告]<a href="/News/ShowNews.aspx?params=1165" target="_blank">紫金游1.2版本更新至1.3</a></strong> <span>09-17</span> </li>
+                                        <li> <strong>[公告]<a href="/News/ShowNews.aspx?params=1164" target="_blank">棋牌游戏推广：掌握网民上网规律和时段</a></strong> <span>09-13</span> </li>
+                                        <li> <strong>[公告]<a href="/News/ShowNews.aspx?params=1163" target="_blank">最省钱的棋牌推广方法——SEO</a></strong> <span>09-13</span> </li>
+                                    </ul>
+                                    <p class="clear"></p>
+                                </div>
+                            </div>
+                            <div class=tagContent id=tagContent3>
+                                <dl>
+                                    <dt> <img src='images/266.jpg' width='155' height='80' /> </dt>
+                                    <dd>
+                                        <p><strong><a href='/News/ShowNews.aspx?params=1187' target='_blank'>紫金游平台 8招打造最稳定棋牌投资项目</a></strong></p>
+                                        <p>紫金游面世不久，便已名声大噪，紫金游的第二家运营商—“紫金阁”首日上线就有千元充值。快速的盈利能力可以让运营商看到希望，加快资金流转，帮助运营商走的更稳更远。</p>
+                                    </dd>
+                                </dl>
+                                <p class="clear"></p>
+                                <div class="news_list">
+                                    <ul class="news_list_lf">
+                                        <li> <strong>[活动]<a href="/News/ShowNews.aspx?params=1187" target="_blank">紫金游平台 8招打造最稳定棋牌投资项...</a></strong> <span>07-01</span> </li>
+                                        <li> <strong>[活动]<a href="/News/ShowNews.aspx?params=1184" target="_blank">每日免费充值卡赠送</a></strong> <span>04-03</span> </li>
+                                        <li> <strong>[活动]<a href="/News/ShowNews.aspx?params=1183" target="_blank">紫金游演示平台玩家QQ群</a></strong> <span>03-01</span> </li>
+                                        <li> <strong>[活动]<a href="/News/ShowNews.aspx?params=1182" target="_blank">游戏建议征集(大厅右上角)</a></strong> <span>02-07</span> </li>
+                                    </ul>
+                                    <ul class="news_list_rg">
+                                        <li> <strong>[活动]<a href="/News/ShowNews.aspx?params=1181" target="_blank">新年行大运，紫金游上拜财神</a></strong> <span>01-26</span> </li>
+                                        <li> <strong>[活动]<a href="/News/ShowNews.aspx?params=1180" target="_blank">金鲨银鲨火爆上线</a></strong> <span>01-12</span> </li>
+                                        <li> <strong>[活动]<a href="/News/ShowNews.aspx?params=1179" target="_blank">新增游戏ATT连环炮、大圣闹海</a></strong> <span>01-12</span> </li>
+                                        <li> <strong>[活动]<a href="/News/ShowNews.aspx?params=1177" target="_blank">头奖500W！幸运扑克系统即将上线</a></strong> <span>10-23</span> </li>
+                                    </ul>
+                                    <p class="clear"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </DIV>
+                    <script type="text/javascript">
+                        function selectTag(showContent, selfObj) {
+                            // 操作标签
+                            var tag = document.getElementById("tags").getElementsByTagName("li");
+                            var taglength = tag.length;
+                            for (i = 0; i < taglength; i++) {
+                                tag[i].className = "";
+                            }
+                            selfObj.parentNode.className = "selectTag";
+                            // 操作内容
+                            for (i = 0; j = document.getElementById("tagContent" + i); i++) {
+                                j.style.display = "none";
+                            }
+                            document.getElementById(showContent).style.display = "block";
+                        }
+                    </script>
+                    <!-- products -->
+                    <div class="product">
+                        <h2><span>精品游戏推荐</span></h2>
+                        <ul>
+                            <li> <a href="/Game/?params=10003300" title="斗地主" target="_blank"> <img src="images/260.png" width="212" height="116" alt="斗地主" /> </a> </li>
+                            <li> <a href="/Game/?params=10900500" title="斗牛" target="_blank"> <img src="images/136.png" width="212" height="116" alt="斗牛" /> </a> </li>
+                            <li> <a href="/Game/?params=10306600" title="智勇三张" target="_blank"> <img src="images/258.png" width="212" height="116" alt="智勇三张" /> </a> </li>
+                        </ul>
+                        <p class="clear"></p>
+                    </div>
+                    <!-- prize -->
+                    <div class="prize">
+                        <h2><span>热门兑换奖品</span></h2>
+                        <dl>
+                            <dt> <a href="#/ProductDetail.aspx?params=132" title="泰迪熊毛绒玩具" target="_blank"> <img src='images/PictureHandler.jpg' alt="泰迪熊毛绒玩具" width="170" height="142" /> </a> </dt>
+                            <dd> <a href="#/ProductDetail.aspx?params=132" title="泰迪熊毛绒玩具"> 泰迪熊毛绒玩具 </a> </dd>
+                        </dl>
+                        <dl>
+                            <dt> <a href="#/ProductDetail.aspx?params=129" title="泰迪熊毛绒玩具" target="_blank"> <img src='images/PictureHandler.jpg' alt="泰迪熊毛绒玩具" width="170" height="142" /> </a> </dt>
+                            <dd> <a href="#/ProductDetail.aspx?params=129" title="泰迪熊毛绒玩具"> 泰迪熊毛绒玩具 </a> </dd>
+                        </dl>
+                        <dl>
+                            <dt> <a href="#/ProductDetail.aspx?params=127" title="泰迪熊毛绒玩具" target="_blank"> <img src='images/PictureHandler.jpg' alt="泰迪熊毛绒玩具" width="170" height="142" /> </a> </dt>
+                            <dd> <a href="#/ProductDetail.aspx?params=127" title="泰迪熊毛绒玩具"> 泰迪熊毛绒玩具 </a> </dd>
+                        </dl>
+                        <dl>
+                            <dt> <a href="#/ProductDetail.aspx?params=126" title="泰迪熊毛绒玩具" target="_blank"> <img src='images/PictureHandler.jpg' alt="泰迪熊毛绒玩具" width="170" height="142" /> </a> </dt>
+                            <dd> <a href="#/ProductDetail.aspx?params=126" title="泰迪熊毛绒玩具"> 泰迪熊毛绒玩具 </a> </dd>
+                        </dl>
+                        <p class="clear"></p>
+                    </div>
+                </div>
+                <p class="clear"></p>
+            </div>
+            <!-- footer -->
+            <!-- footer -->
+            <div class="footer">
+                <p> <a href="#">&nbsp;网站地图</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">公司介绍</a>&nbsp;|&nbsp;&nbsp;<a href="#">联系我们</a>&nbsp;|&nbsp;&nbsp;<a href="#">游戏协议</a>&nbsp;|&nbsp;<a href="#">&nbsp;免责公告</a></p>
+                <p> 抵制不良游戏 拒绝盗版游戏 注意自我保护 谨防受骗上当 适度<a href="#">游戏</a>益脑 沉迷游戏伤身 合理安排时间 享受健康生活</p>
+                <p>
+                    &nbsp; &nbsp; &nbsp;北京科技至上有限公司&nbsp;<br />
+                    &nbsp;Copyright 2018-2020
+                </p>
+                <p>&nbsp; </p>
+                <h1>&nbsp; </h1>
+            </div>
+            <script type="text/javascript">
+                var domialname = "pk";
+                var pusername = "";
+            </script>
+            <!--快速注册-->
+            <script type="text/javascript" src="js/public.js"></script>
+            <div id="qucikRegDiv" onclick="quickRgeOperate()"><img src="images/kszc.gif" width="39" height="149" /></div>
+            <div id="qucikRegDiv1">
+                <div class="quickRegDiv">
+                    <div id="close" onclick="closeDiv('qucikRegDiv1')">&nbsp;</div>
+                    <div class="ContentDiv">
+                        <ul>
+                            <li>
+                                <div class="yczh">游戏帐号：</div>
+                                <div>
+                                    <input name="txtUserName" id="txtUserName" maxlength="12" type="text" class="textStyle" onblur="IsEtis()" />
+                                </div>
+                                <div id="spanUserName"></div>
+                            </li>
+                            <li>
+                                <div class="ncDiv"> 昵称：</div>
+                                <div>
+                                    <input name="txtNickName" id="txtNickName" maxlength="10" type="text" class="textStyle" />
+                                </div>
+                                <div id="spanNickName"></div>
+                            </li>
+                            <li>
+                                <div class="passwordDiv"> 登录密码：</div>
+                                <div>
+                                    <input type="password" name="txtPassword" id="txtPassword" maxlength="16" class="textStyle" />
+                                </div>
+                                <div id="spanPassword"></div>
+                            </li>
+                            <li>
+                                <div class="xbie"> 性别：</div>
+                                <div>
+                                    <input type="radio" id="sex1" name="sex" value="1" checked="checked" />
+                                    <label for="sex1">男</label>
+                                    <input type="radio" id="sex2" name="sex" value="0" />
+                                    <label for="sex2">女</label>
+                                </div>
+                                <span class="clear"></span>
+                            </li>
+                            <li>
+                                <div class="yzmDiv"> 验证码：</div>
+                                <div class="yzm">
+                                    <input type="text" maxlength="4" onkeypress="return KeyPressNum(this,event);" class="textStyle" name="txtValidate" id="txtValidate" />
+                                    &nbsp; <img src="/Public/Validate.ashx" alt="验证码" title="点击刷新验证码" border="0" id="imgValidate" onclick="this.src='/Public/Validate.ashx?x=' + Math.random();" align="absmiddle" style="cursor:pointer;" />
+                                </div>
+                                <div id="spanValidate"></div>
+                                <!--<a href="javascript:void(0);" onclick="javascript:document.getElementById('imgValidate').src='/Public/Validate.ashx?x=' + Math.random();">看不清，换一张</a> -->
+                            </li>
+                            <li>
+                                <input type="text" name="txtPromoter" id="txtPromoter" style="display:none;" />
+                                <input name="" type="checkbox" value="" id="cbxEnable" checked="checked" />
+                                已阅读并同意 <a href="/Treaty.aspx" target="_blank">用户服务协议</a>
+                            </li>
+                            <li class="errormsg"> <span id="errormsg"></span> </li>
+                            <li class="tegbttn">
+                                <input type="button" id="btnSubmit" />
+                                <a href="#"></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <script type="text/javascript">
+                var domialname = "pk";
+                var pusername = "";
+            </script>
+            <script type="text/javascript" src="js/HtmlValidateImg.js"></script>
+            <script type="text/javascript" src="js/FastReg.js"></script>
+        </div>
+        <!-- warp end -->
+
+
+
+    </div>
+
+</body>
+</html>
