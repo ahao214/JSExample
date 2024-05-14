@@ -1,0 +1,168 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>使用按钮控制文本渐变</title>
+    <script>
+        var x = 9;
+        var change = "on";
+        if (navigator.appName == "Netscape") {  //浏览器是netscape的情况
+            visShow = "'show'";                   //显示的命令
+            visHide = "'hide'";                   //隐藏的命令
+            docStyle = "document.";
+            styleDoc = "";
+        }
+        else {                                 //浏览器是IE的情况
+            visHide = "'hidden'";                //显示的命令
+            visShow = "'visible'";               //隐藏的命令
+            docStyle = "";
+            styleDoc = ".style";                 //设置样式的命令
+        }
+
+        function hide1() {
+            eval(docStyle + 'object1' + styleDoc + '.visibility=' + visHide);//隐藏第一个div
+        }
+        function hide2() {
+            eval(docStyle + 'object2' + styleDoc + '.visibility=' + visHide);//隐藏第二个div
+        }
+        function hide3() {
+            eval(docStyle + 'object3' + styleDoc + '.visibility=' + visHide);//隐藏第三个div
+        }
+        function hide4() {
+            eval(docStyle + 'object4' + styleDoc + '.visibility=' + visHide);//隐藏第四个div
+        }
+        function hide5() {
+            eval(docStyle + 'object5' + styleDoc + '.visibility=' + visHide);//隐藏第五个div
+        }
+        function hide6() {
+            eval(docStyle + 'object6' + styleDoc + '.visibility=' + visHide);//隐藏第六个div
+        }
+        function hide7() {
+            eval(docStyle + 'object7' + styleDoc + '.visibility=' + visHide);//隐藏第七个div
+        }
+        function hide8() {
+            eval(docStyle + 'object8' + styleDoc + '.visibility=' + visHide);//隐藏第八个div
+        }
+        function hide9() {
+            eval(docStyle + 'object9' + styleDoc + '.visibility=' + visHide);//隐藏第九个div
+        }
+        function hide10() {
+            eval(docStyle + 'object10' + styleDoc + '.visibility=' + visHide);//隐藏第十个div
+        }
+        function show1() {
+            eval(docStyle + 'object1' + styleDoc + '.visibility=' + visShow);//显示第一个div
+            hide2(), hide3();
+        }
+        function show2() {
+            eval(docStyle + 'object2' + styleDoc + '.visibility=' + visShow);//显示第二个div
+            hide1(), hide3();
+        }
+        function show3() {
+            eval(docStyle + 'object3' + styleDoc + '.visibility=' + visShow);//显示第三个div
+            hide2(), hide4();
+        }
+        function show4() {
+            eval(docStyle + 'object4' + styleDoc + '.visibility=' + visShow);//显示第四个div
+            hide3(), hide5();
+        }
+        function show5() {
+            eval(docStyle + 'object5' + styleDoc + '.visibility=' + visShow);//显示第五个div
+            hide4(), hide6();
+        }
+        function show6() {
+            eval(docStyle + 'object6' + styleDoc + '.visibility=' + visShow);//显示第六个div
+            hide5(), hide7();
+        }
+        function show7() {
+            eval(docStyle + 'object7' + styleDoc + '.visibility=' + visShow);//显示第七个div
+            hide6(), hide8();
+        }
+        function show8() {
+            eval(docStyle + 'object8' + styleDoc + '.visibility=' + visShow);//显示第八个div
+            hide7(), hide9();
+        }
+        function show9() {
+            eval(docStyle + 'object9' + styleDoc + '.visibility=' + visShow);//显示第九个div
+            hide8(), hide10();
+        }
+        function show10() {
+            eval(docStyle + 'object10' + styleDoc + '.visibility=' + visShow);//显示第十个div
+            hide9();
+        }
+        function change1() {
+            x += 1;
+            eval("show" + x + "()");                          //逐个显示div,从1到10
+            if (x < 10) setTimeout("change1()", 75);            //一直在此方法中循环
+            else if (change == "on") change2();                 //开始调用第二个循环方法
+        }
+        function change2() {
+            x -= 1;                                             //逐个显示div，从10到1
+            eval("show" + x + "()");
+            if (x > 1) setTimeout("change2()", 75);             //一直在此方法中循环
+            else change1();                                   //开始调用第一个循环方法
+        }
+        function changeOn() {                              //开始变化的控制
+            x = 9;
+            change = "on";
+            change1();
+        }
+        function changeOff() {                            //结束变化的控制
+            change = "off";
+        }
+
+
+    </script>
+</head>
+<body>
+
+    <div id="vis" style="position:absolute; visibility:show; left:10px; top:10px; z-index:1">
+        <table cellpadding=2 border=1>
+            <tr>
+                <td><center><b>颜色变化控制</b></center></font></a></td>
+                <td>
+                    <a href="javascript:changeOn()">
+                        <font color="#000000"><center>开始渐变</center></font>
+                    </a>
+                </td>
+                <td>
+                    <a href="javascript:changeOff()">
+                        <font color="#000000"><center>结束渐变</center></font>
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="object1" style="position:absolute; visibility:hide; left:10px; top:50px; z-index:1">
+        <table border=1 bgcolor=#eaffff width=175 height=50><td><center><b><font color="#F9F9F9">看看我的颜色变化</font></b></center></td></table>
+    </div>
+    <div id="object2" style="position:absolute; visibility:hide; left:10px; top:50px; z-index:1">
+        <table border=1 bgcolor=eaffff width=175 height=50><td><center><b><font color="#ECECEC">看看我的颜色变化</font></b></center></td></table>
+    </div>
+    <div id="object3" style="position:absolute; visibility:hide; left:10px; top:50px; z-index:1">
+        <table border=1 bgcolor=eaffff width=175 height=50><td><center><b><font color="#D5D5D5">看看我的颜色变化</font></b></center></td></table>
+    </div>
+    <div id="object4" style="position:absolute; visibility:hide; left:10px; top:50px; z-index:1">
+        <table border=1 bgcolor=eaffff width=175 height=50><td><center><b><font color="#C0C0C0">看看我的颜色变化</font></b></center></td></table>
+    </div>
+    <div id="object5" style="position:absolute; visibility:hide; left:10px; top:50px; z-index:1">
+        <table border=1 bgcolor=eaffff width=175 height=50><td><center><b><font color="#b0b0b0">看看我的颜色变化</font></b></center></td></table>
+    </div>
+    <div id="object6" style="position:absolute; visibility:hide; left:10px; top:50px; z-index:1">
+        <table border=1 bgcolor=eaffff width=175 height=50><td><center><b><font color="#939393">看看我的颜色变化</font></b></center></td></table>
+    </div>
+    <div id="object7" style="position:absolute; visibility:hide; left:10px; top:50px; z-index:1">
+        <table border=1 bgcolor=eaffff width=175 height=50><td><center><b><font color="#808080">看看我的颜色变化</font></b></center></td></table>
+    </div>
+    <div id="object8" style="position:absolute; visibility:hide; left:10px; top:50px; z-index:1">
+        <table border=1 bgcolor=eaffff width=175 height=50><td><center><b><font color="#6b6b6b">看看我的颜色变化</font></b></center></td></table>
+    </div>
+    <div id="object9" style="position:absolute; visibility:hide; left:10px; top:50px; z-index:1">
+        <table border=1 bgcolor=eaffff width=175 height=50><td><center><b><font color="#424242">看看我的颜色变化</font></b></center></td></table>
+    </div>
+    <div id="object10" style="position:absolute; visibility:show; left:10px; top:50px; z-index:1">
+        <table border=1 bgcolor=eaffff width=175 height=50><td><center><b><font color="#000000">看看我的颜色变化</font></b></center></td></table>
+    </div><P>
+        </FONT></CENTER>
+</body>
+</html>

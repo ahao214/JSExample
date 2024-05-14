@@ -741,6 +741,7 @@
     <Content Include="案例资源库\01按钮事件类案例\12  图片式按钮.html" />
     <Content Include="案例资源库\01按钮事件类案例\13  文字显示在按钮底部.html" />
     <Content Include="案例资源库\01按钮事件类案例\14  选择不同的列表项就显示不同的按钮.html" />
+    <Content Include="案例资源库\01按钮事件类案例\15  使用按钮控制文本渐变.html" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
