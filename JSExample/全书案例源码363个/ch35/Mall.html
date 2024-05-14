@@ -1,0 +1,331 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- 样式 -->
+    <link href="Css/layout.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="Js/jquery.js"></script>
+    <script type="text/javascript" src="Js/public.js"></script>
+    <!--[if IE 6]>
+    <script src="Js/DD_belatedPNG_0.0.8a.js" type="text/javascript" ></script>
+    <script type="text/javascript">
+    DD_belatedPNG.fix(' ');
+    </script>
+    <![endif]-->
+    <!-- banner -->
+    <style type="text/css">
+        .nav_bg .nav ul li .i_home {
+            color: #b5954d;
+        }
+    </style>
+    <meta name="Keywords" />
+    <meta name="Description" />
+    <title>紫金游</title>
+</head>
+<body>
+    <!-- warp start -->
+    <div class="warp">
+        <!-- top -->
+        <!-- top -->
+        <div class="top_bg" id="topLoginIn">
+            <div class="top">您好，欢迎光临紫金游 <a href="#">请登录</a> | <a href="Register.html">注册</a></div>
+        </div>
+        <div class="top_bg" id="topLoginOut">
+            <div class="top">欢迎您，，【<a href="#">个人中心</a>】 【<a href="#">退出</a>】</div>
+        </div>
+        <script type="text/javascript">
+            var nameuser = ''
+            if (nameuser == "") {
+                $("#topLoginOut").hide();
+                $("#topLoginIn").show();
+            } else {
+                $("#topLoginOut").show();
+                $("#topLoginIn").hide();
+            }
+        </script>
+        <!-- nav -->
+        <!-- nav -->
+        <div class="nav_bg">
+            <div class="nav">
+                <ul>
+                    <li>
+                        <a href="index.html">官网首页</a><br />
+                        <span>HOME</span>
+                    </li>
+                    <li>
+                        <a href="Down.html">下载中心</a><br />
+                        <span>DOWNLOAD</span>
+                    </li>
+                    <li>
+                        <a href="Pay.html">账号充值</a><br />
+                        <span>ACCOUNT SERVICES</span>
+                    </li>
+                    <li class="nav_logo">紫金游</li>
+                    <li>
+                        <a href="News.html">新闻动态</a><br />
+                        <span>NEWS</span>
+                    </li>
+                    <li>
+                        <a href="Mall.html" class="i_home">道具商城</a><br />
+                        <span>ITEM SHOP</span>
+                    </li>
+                    <li>
+                        <a href="Mall.html">奖品乐园</a><br />
+                        <span>PRIZES PARADISE</span>
+                    </li>
+                </ul>
+                <p class="clear"></p>
+            </div>
+            <div class="logo"><a href="/"><img src="images/logo.png" /></a></div>
+        </div>
+        <script type="text/javascript">
+            $(function () {
+                if (index) {
+                    $(".nav ul a").removeClass().parent().eq(index - 1).find("a").addClass("i_home");
+                }
+            })
+        </script>
+        <!-- main -->
+        <div class="main_bg">
+            <div class="main">
+                <div class="m_lf">
+                    <div class="m_download"> <a href="#"> <img src="images/down_load.jpg" width="248" height="109" alt="游戏下载" /> </a> </div>
+                    <div class="m_reg"> <a href="Register.html">快速注册</a> </div>
+                    <div class="con_mall_try">
+                        <h3><a href='#'>登录后</a>获取</h3>
+                        <dl>
+                            <dt> <img id="imgPhotoBack" src="images//blank.gif" width="190" height="253" /> </dt>
+                            <dd> <img id="imgPhotoImg" src="images/1.png" width="190" height="253" /> </dd>
+                        </dl>
+                        <div class="con_mall_try_tit">
+                            <table width="200" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td width="42" height="30"><img src="images/mall_icon2.png" width="25" height="21" /></td>
+                                    <td>乐豆：<span id="tb_jb"><a href='#'>登录后</a>获取</span></td>
+                                </tr>
+                                <tr>
+                                    <td height="30"><img src="images/mall_icon1.png" width="30" height="19" /></td>
+                                    <td>元宝：<span id="tb_yb"><a href='#'>登录后</a>获取</span></td>
+                                </tr>
+                                <tr>
+                                    <td height="30"><img src="images/mall_icon3.png" width="30" height="30" /></td>
+                                    <td>奖券：<span id="tb_lq"><a href='#'>登录后</a>获取</span></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <script type="text/javascript">
+                    var index = 5;
+                </script>
+                <div class="cont">
+                    <div class="cont_tit"> <strong><img src="images/mall_icon.PNG" width="34" height="32" />道具商城</strong> <span>您所在位置：<a href="/">首页</a> > 道具商城</span></div>
+                    <div class="con_bg">
+                        <div class="con_news_menu">
+                            <ul>
+                                <li><a href="/Mall/Default.aspx" class="con_news_menu1">全部</a></li>
+                                <li><a href="/Mall/Default.aspx?params=3">形象</a></li>
+                                <li><a href="/Mall/Default.aspx?params=4">背景</a></li>
+                                <li><a href="/Mall/Default.aspx?params=2">道具</a></li>
+                            </ul>
+                        </div>
+                        <div class="con_mall_list">
+                            <dl>
+                                <dt> <a href="ShowMall.html"> <img id="img35" src="images//0035.png" width="132" height="132" alt="文艺青年" /> </a> </dt>
+                                <dd>
+                                    <p class="con_mall_tit">文艺青年</p>
+                                    <p>价格：100 乐豆</p>
+                                    <p>文艺青年</p>
+                                    <p class="con_mall_btn"> <a href="ShowMall.html" class="con_mall_btn1">购买</a> <a href="javascript:void(0);" onclick="DressImage('img35',3)" class="con_mall_btn2">试穿</a> </p>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt> <a href="ShowMall.html"> <img id="img50" src="images//0050.png" width="132" height="132" alt="罗马街景" /> </a> </dt>
+                                <dd>
+                                    <p class="con_mall_tit">罗马街景</p>
+                                    <p>价格：1000 元宝</p>
+                                    <p>罗马街景</p>
+                                    <p class="con_mall_btn"> <a href="ShowMall.html" class="con_mall_btn1">购买</a> <a href="javascript:void(0);" onclick="DressImage('img50',4)" class="con_mall_btn2">试穿</a> </p>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt> <a href="ShowMall.html"> <img id="img49" src="images//0049.png" width="132" height="132" alt="北欧雪景" /> </a> </dt>
+                                <dd>
+                                    <p class="con_mall_tit">北欧雪景</p>
+                                    <p>价格：500 元宝</p>
+                                    <p>北欧雪景</p>
+                                    <p class="con_mall_btn"> <a href="ShowMall.html" class="con_mall_btn1">购买</a> <a href="javascript:void(0);" onclick="DressImage('img49',4)" class="con_mall_btn2">试穿</a> </p>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt> <a href="ShowMall.html"> <img id="img48" src="images//0048.png" width="132" height="132" alt="夜色阑珊" /> </a> </dt>
+                                <dd>
+                                    <p class="con_mall_tit">夜色阑珊</p>
+                                    <p>价格：100 元宝</p>
+                                    <p>夜色阑珊</p>
+                                    <p class="con_mall_btn"> <a href="ShowMall.html" class="con_mall_btn1">购买</a> <a href="javascript:void(0);" onclick="DressImage('img48',4)" class="con_mall_btn2">试穿</a> </p>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt> <a href="ShowMall.html"> <img id="img16" src="images//0016.png" width="132" height="132" alt="故宫天坛" /> </a> </dt>
+                                <dd>
+                                    <p class="con_mall_tit">故宫天坛</p>
+                                    <p>价格：100 元宝</p>
+                                    <p>故宫天坛</p>
+                                    <p class="con_mall_btn"> <a href="ShowMall.html" class="con_mall_btn1">购买</a> <a href="javascript:void(0);" onclick="DressImage('img16',4)" class="con_mall_btn2">试穿</a> </p>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt> <a href="ShowMall.html"> <img id="img4" src="images//004.png" width="132" height="132" alt="梦幻小镇" /> </a> </dt>
+                                <dd>
+                                    <p class="con_mall_tit">梦幻小镇</p>
+                                    <p>价格：5 元宝</p>
+                                    <p>梦幻小镇</p>
+                                    <p class="con_mall_btn"> <a href="ShowMall.html" class="con_mall_btn1">购买</a> <a href="javascript:void(0);" onclick="DressImage('img4',4)" class="con_mall_btn2">试穿</a> </p>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt> <a href="ShowMall.html"> <img id="img3" src="images//003.png" width="132" height="132" alt="休闲酒吧" /> </a> </dt>
+                                <dd>
+                                    <p class="con_mall_tit">休闲酒吧</p>
+                                    <p>价格：1 元宝</p>
+                                    <p>休闲酒吧</p>
+                                    <p class="con_mall_btn"> <a href="ShowMall.html" class="con_mall_btn1">购买</a> <a href="javascript:void(0);" onclick="DressImage('img3',4)" class="con_mall_btn2">试穿</a> </p>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt> <a href="ShowMall.html"> <img id="img15" src="images//0015.png" width="132" height="132" alt="白领美女" /> </a> </dt>
+                                <dd>
+                                    <p class="con_mall_tit">白领美女</p>
+                                    <p>价格：50000 乐豆</p>
+                                    <p>白领美女</p>
+                                    <p class="con_mall_btn"> <a href="ShowMall.html" class="con_mall_btn1">购买</a> <a href="javascript:void(0);" onclick="DressImage('img15',3)" class="con_mall_btn2">试穿</a> </p>
+                                </dd>
+                            </dl>
+                            <p class="clear"></p>
+                        </div>
+                        <div class="cont_page" style="margin-top:10px;">
+                            <div id="Content_anpPageIndex" class="extAspNetPager"> <a disabled="disabled" style="margin-right:5px;">上一页</a><span style="margin-right:5px;font-weight:Bold;color:red;">1</span><a href="default.aspx?page=2" style="margin-right:5px;">2</a><a href="default.aspx?page=3" style="margin-right:5px;">3</a><a href="default.aspx?page=4" style="margin-right:5px;">4</a><a href="default.aspx?page=2" style="margin-right:5px;">下一页</a> </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="clear"></p>
+                <script type="text/javascript">
+                    $(function () {
+                        var typeindex = decodeURIComponent(GetRequest("params", "0"));
+                        if (typeindex == "0") {
+                            $(".con_news_menu ul li").eq(0).find("a").addClass("con_news_menu1").parent().siblings().find("a").removeClass();
+                        }
+                        if (typeindex == "3") {
+                            $(".con_news_menu ul li").eq(1).find("a").addClass("con_news_menu1").parent().siblings().find("a").removeClass();
+                        }
+                        if (typeindex == "4") {
+                            $(".con_news_menu ul li").eq(2).find("a").addClass("con_news_menu1").parent().siblings().find("a").removeClass();
+                        }
+                        if (typeindex == "2") {
+                            $(".con_news_menu ul li").eq(3).find("a").addClass("con_news_menu1").parent().siblings().find("a").removeClass();
+                        }
+                    })
+                    function DressImage(imgid, colid) {
+                        if (colid == 3) {
+                            $("#imgPhotoImg").attr("src", $("#" + imgid + "").attr("src"));
+                        }
+                        else if (colid == 4) {
+                            $("#imgPhotoBack").attr("src", $("#" + imgid + "").attr("src"));
+                        }
+                        else {
+                            alert("该道具不可试穿！");
+                        }
+                    }
+                </script>
+            </div>
+            <!-- footer -->
+            <!-- footer -->
+            <div class="footer">
+                <p> <a href="#">&nbsp;网站地图</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">公司介绍</a>&nbsp;|&nbsp;&nbsp;<a href="#">联系我们</a>&nbsp;|&nbsp;&nbsp;<a href="#">游戏协议</a>&nbsp;|&nbsp;<a href="#">&nbsp;免责公告</a></p>
+                <p> 抵制不良游戏 拒绝盗版游戏 注意自我保护 谨防受骗上当 适度<a href="#">游戏</a>益脑 沉迷游戏伤身 合理安排时间 享受健康生活</p>
+                <p>
+                    &nbsp; &nbsp; &nbsp;北京科技至上有限公司&nbsp;<br />
+                    &nbsp;Copyright 2018-2020
+                </p>
+                <p>&nbsp; </p>
+                <h1>&nbsp; </h1>
+            </div>
+            <script type="text/javascript">
+                var domialname = "pk";
+                var pusername = "";
+            </script>
+            <!--快速注册-->
+            <script type="text/javascript" src="Js/public.js"></script>
+            <div id="qucikRegDiv" onclick="quickRgeOperate()"><img src="images/kszc.gif" width="39" height="149" /></div>
+            <div id="qucikRegDiv1">
+                <div class="quickRegDiv">
+                    <div id="close" onclick="closeDiv('qucikRegDiv1')">&nbsp;</div>
+                    <div class="ContentDiv">
+                        <ul>
+                            <li>
+                                <div class="yczh">游戏帐号：</div>
+                                <div>
+                                    <input name="txtUserName" id="txtUserName" maxlength="12" type="text" class="textStyle" onblur="IsEtis()" />
+                                </div>
+                                <div id="spanUserName"></div>
+                            </li>
+                            <li>
+                                <div class="ncDiv"> 昵称：</div>
+                                <div>
+                                    <input name="txtNickName" id="txtNickName" maxlength="10" type="text" class="textStyle" />
+                                </div>
+                                <div id="spanNickName"></div>
+                            </li>
+                            <li>
+                                <div class="passwordDiv"> 登录密码：</div>
+                                <div>
+                                    <input type="password" name="txtPassword" id="txtPassword" maxlength="16" class="textStyle" />
+                                </div>
+                                <div id="spanPassword"></div>
+                            </li>
+                            <li>
+                                <div class="xbie"> 性别：</div>
+                                <div>
+                                    <input type="radio" id="sex1" name="sex" value="1" checked="checked" />
+                                    <label for="sex1">男</label>
+                                    <input type="radio" id="sex2" name="sex" value="0" />
+                                    <label for="sex2">女</label>
+                                </div>
+                                <span class="clear"></span>
+                            </li>
+                            <li>
+                                <div class="yzmDiv"> 验证码：</div>
+                                <div class="yzm">
+                                    <input type="text" maxlength="4" onkeypress="return KeyPressNum(this,event);" class="textStyle" name="txtValidate" id="txtValidate" />
+                                    &nbsp; <img src="/Public/Validate.ashx" alt="验证码" title="点击刷新验证码" border="0" id="imgValidate" onclick="this.src='/Public/Validate.ashx?x=' + Math.random();" align="absmiddle" style="cursor:pointer;" />
+                                </div>
+                                <div id="spanValidate"></div>
+                                <!--<a href="javascript:void(0);" onclick="javascript:document.getElementById('imgValidate').src='/Public/Validate.ashx?x=' + Math.random();">看不清，换一张</a> -->
+                            </li>
+                            <li>
+                                <input type="text" name="txtPromoter" id="txtPromoter" style="display:none;" />
+                                <input name="" type="checkbox" value="" id="cbxEnable" checked="checked" />
+                                已阅读并同意 <a href="/Treaty.aspx" target="_blank">用户服务协议</a>
+                            </li>
+                            <li class="errormsg"> <span id="errormsg"></span> </li>
+                            <li class="tegbttn">
+                                <input type="button" id="btnSubmit" />
+                                <a href="#"></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <script type="text/javascript">
+                var domialname = "pk";
+                var pusername = "";
+            </script>
+            <script type="text/javascript" src="Js/HtmlValidateImg.js"></script>
+            <script type="text/javascript" src="Js/FastReg.js"></script>
+        </div>
+        <!-- warp end -->
+    </div>
+</body>
+</html>
