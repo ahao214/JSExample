@@ -95,6 +95,7 @@
     <Content Include="90套JS特效案例库\特效案例04、Windows计算器（简易版）\1.PNG" />
     <Content Include="90套JS特效案例库\特效案例04、Windows计算器（简易版）\Images\bg.png" />
     <Content Include="90套JS特效案例库\特效案例04、Windows计算器（简易版）\Images\ico.png" />
+    <Content Include="90套JS特效案例库\特效案例04、Windows计算器（简易版）\miaov.js" />
     <Content Include="Web.config" />
     <Content Include="全书案例源码363个\ch01\Chap1.2.html" />
     <Content Include="全书案例源码363个\ch01\Chap1.3.html" />
