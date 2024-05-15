@@ -90,6 +90,7 @@
     <Content Include="90套JS特效案例库\特效案例03、QQ登录框效果\images\user3.png" />
     <Content Include="90套JS特效案例库\特效案例03、QQ登录框效果\images\user4.png" />
     <Content Include="90套JS特效案例库\特效案例03、QQ登录框效果\miaov.js" />
+    <Content Include="90套JS特效案例库\特效案例03、QQ登录框效果\style.css" />
     <Content Include="Web.config" />
     <Content Include="全书案例源码363个\ch01\Chap1.2.html" />
     <Content Include="全书案例源码363个\ch01\Chap1.3.html" />
