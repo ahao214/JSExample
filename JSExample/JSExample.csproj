@@ -132,6 +132,9 @@
     <Content Include="90套JS特效案例库\特效案例06、超炫多级下拉菜单效果\img\miaov.png" />
     <Content Include="90套JS特效案例库\特效案例06、超炫多级下拉菜单效果\img\modelrange.gif" />
     <Content Include="90套JS特效案例库\特效案例06、超炫多级下拉菜单效果\index.html" />
+    <Content Include="90套JS特效案例库\特效案例07、带渐变与滑动的图片展示\demo.css" />
+    <Content Include="90套JS特效案例库\特效案例07、带渐变与滑动的图片展示\demo.html" />
+    <Content Include="90套JS特效案例库\特效案例07、带渐变与滑动的图片展示\demo.js" />
     <Content Include="Web.config" />
     <Content Include="全书案例源码363个\ch01\Chap1.2.html" />
     <Content Include="全书案例源码363个\ch01\Chap1.3.html" />
