@@ -126,6 +126,11 @@
     <Content Include="90套JS特效案例库\特效案例05、超酷数码钟表\images\week.png" />
     <Content Include="90套JS特效案例库\特效案例05、超酷数码钟表\images\year.png" />
     <Content Include="90套JS特效案例库\特效案例05、超酷数码钟表\miaov.js" />
+    <Content Include="90套JS特效案例库\特效案例06、超炫多级下拉菜单效果\img\ico.gif" />
+    <Content Include="90套JS特效案例库\特效案例06、超炫多级下拉菜单效果\img\logo.jpg" />
+    <Content Include="90套JS特效案例库\特效案例06、超炫多级下拉菜单效果\img\miaov.png" />
+    <Content Include="90套JS特效案例库\特效案例06、超炫多级下拉菜单效果\img\modelrange.gif" />
+    <Content Include="90套JS特效案例库\特效案例06、超炫多级下拉菜单效果\index.html" />
     <Content Include="Web.config" />
     <Content Include="全书案例源码363个\ch01\Chap1.2.html" />
     <Content Include="全书案例源码363个\ch01\Chap1.3.html" />
@@ -825,6 +830,7 @@
     <Folder Include="100套8大行业软件开发文档模板库\" />
     <Folder Include="133套网页模板库\" />
     <Folder Include="14套网页赏析案例库\" />
+    <Folder Include="90套JS特效案例库\特效案例06、超炫多级下拉菜单效果\css\" />
     <Folder Include="Student Data Files\" />
     <Folder Include="全书案例源码363个\ch35\images\newsimgs\" />
   </ItemGroup>
