@@ -2,8 +2,80 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>超炫多级下拉菜单效果</title>
     <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <script type="text/javascript">
+        var count = 0;
+        window.onload = function () {
+            var oUl = document.getElementById('miaov_box');
+            var oUlShare = document.getElementById('miaov_boxShade');
+            var oUlShadeSecond = document.getElementById('miaov_boxShadeSecond');
+            var aLiBox = oUl.getElementsByTagName('li');
+            var aLi = document.getElementsByTagName('li');
+            var timer = null;
+            var i = 0, j = 0;
+
+            oUl.onmouseover = function () {
+                clearTimeout(timer);
+            };
+
+            oUl.onmouseout = function () {
+                for (i = 0; i < aLi.length; i++) {
+                    switch (aLi[i].parentNode.className) {
+                        case 'miaov_navTopSecond':
+                        case '':
+                            aLi[i].className = '';
+                            break;
+                    }
+                };
+                clearTimeout(timer);
+                timer = setTimeout(function () {
+                    oUlShade.style.display = oUlShadeSecond.style.display = oUl.style.display = 'none';
+                    for (i = 0; i < aLiBox.length; i++)aLiBox[i].className = '';
+
+                    for (i = 0; i < aLi.length; i++) {
+                        switch (aLi[i].parentNode.className) {
+                            case 'miaov_navTopSecond':
+                                oUlShade.style.display = oUlShadeSecond.style.display = oUl.style.display = 'none';
+                                aLiBox[aLi[i].index].className = '';
+                            case '':
+                                aLi[i].className = '';
+                                break;
+                            case 'miaov_navBottom':
+                            case 'miaov_navTop':
+                                aLi[i].className = '';
+                                break;
+                        }
+                    }
+                }, 500);
+            };
+
+            for (i = 0; i < aLi.length; i++) {
+                aLi[i].onmouseover = function () {
+                    clearTimeout(timer);
+                    switch (this.parentNode.className) {
+                        case 'miaov_navTopSecond':
+                            oUlShade.style.display = oUlShadeSecond.style.display = oUl.style.display = 'block';
+                            for (i = 0; i < aLiBox.length; i++)aLiBox[i].className = '';
+                            aLiBox[this.index].className = 'show';
+                        case '':
+                            this.className = 'active';
+                            break;
+                        case 'miaov_navBottom':
+                        case 'miaov_navTop':
+                            for (i = 0; i < aLi.length; i++)
+                                if (aLi[i].parentNode.className == 'miaov_navBottom' || aLi[i].parentNode.className == 'miaov_navTop') aLi[i].className = '';
+                            this.className = 'show';
+                            break;
+                    }
+                };
+                aLi[i].onmouseout = oUl.onmouseout;
+                if (aLi[i].parentNode.className == 'miaov_navTopSecond') {
+                    aLi[i].index = j++;
+                }
+            }
+        }
+    </script>
 </head>
 <body>
     <div class="miaov_page">
