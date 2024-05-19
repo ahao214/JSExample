@@ -1,2 +1,65 @@
-﻿body {
+﻿ul {
+    margin: 0;
+    padding-left: 0;
 }
+
+li {
+    list-style: none;
+}
+
+img {
+    border: none;
+}
+
+#main {
+    width: 280px;
+    height: 330px;
+    overflow: hidden;
+    position: relative;
+    margin: 20px auto 0 auto;
+}
+
+    #main ul {
+        position: absolute;
+        left: 0;
+    }
+
+        #main ul li {
+            width: 280px;
+            height: 330px;
+            float: left;
+            position: absolute;
+            filter: alpha(opacity=0);
+            opacity: 0;
+        }
+
+#btn {
+    line-height: 13px;
+    text-align: center;
+    background: #eeeeee;
+    width: 280px;
+    margin: 10px auto 0 auto;
+}
+
+    #btn a {
+        display: inline-block;
+        background: url(img.gif) no-repeat;
+        width: 13px;
+        height: 13px;
+    }
+
+        #btn a.index {
+            background-position: -13px 0;
+        }
+
+        #btn a.active {
+            background-position: -26px 0;
+        }
+
+        #btn a.prev {
+            background-position: 0 0;
+        }
+
+        #btn a.next {
+            background-position: -39px 0;
+        }
